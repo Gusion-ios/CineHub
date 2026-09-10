@@ -84,20 +84,3 @@
     font-size: 0.9rem;
     text-align: center;
 }
-
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 600px) {
-    .tabla-datos {
-        font-size: 0.8rem;
-    }
-
-    .tabla-datos th,
-    .tabla-datos td {
-        padding: 8px 10px;
-    }
-
-    .nota-especial {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-}

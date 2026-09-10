@@ -19,7 +19,6 @@
     z-index: -1;
 }
 
-/* Capa oscura sobre el video para que el texto se lea bien (antes el titulo quedaba pegado al video sin contraste) */
 .cartelera-hero::after {
     content: "";
     position: absolute;
@@ -93,20 +92,4 @@
 
 .tabla-datos tbody tr:last-child td {
     border-bottom: none;
-}
-
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 600px) {
-    .cartelera-hero {
-        height: 260px;
-    }
-
-    .tabla-datos {
-        font-size: 0.8rem;
-    }
-
-    .tabla-datos th,
-    .tabla-datos td {
-        padding: 8px 10px;
-    }
 }

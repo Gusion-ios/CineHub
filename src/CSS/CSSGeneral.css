@@ -19,7 +19,6 @@
 body {
     background-color: var(--negro);
     color: var(--blanco);
-    font-family: var(--font-principal);
     line-height: 1.5;
 }
 
@@ -36,7 +35,6 @@ ul {
     color: var(--dorado);
 }
 
-/* Label invisible pero leible por lectores de pantalla (accesibilidad) */
 .visualmente-oculto {
     position: absolute;
     width: 1px;
@@ -59,7 +57,6 @@ ul {
     z-index: 100;
 }
 
-/* Logo: imagen circular posicionada sobre el texto */
 .logo {
     position: relative;
     display: flex;
@@ -86,7 +83,6 @@ ul {
     left: 160px;
 }
 
-/* Menu de navegacion */
 .nav-menu ul {
     display: flex;
     gap: 25px;
@@ -103,7 +99,6 @@ ul {
     color: var(--dorado);
 }
 
-/* Boton de login */
 .btn-login {
     display: flex;
     align-items: center;
@@ -144,11 +139,10 @@ main section h2 {
     padding: 12px 30px;
     border-radius: 6px;
     transition: background-color 0.3s;
-    display: inline-block;
 }
 
 .btn-cta:hover {
-    background-color: var(--dorado-suave);
+    background-color: var(--plateado);
 }
 
 .btn-comprar {
@@ -266,21 +260,4 @@ main section h2 {
     color: #777;
     font-size: 0.8rem;
     margin-top: 20px;
-}
-
-/* ===================== RESPONSIVE (compartido) ===================== */
-@media (max-width: 768px) {
-    .header {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .nav-menu ul {
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    .footer {
-        grid-template-columns: 1fr;
-    }
 }

@@ -163,34 +163,3 @@
 .tabla-datos tbody tr:last-child td {
     border-bottom: none;
 }
-
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 768px) {
-    .sedes-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .mapa-placeholder {
-        height: 260px;
-    }
-
-    .lista-sedes {
-        max-height: none;
-    }
-}
-
-@media (max-width: 600px) {
-    .sedes-buscador form {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .tabla-datos {
-        font-size: 0.8rem;
-    }
-
-    .tabla-datos th,
-    .tabla-datos td {
-        padding: 8px 10px;
-    }
-}

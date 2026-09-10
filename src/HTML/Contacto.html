@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineHub - Contacto</title>
 
-    <!-- Hojas de estilo -->
     <link rel="stylesheet" href="../CSS/CSSGeneral.css">
     <link rel="stylesheet" href="../CSS/ContactoStyle.css">
-
-    <!-- Fuente externa para esta pagina -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -45,17 +43,14 @@
 <!-- ===================== MAIN ===================== -->
 <main>
 
-    <!-- ===== TITULO DE LA PAGINA ===== -->
     <section class="contacto-hero">
         <h1>CONTÁCTANOS</h1>
         <p>¿Tienes dudas o sugerencias? Escríbenos</p>
     </section>
 
-    <!-- ===== FORMULARIO + INFO DE CONTACTO ===== -->
     <section class="contacto-contenido">
         <div class="contacto-grid">
 
-            <!-- Columna izquierda: formulario -->
             <div class="tarjeta-formulario">
                 <h2>Formulario de contacto</h2>
                 <form action="#" method="post">
@@ -79,9 +74,6 @@
                         <option value="sugerencia">Sugerencia</option>
                     </select>
 
-                    <label for="codigo">Código de referencia</label>
-                    <input type="text" id="codigo" name="codigo" disabled value="APF1">
-
                     <label for="mensaje">Mensaje</label>
                     <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..."></textarea>
 
@@ -89,7 +81,6 @@
                 </form>
             </div>
 
-            <!-- Columna derecha: datos + mapa + redes -->
             <div class="tarjeta-info">
                 <h2>Información de contacto</h2>
                 <ul class="lista-info">
@@ -120,8 +111,9 @@
     <!-- ===== MULTIMEDIA: ambientacion sonora (requisito Sesion 3) ===== -->
     <section class="contacto-multimedia">
         <h2>Conoce nuestra sede</h2>
+        <img src="../File/IMAGE/Sede%20CineHub.png" alt="Sede">
         <p class="nota-audio">Ambientación sonora de la sala principal</p>
-        <audio controls>
+        <audio autoplay loop>
             <source src="../File/MUSIC/Fondo/Interstellar%20-%20Hans%20Zimmer%20(Soft%20Version)%20Sleep_%20Study_%20Relax%20-%201%20Hour(MP3_160K).mp3" type="audio/mpeg">
             Tu navegador no soporta el elemento de audio.
         </audio>
