@@ -1,0 +1,103 @@
+/* ===================== HERO DE HORARIOS ===================== */
+.horarios-hero {
+    text-align: center;
+    padding: 50px 40px 20px;
+}
+
+.horarios-hero h1 {
+    color: var(--dorado);
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.horarios-hero p {
+    color: var(--plateado);
+    margin-top: 8px;
+}
+
+/* ===================== SECCIONES DE TABLA ===================== */
+.horarios-tabla h2 {
+    color: var(--plateado);
+    margin-bottom: 15px;
+}
+
+/* Separacion entre la tabla 1 y la tabla 2 (antes quedaban pegadas) */
+.horarios-tabla + .horarios-tabla {
+    margin-top: 10px;
+}
+
+.tabla-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-datos {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--gris-tarjeta);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabla-datos caption {
+    caption-side: top;
+    text-align: left;
+    color: var(--dorado);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.tabla-datos thead {
+    background-color: var(--negro-suave);
+}
+
+.tabla-datos th {
+    color: var(--dorado);
+    text-align: left;
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--dorado-suave);
+}
+
+.tabla-datos td {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    color: var(--blanco);
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.tabla-datos tbody tr:hover {
+    background-color: #262626;
+}
+
+.tabla-datos tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===================== NOTA ESPECIAL: banner de feriados ===================== */
+.nota-especial {
+    margin: 10px 40px 40px;
+    background: linear-gradient(135deg, var(--dorado-suave), #8a6d1a);
+    color: var(--negro);
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 600px) {
+    .tabla-datos {
+        font-size: 0.8rem;
+    }
+
+    .tabla-datos th,
+    .tabla-datos td {
+        padding: 8px 10px;
+    }
+
+    .nota-especial {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}

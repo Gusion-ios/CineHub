@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineHub - Contacto</title>
+
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="../CSS/CSSGeneral.css">
+    <link rel="stylesheet" href="../CSS/ContactoStyle.css">
+
+    <!-- Fuente externa para esta pagina -->
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header">
+    <div class="logo">
+        <img src="../File/IMAGE/logo-cinehub.png" alt="Logo CineHub" class="logo-img">
+        <span class="logo-text">CineHub</span>
+    </div>
+
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="Cartelera.html">Cartelera</a></li>
+            <li><a href="Peliculas.html">Peliculas</a></li>
+            <li><a href="Entradas.html">Entradas</a></li>
+            <li><a href="Salas.html">Salas</a></li>
+            <li><a href="Promociones.html">Promociones</a></li>
+            <li><a href="Dulceria.html">Dulceria</a></li>
+            <li><a href="Contacto.html" class="activo">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="user-actions">
+        <a href="Login.html" class="btn-login">
+            <img src="../File/IMAGE/Icon/User.png" alt="Usuario">
+            Login
+        </a>
+    </div>
+</header>
+
+<!-- ===================== MAIN ===================== -->
+<main>
+
+    <!-- ===== TITULO DE LA PAGINA ===== -->
+    <section class="contacto-hero">
+        <h1>CONTÁCTANOS</h1>
+        <p>¿Tienes dudas o sugerencias? Escríbenos</p>
+    </section>
+
+    <!-- ===== FORMULARIO + INFO DE CONTACTO ===== -->
+    <section class="contacto-contenido">
+        <div class="contacto-grid">
+
+            <!-- Columna izquierda: formulario -->
+            <div class="tarjeta-formulario">
+                <h2>Formulario de contacto</h2>
+                <form action="#" method="post">
+
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre">
+
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" name="correo" required placeholder="Escribe tu correo">
+
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" maxlength="9" placeholder="987654321">
+
+                    <label for="fecha">Fecha de consulta</label>
+                    <input type="date" id="fecha" name="fecha">
+
+                    <label for="asunto">Asunto</label>
+                    <select id="asunto" name="asunto">
+                        <option value="consulta">Consulta general</option>
+                        <option value="reclamo">Reclamo</option>
+                        <option value="sugerencia">Sugerencia</option>
+                    </select>
+
+                    <label for="codigo">Código de referencia</label>
+                    <input type="text" id="codigo" name="codigo" disabled value="APF1">
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..."></textarea>
+
+                    <button type="submit" class="btn-enviar">Enviar mensaje</button>
+                </form>
+            </div>
+
+            <!-- Columna derecha: datos + mapa + redes -->
+            <div class="tarjeta-info">
+                <h2>Información de contacto</h2>
+                <ul class="lista-info">
+                    <li>Teléfono: (054) 000-000</li>
+                    <li>Correo: contacto@cinehub.com</li>
+                    <li>Dirección: Av. Principal 123, Arequipa</li>
+                </ul>
+
+                <div class="mapa-placeholder">
+                    <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7760697.123456!2d-75.0!3d-9.19!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5f4f1f1f1f1%3A0x1!2sPer%C3%BA!5e0!3m2!1ses!2spe!4v1234567890"
+                            title="Ubicacion de CineHub en Arequipa"
+                            allowfullscreen
+                            loading="lazy">
+                    </iframe>
+                </div>
+
+                <div class="footer-redes">
+                    <img src="../File/IMAGE/RedesSociales/Facebook.png" alt="Facebook">
+                    <img src="../File/IMAGE/RedesSociales/Instagram.png" alt="Instagram">
+                    <img src="../File/IMAGE/RedesSociales/X.png" alt="X">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== MULTIMEDIA: ambientacion sonora (requisito Sesion 3) ===== -->
+    <section class="contacto-multimedia">
+        <h2>Conoce nuestra sede</h2>
+        <p class="nota-audio">Ambientación sonora de la sala principal</p>
+        <audio controls>
+            <source src="../File/MUSIC/Fondo/Interstellar%20-%20Hans%20Zimmer%20(Soft%20Version)%20Sleep_%20Study_%20Relax%20-%201%20Hour(MP3_160K).mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+    <div class="footer-logo">
+        <img src="../File/IMAGE/logo-cinehub.png" alt="Logo CineHub">
+        <span>
+            <h1>CineHub</h1>
+        </span>
+    </div>
+
+    <div class="footer-col">
+        <a href="Sedes.html">Nuestras Sedes</a>
+        <a href="Horarios.html">Horarios y Precios</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="Blog.html">CineHub Blog</a>
+    </div>
+
+    <div class="footer-col">
+        <a href="Entradas.html">Entradas</a>
+        <a href="Contacto.html">Contacto</a>
+        <a href="#">Trabaja con nosotros</a>
+        <a href="#">Terminos y Condiciones</a>
+    </div>
+
+    <div class="footer-redes">
+        <img src="../File/IMAGE/RedesSociales/Facebook.png" alt="Facebook">
+        <img src="../File/IMAGE/RedesSociales/Instagram.png" alt="Instagram">
+        <img src="../File/IMAGE/RedesSociales/X.png" alt="X">
+    </div>
+
+    <p class="footer-copy">&copy; CineHub. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

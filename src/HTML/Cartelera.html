@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineHub - Cartelera</title>
+
+    <link rel="stylesheet" href="../CSS/CSSGeneral.css">
+    <link rel="stylesheet" href="../CSS/CarteleraStyle.css">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header">
+    <div class="logo">
+        <img src="../File/IMAGE/logo-cinehub.png" alt="Logo CineHub" class="logo-img">
+        <span class="logo-text">CineHub</span>
+    </div>
+
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="Cartelera.html" class="activo">Cartelera</a></li>
+            <li><a href="Peliculas.html">Peliculas</a></li>
+            <li><a href="Entradas.html">Entradas</a></li>
+            <li><a href="Salas.html">Salas</a></li>
+            <li><a href="Promociones.html">Promociones</a></li>
+            <li><a href="Dulceria.html">Dulceria</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="user-actions">
+        <a href="Login.html" class="btn-login">
+            <img src="../File/IMAGE/Icon/User.png" alt="Usuario">
+            Login
+        </a>
+    </div>
+</header>
+
+<!-- ===================== MAIN ===================== -->
+<main>
+
+    <!-- ===== HERO con video de fondo + titulo ===== -->
+    <section class="cartelera-hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="../File/VIDEO/Vector%201.mp4" type="video/mp4">
+        </video>
+        <h1>CARTELERA</h1>
+        <p>Elige tu pelicula, horario y sala</p>
+    </section>
+
+    <!-- ===== TABLA DE FUNCIONES ===== -->
+    <section class="cartelera-tabla">
+        <h2>Funciones de hoy</h2>
+
+        <div class="tabla-responsive">
+            <table class="tabla-datos">
+                <caption>Funciones disponibles en CineHub - sede principal, hoy</caption>
+                <thead>
+                <tr>
+                    <th scope="col">Pelicula</th>
+                    <th scope="col">Genero</th>
+                    <th scope="col">Sala</th>
+                    <th scope="col">Clasificacion</th>
+                    <th scope="col">Duracion</th>
+                    <th scope="col">Horarios</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Astro Force 7</td>
+                    <td>Ciencia ficcion</td>
+                    <td>3D</td>
+                    <td>+14</td>
+                    <td>128 min</td>
+                    <td>15:00 / 18:00 / 21:00</td>
+                </tr>
+                <tr>
+                    <td>The Lost Tomb</td>
+                    <td>Aventura</td>
+                    <td>2D</td>
+                    <td>+14</td>
+                    <td>110 min</td>
+                    <td>14:30 / 17:30 / 20:30</td>
+                </tr>
+                <tr>
+                    <td>Night Runner</td>
+                    <td>Accion</td>
+                    <td>VIP</td>
+                    <td>+18</td>
+                    <td>102 min</td>
+                    <td>16:00 / 19:00 / 22:00</td>
+                </tr>
+                <tr>
+                    <td>The Chef</td>
+                    <td>Comedia</td>
+                    <td>2D</td>
+                    <td>+14</td>
+                    <td>95 min</td>
+                    <td>13:00 / 16:00 / 19:00</td>
+                </tr>
+                <tr>
+                    <td>Mind Games</td>
+                    <td>Suspenso</td>
+                    <td>4DX</td>
+                    <td>+18</td>
+                    <td>115 min</td>
+                    <td>17:00 / 20:00</td>
+                </tr>
+                <tr>
+                    <td>Cosmic Journey</td>
+                    <td>Ciencia ficcion</td>
+                    <td>3D</td>
+                    <td>+14</td>
+                    <td>134 min</td>
+                    <td>14:00 / 18:30 / 21:30</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+    <div class="footer-logo">
+        <img src="../File/IMAGE/logo-cinehub.png" alt="Logo CineHub">
+        <span>CineHub</span>
+    </div>
+
+    <div class="footer-col">
+        <a href="Sedes.html">Nuestras Sedes</a>
+        <a href="Horarios.html">Horarios y Precios</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="Blog.html">CineHub Blog</a>
+    </div>
+
+    <div class="footer-col">
+        <a href="Entradas.html">Entradas</a>
+        <a href="Contacto.html">Contacto</a>
+        <a href="#">Trabaja con nosotros</a>
+        <a href="#">Terminos y Condiciones</a>
+    </div>
+
+    <div class="footer-redes">
+        <img src="../File/IMAGE/RedesSociales/Facebook.png" alt="Facebook">
+        <img src="../File/IMAGE/RedesSociales/Instagram.png" alt="Instagram">
+        <img src="../File/IMAGE/RedesSociales/X.png" alt="X">
+    </div>
+
+    <p class="footer-copy">&copy; CineHub. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

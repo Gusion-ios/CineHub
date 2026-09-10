@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineHub - Sedes</title>
+
+    <link rel="stylesheet" href="../CSS/CSSGeneral.css">
+    <link rel="stylesheet" href="../CSS/SedesStyle.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header class="header">
+    <div class="logo">
+        <img src="../File/IMAGE/logo-cinehub.png" alt="Logo CineHub" class="logo-img">
+        <span class="logo-text">CineHub</span>
+    </div>
+
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="Cartelera.html">Cartelera</a></li>
+            <li><a href="Peliculas.html">Peliculas</a></li>
+            <li><a href="Entradas.html">Entradas</a></li>
+            <li><a href="Salas.html">Salas</a></li>
+            <li><a href="Promociones.html">Promociones</a></li>
+            <li><a href="Dulceria.html">Dulceria</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="user-actions">
+        <a href="Login.html" class="btn-login">
+            <img src="../File/IMAGE/Icon/User.png" alt="Usuario">
+            Login
+        </a>
+    </div>
+</header>
+
+<!-- ===================== MAIN ===================== -->
+<main>
+
+    <!-- ===== TITULO DE LA PAGINA ===== -->
+    <section class="sedes-hero">
+        <h1>NUESTRAS SEDES</h1>
+        <p>Encuentra el CineHub mas cercano a ti</p>
+    </section>
+
+    <!-- ===== BUSCADOR POR DISTRITO ===== -->
+    <section class="sedes-buscador">
+        <form action="#" method="get">
+            <label for="distrito" class="visualmente-oculto">Filtrar por distrito</label>
+            <select id="distrito" name="distrito">
+                <option value="">Todos los distritos</option>
+                <option value="cercado">Cercado</option>
+                <option value="yanahuara">Yanahuara</option>
+                <option value="cayma">Cayma</option>
+                <option value="cerro-colorado">Cerro Colorado</option>
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+    </section>
+
+    <!-- ===== MAPA + LISTA DE SEDES ===== -->
+    <section class="sedes-contenido">
+        <div class="sedes-grid">
+
+            <div class="mapa-placeholder">
+                <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7760697.123456!2d-75.0!3d-9.19!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5f4f1f1f1f1%3A0x1!2sPer%C3%BA!5e0!3m2!1ses!2spe!4v1234567890"
+                        title="Mapa de sedes CineHub en Arequipa"
+                        allowfullscreen
+                        loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="lista-sedes">
+
+                <article class="card-sede">
+                    <h3>CineHub - Cercado</h3>
+                    <p>Av. Principal 123, Cercado, Arequipa</p>
+                    <p class="telefono-sede">Tel: (054) 000-001</p>
+                    <a href="#" class="btn-comprar">Como llegar</a>
+                </article>
+
+                <article class="card-sede">
+                    <h3>CineHub - Yanahuara</h3>
+                    <p>Calle Los Alamos 456, Yanahuara, Arequipa</p>
+                    <p class="telefono-sede">Tel: (054) 000-002</p>
+                    <a href="#" class="btn-comprar">Como llegar</a>
+                </article>
+
+                <article class="card-sede">
+                    <h3>CineHub - Cayma</h3>
+                    <p>Av. Ejercito 789, Cayma, Arequipa</p>
+                    <p class="telefono-sede">Tel: (054) 000-003</p>
+                    <a href="#" class="btn-comprar">Como llegar</a>
+                </article>
+
+                <article class="card-sede">
+                    <h3>CineHub - Cerro Colorado</h3>
+                    <p>Av. Aviacion 321, Cerro Colorado, Arequipa</p>
+                    <p class="telefono-sede">Tel: (054) 000-004</p>
+                    <a href="#" class="btn-comprar">Como llegar</a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TABLA DE HORARIOS POR SEDE ===== -->
+    <section class="sedes-tabla">
+        <h2>Horario general por sede</h2>
+
+        <div class="tabla-responsive">
+            <table class="tabla-datos">
+                <caption>Horario de atencion por sede - dias y horas</caption>
+                <thead>
+                <tr>
+                    <th scope="col">Sede</th>
+                    <th scope="col">Lunes a jueves</th>
+                    <th scope="col">Viernes y sabado</th>
+                    <th scope="col">Domingo</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Cercado</td>
+                    <td>12:00 pm - 11:00 pm</td>
+                    <td>12:00 pm - 1:00 am</td>
+                    <td>11:00 am - 11:00 pm</td>
+                </tr>
+                <tr>
+                    <td>Yanahuara</td>
+                    <td>1:00 pm - 10:30 pm</td>
+                    <td>1:00 pm - 12:30 am</td>
+                    <td>11:30 am - 10:30 pm</td>
+                </tr>
+                <tr>
+                    <td>Cayma</td>
+                    <td>12:30 pm - 11:00 pm</td>
+                    <td>12:30 pm - 1:00 am</td>
+                    <td>11:00 am - 11:00 pm</td>
+                </tr>
+                <tr>
+                    <td>Cerro Colorado</td>
+                    <td>1:00 pm - 10:00 pm</td>
+                    <td>1:00 pm - 12:00 am</td>
+                    <td>12:00 pm - 10:00 pm</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+    <div class="footer-logo">
+        <img src="../File/IMAGE/logo-cinehub.png" alt="Logo CineHub">
+        <span>CineHub</span>
+    </div>
+
+    <div class="footer-col">
+        <a href="Sedes.html">Nuestras Sedes</a>
+        <a href="Horarios.html">Horarios y Precios</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="Blog.html">CineHub Blog</a>
+    </div>
+
+    <div class="footer-col">
+        <a href="Entradas.html">Entradas</a>
+        <a href="Contacto.html">Contacto</a>
+        <a href="#">Trabaja con nosotros</a>
+        <a href="#">Terminos y Condiciones</a>
+    </div>
+
+    <div class="footer-redes">
+        <img src="../File/IMAGE/RedesSociales/Facebook.png" alt="Facebook">
+        <img src="../File/IMAGE/RedesSociales/Instagram.png" alt="Instagram">
+        <img src="../File/IMAGE/RedesSociales/X.png" alt="X">
+    </div>
+
+    <p class="footer-copy">&copy; CineHub. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+/* ===================== HERO DE CONTACTO ===================== */
+.contacto-hero {
+    text-align: center;
+    padding: 50px 40px 20px;
+}
+
+.contacto-hero h1 {
+    color: var(--dorado);
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.contacto-hero p {
+    color: var(--plateado);
+    margin-top: 8px;
+}
+
+/* ===================== GRID PRINCIPAL: formulario + info ===================== */
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* ===================== TARJETA FORMULARIO ===================== */
+.tarjeta-formulario {
+    background-color: var(--gris-tarjeta);
+    border-radius: 8px;
+    padding: 25px;
+    border: 1px solid var(--dorado-suave);
+}
+
+.tarjeta-formulario h2 {
+    color: var(--dorado);
+    margin-bottom: 15px;
+}
+
+.tarjeta-formulario label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    color: var(--plateado);
+}
+
+.tarjeta-formulario input,
+.tarjeta-formulario select,
+.tarjeta-formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-size: 0.9rem;
+}
+
+.tarjeta-formulario input:focus,
+.tarjeta-formulario select:focus,
+.tarjeta-formulario textarea:focus {
+    outline: none;
+    border-color: var(--dorado);
+}
+
+.tarjeta-formulario input[disabled] {
+    background-color: #1a1a1a;
+    color: #777;
+    cursor: not-allowed;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--dorado);
+    color: var(--negro);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: var(--dorado-suave);
+}
+
+/* ===================== TARJETA INFO ===================== */
+.tarjeta-info {
+    background-color: var(--gris-tarjeta);
+    border-radius: 8px;
+    padding: 25px;
+    border: 1px solid var(--dorado-suave);
+}
+
+.tarjeta-info h2 {
+    color: var(--dorado);
+    margin-bottom: 15px;
+}
+
+.lista-info {
+    list-style: none;
+    color: var(--plateado);
+    margin-bottom: 20px;
+}
+
+.lista-info li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+/* Mapa: el iframe ahora llena todo el contenedor, antes quedaba flotando sin tamaño */
+.mapa-placeholder {
+    width: 100%;
+    height: 220px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.mapa-placeholder iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* Redes sociales dentro de la tarjeta de info: alineadas a la izquierda, no centradas como en el footer */
+.tarjeta-info .footer-redes {
+    justify-content: flex-start;
+}
+
+/* ===================== MULTIMEDIA ===================== */
+.contacto-multimedia {
+    text-align: center;
+}
+
+.contacto-multimedia h2 {
+    color: var(--dorado);
+    margin-bottom: 10px;
+}
+
+.nota-audio {
+    color: var(--plateado);
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+}
+
+/* Audio centrado con ancho maximo para que no se estire en pantallas grandes */
+.contacto-multimedia audio {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,112 @@
+/* ===================== HERO DE CARTELERA: video de fondo ===================== */
+.cartelera-hero {
+    position: relative;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cartelera-hero .hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Capa oscura sobre el video para que el texto se lea bien (antes el titulo quedaba pegado al video sin contraste) */
+.cartelera-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+}
+
+.cartelera-hero h1 {
+    position: relative;
+    color: var(--dorado);
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.cartelera-hero p {
+    position: relative;
+    color: var(--plateado);
+    margin-top: 8px;
+}
+
+/* ===================== SECCION TABLA ===================== */
+.cartelera-tabla h2 {
+    color: var(--plateado);
+    margin-bottom: 15px;
+}
+
+.tabla-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-datos {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--gris-tarjeta);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabla-datos caption {
+    caption-side: top;
+    text-align: left;
+    color: var(--dorado);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.tabla-datos thead {
+    background-color: var(--negro-suave);
+}
+
+.tabla-datos th {
+    color: var(--dorado);
+    text-align: left;
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--dorado-suave);
+}
+
+.tabla-datos td {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    color: var(--blanco);
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.tabla-datos tbody tr:hover {
+    background-color: #262626;
+}
+
+.tabla-datos tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 600px) {
+    .cartelera-hero {
+        height: 260px;
+    }
+
+    .tabla-datos {
+        font-size: 0.8rem;
+    }
+
+    .tabla-datos th,
+    .tabla-datos td {
+        padding: 8px 10px;
+    }
+}

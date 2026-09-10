@@ -1,0 +1,286 @@
+/* ===================== VARIABLES / RESET ===================== */
+:root {
+    --negro: #0a0a0a;
+    --negro-suave: #161616;
+    --gris-tarjeta: #1f1f1f;
+    --dorado: #d4af37;
+    --dorado-suave: #c9a227;
+    --plateado: #c0c0c0;
+    --blanco: #f5f5f5;
+    --font-principal: "Segoe UI", Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-family: var(--font-principal);
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.dorado {
+    color: var(--dorado);
+}
+
+/* Label invisible pero leible por lectores de pantalla (accesibilidad) */
+.visualmente-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* ===================== HEADER (compartido en todas las paginas) ===================== */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: var(--negro);
+    border-bottom: 1px solid var(--dorado-suave);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Logo: imagen circular posicionada sobre el texto */
+.logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    border: 1px solid var(--dorado);
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--dorado);
+    position: relative;
+    left: 160px;
+}
+
+/* Menu de navegacion */
+.nav-menu ul {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: var(--blanco);
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.activo {
+    color: var(--dorado);
+}
+
+/* Boton de login */
+.btn-login {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid var(--plateado);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.btn-login img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+}
+
+.btn-login:hover {
+    border-color: var(--dorado);
+    color: var(--dorado);
+}
+
+/* ===================== TITULOS DE SECCION (compartido) ===================== */
+main section {
+    padding: 40px;
+}
+
+main section h2 {
+    color: var(--plateado);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* ===================== BOTONES BASE (compartido) ===================== */
+.btn-cta {
+    background-color: var(--dorado);
+    color: var(--negro);
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.btn-cta:hover {
+    background-color: var(--dorado-suave);
+}
+
+.btn-comprar {
+    display: inline-block;
+    background-color: var(--dorado);
+    color: var(--negro);
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.btn-comprar:hover {
+    background-color: var(--dorado-suave);
+}
+
+/* ===================== TARJETA DE PELICULA (base compartida) ===================== */
+/* Ajustes especificos de imagen/altura de portada se agregan en el CSS de cada pagina */
+.grid-peliculas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card-pelicula {
+    background-color: var(--gris-tarjeta);
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.card-pelicula:hover {
+    border-color: var(--dorado);
+}
+
+.card-pelicula h3 {
+    font-size: 1rem;
+    margin: 8px 0 4px;
+}
+
+.card-pelicula .meta {
+    font-size: 0.8rem;
+    color: var(--plateado);
+    margin-bottom: 10px;
+}
+
+/* ===================== FOOTER (compartido) ===================== */
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 20px;
+    padding: 40px;
+    background-color: var(--negro-suave);
+    border-top: 1px solid var(--dorado-suave);
+    font-size: 0.9rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    color: var(--plateado);
+}
+
+.footer-logo span {
+    font-size: 1.5rem;
+    color: gold;
+    font-weight: bold;
+}
+
+.footer-logo img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 1px solid var(--dorado);
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: var(--plateado);
+}
+
+.footer-col a:hover {
+    color: var(--dorado);
+}
+
+/* Iconos de redes sociales */
+.footer-redes {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-redes img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.footer-redes img:hover {
+    transform: scale(1.1);
+}
+
+.footer-copy {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #777;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+/* ===================== RESPONSIVE (compartido) ===================== */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-menu ul {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}
