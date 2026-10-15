@@ -1,0 +1,554 @@
+/* =========================================
+   CINEHUB - PÁGINA DE SALAS
+   Archivo: CSSSalas.css
+========================================= */
+
+
+/* HERO */
+
+.salas-hero {
+    position: relative;
+    min-height: 530px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    background:
+            linear-gradient(
+                    90deg,
+                    rgba(10, 10, 10, 0.97) 0%,
+                    rgba(10, 10, 10, 0.82) 48%,
+                    rgba(10, 10, 10, 0.25) 100%
+            ),
+            url("/colocar imagen en esta parte");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.salas-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, var(--negro), transparent 40%);
+}
+
+.salas-hero-contenido {
+    position: relative;
+    z-index: 2;
+    padding-top: 65px;
+    padding-bottom: 80px;
+}
+
+.etiqueta-superior {
+    display: inline-block;
+    color: var(--dorado);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.salas-hero h1 {
+    color: var(--blanco);
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1.15;
+    max-width: 720px;
+    margin-bottom: 22px;
+}
+
+.salas-hero h1 span {
+    color: var(--dorado);
+}
+
+.salas-hero p {
+    max-width: 540px;
+    color: var(--plateado);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+
+/* INTRODUCCIÓN */
+
+.salas-introduccion {
+    padding: 95px 0;
+    background: var(--negro);
+}
+
+.introduccion-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.subtitulo {
+    display: block;
+    color: var(--dorado);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    margin-bottom: 16px;
+}
+
+.introduccion-texto h2,
+.seccion-encabezado h2 {
+    color: var(--blanco);
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.introduccion-texto p {
+    color: var(--plateado);
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.introduccion-imagen {
+    position: relative;
+    height: 400px;
+}
+
+.introduccion-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.imagen-etiqueta {
+    position: absolute;
+    left: -20px;
+    bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 22px;
+    background: var(--dorado);
+    color: var(--negro);
+    border-radius: 7px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.imagen-etiqueta span {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.imagen-etiqueta p {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* TIPOS DE SALAS */
+
+.tipos-salas {
+    padding: 95px 0;
+    background: var(--negro-suave);
+}
+
+.seccion-encabezado {
+    margin-bottom: 45px;
+}
+
+.seccion-encabezado p {
+    color: var(--plateado);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.salas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+
+/* TARJETAS DE SALAS */
+
+.sala-card {
+    background: var(--gris-tarjeta);
+    border: 1px solid rgba(212, 175, 55, 0.07);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.35s;
+}
+
+.sala-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--dorado);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.sala-destacada {
+    border-color: var(--dorado);
+    box-shadow: 0 0 0 1px var(--dorado), 0 16px 40px rgba(212, 175, 55, 0.12);
+}
+
+.sala-imagen {
+    position: relative;
+    height: 215px;
+    overflow: hidden;
+}
+
+.sala-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.sala-card:hover .sala-imagen img {
+    transform: scale(1.08);
+}
+
+.sala-numero {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 10, 10, 0.85);
+    color: var(--dorado);
+    font-weight: 900;
+    border-radius: 50%;
+    border: 1px solid var(--dorado-suave);
+}
+
+.sala-insignia {
+    position: absolute;
+    top: 16px;
+    right: 14px;
+    padding: 7px 10px;
+    background: var(--dorado);
+    color: var(--negro);
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border-radius: 3px;
+}
+
+.sala-informacion {
+    padding: 25px;
+}
+
+.sala-categoria {
+    color: var(--dorado);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.sala-informacion h3 {
+    color: var(--blanco);
+    font-size: 21px;
+    margin: 11px 0;
+}
+
+.sala-informacion > p {
+    color: var(--plateado);
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 68px;
+}
+
+.sala-caracteristicas {
+    margin: 20px 0;
+}
+
+.sala-caracteristicas li {
+    color: #d5d5d5;
+    font-size: 12px;
+    margin-bottom: 11px;
+    padding-left: 21px;
+    position: relative;
+}
+
+.sala-caracteristicas li::before {
+    content: "✓";
+    color: var(--dorado);
+    position: absolute;
+    left: 0;
+    font-weight: 900;
+}
+
+.sala-enlace {
+    display: inline-block;
+    color: var(--dorado);
+    font-size: 13px;
+    font-weight: 800;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.sala-enlace span {
+    margin-left: 6px;
+    font-size: 17px;
+}
+
+.sala-enlace:hover {
+    border-color: var(--dorado);
+    color: var(--blanco);
+}
+
+
+/* COMPARATIVA DE SALAS (TABLA) */
+
+.comparativa-salas {
+    margin-top: 50px;
+    padding: 30px;
+    background: var(--gris-tarjeta);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: 12px;
+}
+
+.comparativa-salas .seccion-encabezado {
+    margin-bottom: 25px;
+}
+
+.tabla-salas {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-salas caption {
+    caption-side: top;
+    text-align: left;
+    padding-bottom: 14px;
+    color: var(--dorado);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.tabla-salas thead th {
+    padding: 14px 16px;
+    text-align: left;
+    color: var(--blanco);
+    font-size: 13px;
+    font-weight: 800;
+    background: var(--gris-hover);
+    white-space: nowrap;
+}
+
+.tabla-salas thead th:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.tabla-salas thead th:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.tabla-salas tbody td {
+    padding: 14px 16px;
+    color: var(--plateado);
+    font-size: 13px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.tabla-salas tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-salas tbody tr:hover td {
+    color: var(--blanco);
+    background: rgba(212, 175, 55, 0.05);
+}
+
+.tabla-salas tbody td:first-child {
+    color: var(--dorado);
+    font-weight: 700;
+}
+
+
+/* EXPERIENCIA TEMÁTICA */
+
+.experiencia-tematica {
+    position: relative;
+    padding: 105px 0;
+    background: var(--negro);
+}
+
+.experiencia-contenido {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.experiencia-texto h2 {
+    color: var(--blanco);
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.18;
+    margin-bottom: 22px;
+}
+
+.experiencia-texto h2 span {
+    color: var(--dorado);
+}
+
+.experiencia-texto p {
+    color: var(--plateado);
+    font-size: 14px;
+    line-height: 1.9;
+    max-width: 480px;
+    margin-bottom: 28px;
+}
+
+.experiencia-visual {
+    height: 420px;
+    position: relative;
+}
+
+.experiencia-visual::before {
+    content: "";
+    position: absolute;
+    inset: 15px -15px -15px 15px;
+    border: 2px solid var(--dorado);
+    border-radius: 10px;
+}
+
+.experiencia-visual img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* LLAMADO A LA ACCIÓN */
+
+.salas-cta {
+    padding: 95px 20px;
+    text-align: center;
+
+    background:
+            linear-gradient(
+                    rgba(10, 10, 10, 0.93),
+                    rgba(10, 10, 10, 0.93)
+            ),
+            url("/colocar imagen en esta parte");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.salas-cta h2 {
+    color: var(--blanco);
+    font-size: clamp(28px, 4vw, 42px);
+    margin-bottom: 17px;
+}
+
+.salas-cta p {
+    color: var(--plateado);
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 auto 28px;
+    max-width: 580px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .salas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .introduccion-contenido,
+    .experiencia-contenido {
+        gap: 38px;
+    }
+
+    .introduccion-imagen,
+    .experiencia-visual {
+        height: 330px;
+    }
+
+    .tabla-salas {
+        display: block;
+        overflow-x: auto;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .salas-hero {
+        min-height: 470px;
+        background-position: 60% center;
+    }
+
+    .salas-introduccion,
+    .tipos-salas,
+    .experiencia-tematica {
+        padding: 65px 0;
+    }
+
+    .introduccion-contenido,
+    .experiencia-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .introduccion-imagen {
+        height: 280px;
+    }
+
+    .imagen-etiqueta {
+        left: 10px;
+        bottom: 15px;
+    }
+
+    .salas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sala-informacion > p {
+        min-height: auto;
+    }
+
+    .experiencia-visual {
+        height: 280px;
+    }
+
+    .salas-cta {
+        padding: 70px 15px;
+    }
+
+    .comparativa-salas {
+        padding: 20px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .salas-hero h1 {
+        font-size: 34px;
+    }
+
+    .sala-informacion {
+        padding: 20px;
+    }
+
+    .imagen-etiqueta {
+        padding: 12px 15px;
+    }
+
+}

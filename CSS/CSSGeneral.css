@@ -1,0 +1,845 @@
+/* =========================================================
+        CINEHUB - ESTILOS GENERALES
+        Archivo: CSSGeneral.css
+        HTML5 + CSS3
+========================================================= */
+
+/* =========================================================
+        VARIABLES
+========================================================= */
+:root {
+    --negro: #0a0a0a;
+    --negro-suave: #111111;
+    --negro-header: rgba(10, 10, 10, 0.96);
+
+    --gris-tarjeta: #1f1f1f;
+    --gris-hover: #292929;
+
+    --dorado: #d4af37;
+    --dorado-claro: #f2cf63;
+    --dorado-suave: #c9a227;
+
+    --plateado: #c0c0c0;
+    --blanco: #f5f5f5;
+
+    --borde-dorado: rgba(212, 175, 55, 0.45);
+
+    --font-principal: "Segoe UI", Arial, sans-serif;
+
+    --transicion: 0.3s ease;
+
+    /* TAMAÑO UNIFORME PARA TODAS LAS IMÁGENES CIRCULARES */
+    --tamano-icono: 40px;
+    --tamano-logo-header: 90px;
+    --tamano-logo-footer: 60px;
+}
+
+/* =========================================================
+   RESET GENERAL
+========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-principal);
+    background-color: var(--negro);
+    color: var(--blanco);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* =========================================================
+   CONTENEDOR GENERAL
+========================================================= */
+.contenedor {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+/* =========================================================
+   UTILIDADES
+========================================================= */
+.dorado {
+    color: var(--dorado);
+}
+
+.visualmente-oculto {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+.encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 86px;
+    background: var(--negro-header);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.45);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+/* =========================================================
+   CONTENIDO DEL HEADER
+========================================================= */
+.encabezado-contenido {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+/* =========================================================
+   LOGO DEL HEADER — CÍRCULO PERFECTO SIN ESPACIO
+========================================================= */
+.encabezado .logo {
+    position: relative;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 100%;
+    z-index: 1002;
+}
+
+.encabezado .logo-simbolo {
+    width: var(--tamano-logo-header);
+    height: var(--tamano-logo-header);
+    flex: 0 0 var(--tamano-logo-header);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid var(--dorado);
+    background-color: var(--negro);
+    box-shadow:
+            0 0 0 4px rgba(10, 10, 10, 0.95),
+            0 0 18px rgba(212, 175, 55, 0.25);
+    transform: translateY(10px);
+    transition:
+            transform var(--transicion),
+            box-shadow var(--transicion);
+}
+
+.encabezado .logo-simbolo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+}
+
+.encabezado .logo:hover .logo-simbolo {
+    transform: translateY(10px) scale(1.03);
+    box-shadow:
+            0 0 0 4px rgba(10, 10, 10, 0.95),
+            0 0 25px rgba(212, 175, 55, 0.45);
+}
+
+/* =========================================================
+   TEXTO DEL LOGO DEL HEADER
+========================================================= */
+.encabezado .logo-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.encabezado .logo-texto h1 {
+    color: var(--dorado);
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.encabezado .logo-texto span {
+    display: block;
+    margin-top: 5px;
+    color: var(--plateado);
+    font-size: 0.58rem;
+    letter-spacing: 1.4px;
+    line-height: 1.2;
+}
+
+/* =========================================================
+   NAVEGACIÓN
+========================================================= */
+.navegacion {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.8rem, 1.4vw, 1.5rem);
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.menu a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 0;
+    color: var(--blanco);
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    transition:
+            color var(--transicion),
+            transform var(--transicion);
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--dorado), var(--dorado-claro));
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform var(--transicion);
+}
+
+.menu a:hover,
+.menu a.enlace-activo {
+    color: var(--dorado);
+}
+
+.menu a:hover::after,
+.menu a.enlace-activo::after {
+    transform: scaleX(1);
+}
+
+/* =========================================================
+   ACCIONES DEL HEADER
+========================================================= */
+.acciones-encabezado {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+/* =========================================================
+   BOTONES DE ICONOS — BUSCAR / CUENTA
+========================================================= */
+.accion-icono {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background:
+            linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.015));
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.05),
+            0 4px 15px rgba(0, 0, 0, 0.25);
+    transition:
+            transform var(--transicion),
+            background var(--transicion),
+            border-color var(--transicion),
+            box-shadow var(--transicion);
+}
+
+.accion-icono svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: var(--plateado);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition:
+            stroke var(--transicion),
+            transform var(--transicion);
+}
+
+.accion-icono:hover {
+    transform: translateY(-3px);
+    background:
+            linear-gradient(145deg, rgba(212, 175, 55, 0.22), rgba(212, 175, 55, 0.06));
+    border-color: var(--dorado);
+    box-shadow:
+            0 0 12px rgba(212, 175, 55, 0.35),
+            0 0 28px rgba(212, 175, 55, 0.12);
+}
+
+.accion-icono:hover svg {
+    stroke: var(--dorado-claro);
+    transform: scale(1.08);
+}
+
+/* =========================================================
+   BOTÓN COMPRAR ENTRADAS
+========================================================= */
+.boton-entradas {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.75rem 1.45rem;
+    border-radius: 999px;
+    background:
+            linear-gradient(135deg, #b8860b 0%, var(--dorado) 45%, var(--dorado-claro) 100%);
+    color: var(--negro);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    box-shadow: 0 5px 18px rgba(212, 175, 55, 0.28);
+    transition:
+            transform var(--transicion),
+            box-shadow var(--transicion),
+            filter var(--transicion);
+}
+
+.boton-entradas:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.08);
+    box-shadow:
+            0 8px 25px rgba(212, 175, 55, 0.45),
+            0 0 20px rgba(212, 175, 55, 0.18);
+}
+
+/* =========================================================
+   BOTONES GENERALES
+========================================================= */
+.btn-cta,
+.boton-principal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--dorado), var(--dorado-claro));
+    color: var(--negro);
+    font-weight: 800;
+    padding: 14px 26px;
+    border-radius: 7px;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    transition:
+            transform var(--transicion),
+            box-shadow var(--transicion),
+            filter var(--transicion);
+}
+
+.btn-cta:hover,
+.boton-principal:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+/* =========================================================
+   BOTÓN SECUNDARIO
+========================================================= */
+.boton-secundario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 26px;
+    color: var(--blanco);
+    border: 1px solid rgba(192, 192, 192, 0.65);
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 7px;
+    transition:
+            border-color var(--transicion),
+            color var(--transicion),
+            background var(--transicion),
+            transform var(--transicion);
+}
+
+.boton-secundario:hover {
+    border-color: var(--dorado);
+    color: var(--dorado);
+    background: rgba(212, 175, 55, 0.06);
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   TEXTOS COMPARTIDOS
+========================================================= */
+.texto-superior {
+    display: inline-block;
+    color: var(--dorado);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+/* =========================================================
+   BOTÓN COMPRAR
+========================================================= */
+.btn-comprar {
+    display: inline-block;
+    background-color: var(--dorado);
+    color: var(--negro);
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition:
+            background-color var(--transicion),
+            transform var(--transicion);
+}
+
+.btn-comprar:hover {
+    background-color: var(--dorado-suave);
+    transform: translateY(-2px);
+}
+
+/* =========================================================
+   TARJETAS DE PELÍCULAS - BASE
+========================================================= */
+.grid-peliculas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card-pelicula {
+    background-color: var(--gris-tarjeta);
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid transparent;
+    transition:
+            border-color var(--transicion),
+            transform var(--transicion),
+            box-shadow var(--transicion);
+}
+
+.card-pelicula:hover {
+    border-color: var(--dorado);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.card-pelicula h3 {
+    font-size: 1rem;
+    margin: 8px 0 4px;
+}
+
+.card-pelicula .meta {
+    font-size: 0.8rem;
+    color: var(--plateado);
+    margin-bottom: 10px;
+}
+
+/* =========================================================
+   TÍTULOS DE SECCIÓN
+========================================================= */
+main section {
+    padding: 40px;
+}
+
+main section h2 {
+    color: var(--plateado);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+.pie-pagina {
+    background-color: var(--negro-suave);
+    border-top: 1px solid var(--dorado-suave);
+    padding-top: 50px;
+}
+
+/* =========================================================
+   CONTENIDO FOOTER
+========================================================= */
+.footer-contenido {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 35px;
+    padding-bottom: 35px;
+}
+
+/* =========================================================
+   LOGO DEL FOOTER — CÍRCULO PERFECTO SIN ESPACIO
+========================================================= */
+.logo-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    width: fit-content;
+}
+
+.logo-footer .logo-simbolo {
+    width: var(--tamano-logo-footer);
+    height: var(--tamano-logo-footer);
+    flex: 0 0 var(--tamano-logo-footer);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid var(--dorado);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.18);
+}
+
+.logo-footer .logo-simbolo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+}
+
+.logo-footer:hover .logo-simbolo {
+    transform: scale(1.04);
+    box-shadow: 0 0 22px rgba(212, 175, 55, 0.3);
+}
+
+.logo-footer .logo-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.logo-footer .logo-texto h2 {
+    color: var(--dorado);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+.logo-footer .logo-texto span {
+    display: block;
+    margin-top: 4px;
+    color: var(--plateado);
+    font-size: 0.6rem;
+    letter-spacing: 1.3px;
+}
+
+/* =========================================================
+   MARCA FOOTER
+========================================================= */
+.footer-marca p {
+    color: var(--plateado);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    max-width: 280px;
+}
+
+/* =========================================================
+   COLUMNAS FOOTER
+========================================================= */
+.footer-columna h3 {
+    color: var(--blanco);
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+.footer-columna a {
+    display: block;
+    color: var(--plateado);
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    transition:
+            color var(--transicion),
+            transform var(--transicion);
+}
+
+.footer-columna a:hover {
+    color: var(--dorado);
+    transform: translateX(3px);
+}
+
+/* =========================================================
+   REDES SOCIALES — CÍRCULOS UNIFORMES SIN ESPACIO
+========================================================= */
+.footer-redes h3 {
+    color: var(--blanco);
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.footer-redes p {
+    color: var(--plateado);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.redes-lista {
+    display: flex;
+    gap: 10px;
+}
+
+/* Contenedor circular — SIN relleno interno */
+.redes-lista a {
+    width: var(--tamano-icono);
+    height: var(--tamano-icono);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--dorado-suave);
+    background: rgba(255, 255, 255, 0.02);
+    padding: 0; /* ❌ SIN relleno = sin espacio */
+    margin: 0;
+    overflow: hidden;
+    transition:
+            background-color var(--transicion),
+            border-color var(--transicion),
+            transform var(--transicion),
+            box-shadow var(--transicion);
+}
+
+/* Imagen — llena TODO el círculo */
+.redes-lista a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* rellena sin dejar huecos */
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+}
+
+.redes-lista a:hover {
+    background-color: var(--dorado);
+    border-color: var(--dorado);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.25);
+}
+
+/* =========================================================
+   FOOTER INFERIOR
+========================================================= */
+.footer-inferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    flex-wrap: wrap;
+}
+
+.footer-inferior p {
+    color: #777;
+    font-size: 0.8rem;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-legal a {
+    color: #777;
+    font-size: 0.8rem;
+    transition: color var(--transicion);
+}
+
+.footer-legal a:hover {
+    color: var(--dorado);
+}
+
+/* =========================================================
+   RESPONSIVE — TABLETS / LAPTOPS PEQUEÑAS
+========================================================= */
+@media (max-width: 1250px) {
+    .contenedor {
+        padding: 0 22px;
+    }
+    .encabezado-contenido {
+        gap: 18px;
+    }
+    .encabezado .logo-simbolo {
+        width: 85px;
+        height: 85px;
+        flex-basis: 85px;
+    }
+    .encabezado .logo-texto h1 {
+        font-size: 1.15rem;
+    }
+    .encabezado .logo-texto span {
+        font-size: 0.5rem;
+    }
+    .menu {
+        gap: 0.8rem;
+    }
+    .menu a {
+        font-size: 0.78rem;
+    }
+    .boton-entradas {
+        padding-left: 1.1rem;
+        padding-right: 1.1rem;
+        font-size: 0.75rem;
+    }
+}
+
+/* =========================================================
+   TABLETS
+========================================================= */
+@media (max-width: 1050px) {
+    .encabezado {
+        height: 78px;
+    }
+    .navegacion {
+        display: none;
+    }
+    .encabezado-contenido {
+        justify-content: space-between;
+    }
+    .encabezado .logo-simbolo {
+        width: 75px;
+        height: 75px;
+        flex-basis: 75px;
+    }
+    .footer-contenido {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* =========================================================
+   MÓVILES
+========================================================= */
+@media (max-width: 600px) {
+    .contenedor {
+        padding: 0 16px;
+    }
+    .encabezado {
+        height: 70px;
+    }
+    .encabezado .logo {
+        gap: 10px;
+    }
+    .encabezado .logo-simbolo {
+        width: 65px;
+        height: 65px;
+        flex-basis: 65px;
+        transform: none;
+    }
+    .encabezado .logo-simbolo img {
+        transform: translateY(5px);
+    }
+    .encabezado .logo-texto h1 {
+        font-size: 1rem;
+    }
+    .encabezado .logo-texto span {
+        display: none;
+    }
+    .acciones-encabezado {
+        gap: 7px;
+    }
+    .accion-icono {
+        width: 38px;
+        height: 38px;
+    }
+    .accion-icono svg {
+        width: 17px;
+        height: 17px;
+    }
+    .boton-entradas {
+        min-height: 38px;
+        padding: 0.55rem 0.85rem;
+        font-size: 0.7rem;
+    }
+    .footer-contenido {
+        grid-template-columns: 1fr;
+    }
+    .footer-inferior {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-legal {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    main section {
+        padding: 30px 18px;
+    }
+}
+
+/* =========================================================
+   MÓVILES MUY PEQUEÑOS
+========================================================= */
+@media (max-width: 400px) {
+    .encabezado .logo-texto {
+        display: none;
+    }
+    .encabezado .logo-simbolo {
+        width: 55px;
+        height: 55px;
+        flex-basis: 55px;
+    }
+    .accion-icono {
+        width: 35px;
+        height: 35px;
+    }
+    .boton-entradas {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.65rem;
+    }
+}

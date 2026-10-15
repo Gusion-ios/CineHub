@@ -1,0 +1,493 @@
+/* =========================================
+   CINEHUB - PÁGINA DE INICIO
+   Archivo: CSSInicio.css
+========================================= */
+
+/* =========================================
+   PORTADA CON VIDEO DE FONDO
+========================================= */
+.portada {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--negro-suave);
+}
+
+.portada-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.portada-degradado {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+            linear-gradient(
+                    to right,
+                    rgba(10, 10, 10, 0.95) 0%,
+                    rgba(10, 10, 10, 0.72) 45%,
+                    rgba(10, 10, 10, 0.3) 100%
+            ),
+            linear-gradient(
+                    to top,
+                    rgba(10, 10, 10, 0.9) 0%,
+                    transparent 40%
+            );
+}
+
+.portada-contenido {
+    position: relative;
+    z-index: 2;
+    padding: 70px 0;
+}
+
+.portada-informacion {
+    max-width: 640px;
+}
+
+.portada-etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--dorado);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.punto-etiqueta {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--dorado);
+}
+
+.portada-informacion h2 {
+    color: var(--blanco);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.portada-informacion h3 {
+    color: var(--dorado);
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.portada-informacion p {
+    color: var(--plateado);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    max-width: 500px;
+    margin-bottom: 28px;
+}
+
+.portada-botones {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.portada-indicadores {
+    display: flex;
+    gap: 8px;
+}
+
+.indicador {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: rgba(245, 245, 245, 0.25);
+}
+
+.indicador.activo {
+    background-color: var(--dorado);
+    width: 22px;
+    border-radius: 5px;
+}
+
+.portada-identificador {
+    position: absolute;
+    right: 55px;
+    bottom: 90px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.identificador-linea {
+    width: 1px;
+    height: 55px;
+    background-color: var(--dorado-suave);
+}
+
+.portada-identificador strong {
+    display: block;
+    color: var(--plateado);
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 4px;
+}
+
+.portada-identificador span {
+    color: var(--dorado);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.portada-desplazamiento {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: var(--plateado);
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+}
+
+.flecha-desplazamiento {
+    font-size: 1rem;
+    color: var(--dorado);
+}
+
+/* =========================================
+   CATEGORÍAS
+========================================= */
+.seccion-categorias {
+    padding: 20px 40px;
+    background-color: var(--negro);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.categorias-lista {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    overflow-x: auto;
+}
+
+.categoria {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border: 1px solid var(--dorado-suave);
+    border-radius: 30px;
+    color: var(--plateado);
+    font-size: 0.85rem;
+    white-space: nowrap;
+    transition: 0.3s;
+    flex-shrink: 0;
+}
+
+.categoria-icono {
+    width: 32px;
+    height: auto;
+    object-fit: contain;
+    filter: invert(100%);
+    transition: filter 0.3s ease;
+}
+
+.categoria:hover .categoria-icono {
+    filter: invert(0%);
+}
+
+.categoria:hover {
+    background-color: var(--dorado);
+    color: var(--negro);
+    border-color: var(--dorado);
+}
+
+.categoria-mas {
+    border-style: dashed;
+}
+
+/* =========================================
+   ENCABEZADOS DE SECCIÓN
+========================================= */
+.encabezado-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.titulo-seccion h2 {
+    color: var(--blanco);
+    font-size: 1.7rem;
+    margin-bottom: 8px;
+}
+
+.titulo-seccion p {
+    color: var(--plateado);
+    font-size: 0.85rem;
+}
+
+.enlace-ver-mas {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--dorado);
+    font-size: 0.85rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.enlace-ver-mas:hover {
+    gap: 14px;
+}
+
+/* =========================================
+   CARTELERA: tarjeta con póster + tráiler
+========================================= */
+.peliculas-lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.tarjeta-pelicula {
+    background-color: var(--gris-tarjeta);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.tarjeta-pelicula:hover {
+    border-color: var(--dorado);
+    transform: translateY(-6px);
+}
+
+.pelicula-imagen {
+    position: relative;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+}
+
+.pelicula-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.4s ease;
+}
+
+.pelicula-trailer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.tarjeta-pelicula:hover .pelicula-poster {
+    opacity: 0;
+}
+
+.tarjeta-pelicula:hover .pelicula-trailer {
+    opacity: 1;
+}
+
+.pelicula-etiqueta {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    padding: 6px 10px;
+    background-color: var(--dorado);
+    color: var(--negro);
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.pelicula-calificacion {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 6px 9px;
+    background-color: rgba(10, 10, 10, 0.85);
+    border: 1px solid var(--dorado-suave);
+    color: var(--dorado);
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.pelicula-informacion {
+    padding: 16px 18px;
+}
+
+.pelicula-informacion h3 {
+    color: var(--blanco);
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+}
+
+.pelicula-informacion p {
+    color: var(--plateado);
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+}
+
+.pelicula-duracion {
+    display: inline-block;
+    color: var(--plateado);
+    font-size: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 12px;
+    width: 100%;
+}
+
+/* =========================================
+   EXPERIENCIAS / PROMOCIONES
+========================================= */
+/* =========================================
+   EXPERIENCIAS / PROMOCIONES
+========================================= */
+.seccion-experiencias {
+    background-color: var(--negro-suave);
+}
+
+.promociones-lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.tarjeta-promocion {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--dorado-suave);
+    background-color: var(--gris-tarjeta);
+}
+
+.promocion-imagen {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.promocion-contenido {
+    padding: 20px;
+}
+
+.promocion-etiqueta {
+    display: inline-block;
+    color: var(--dorado);
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-promocion h3 {
+    color: var(--blanco);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.tarjeta-promocion p {
+    color: var(--plateado);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.promocion-contenido a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--dorado);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* =========================================
+   INVITACIÓN FINAL
+========================================= */
+.seccion-invitacion {
+    background-color: var(--negro);
+    border-top: 1px solid var(--dorado-suave);
+    padding: 70px 40px;
+}
+
+.invitacion-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.invitacion-contenido h2 {
+    color: var(--blanco);
+    font-size: 1.8rem;
+    line-height: 1.3;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 1050px) {
+    .peliculas-lista,
+    .promociones-lista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portada-identificador {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .peliculas-lista,
+    .promociones-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado-seccion {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .portada-botones {
+        flex-direction: column;
+    }
+
+    .invitacion-contenido {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .seccion-categorias,
+    main section {
+        padding: 25px 20px;
+    }
+}

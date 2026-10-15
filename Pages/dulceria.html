@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre los productos, bebidas y combos de la dulcería CineHub.">
+    <title>Dulcería | CineHub</title>
+    <link rel="stylesheet" href="../CSS/CSSGeneral.css">
+    <link rel="stylesheet" href="../CSS/CSSDulceria.css">
+</head>
+<body>
+<audio id="audio-fondo" src="../Recursos/Audio/Dulceria/PianoFondo.mp3" autoplay loop preload="auto">
+    Tu navegador no soporta el elemento de audio.
+</audio>
+
+<header class="encabezado">
+    <div class="contenedor encabezado-contenido">
+        <a href="../index.html" class="logo">
+            <div class="logo-simbolo">
+                <img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub">
+            </div>
+            <div class="logo-texto">
+                <h1>CINEHUB</h1>
+                <span>TODO EL CINE. EN UN SOLO LUGAR.</span>
+            </div>
+        </a>
+        <nav class="navegacion" aria-label="Navegación principal">
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="cartelera.html">Cartelera</a></li>
+                <li><a href="estrenos.html">Estrenos</a></li>
+                <li><a href="peliculas.html">Películas</a></li>
+                <li><a href="salas.html">Salas</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="dulceria.html" class="enlace-activo">Dulcería</a></li>
+                <li><a href="sedes.html">Sedes</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="acciones-encabezado">
+            <a href="cartelera.html" class="accion-icono" aria-label="Buscar películas">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+            </a>
+            <a href="contacto.html" class="accion-icono" aria-label="Mi cuenta">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"></path></svg>
+            </a>
+            <a href="cartelera.html" class="boton-entradas">Comprar entradas</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="dulceria-hero">
+        <div class="dulceria-hero-video">
+            <video src="../Recursos/Videos/Dulceria/Bebida.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="dulceria-hero-overlay"></div>
+        <div class="contenedor dulceria-hero-contenido">
+            <span class="dulceria-etiqueta">EL SABOR DE UNA GRAN EXPERIENCIA</span>
+            <h1>
+                Tu película favorita<br>
+                merece un <span>gran combo.</span>
+            </h1>
+            <p>
+                Descubre nuestra propuesta de productos,
+                bebidas y deliciosos acompañamientos para
+                disfrutar cada momento frente a la pantalla.
+            </p>
+            <a href="#productos" class="dulceria-boton">Explorar productos</a>
+        </div>
+    </section>
+
+    <section class="dulceria-introduccion">
+        <div class="contenedor dulceria-intro-contenido">
+            <div class="dulceria-intro-texto">
+                <span class="dulceria-subtitulo">EL COMPLEMENTO PERFECTO</span>
+                <h2>Cada función<br>tiene su sabor</h2>
+                <p>
+                    Una buena película se disfruta todavía más
+                    cuando la acompañas con tus productos favoritos.
+                </p>
+                <p>
+                    Explora nuestra selección de canchita,
+                    bebidas, dulces y combos preparados para
+                    convertir cada función en un momento especial.
+                </p>
+                <a href="#combos" class="dulceria-enlace">Descubrir nuestros combos →</a>
+            </div>
+            <div class="dulceria-intro-imagen">
+                <img src="../Recursos/Imagenes/Dulceria/CanchitaBebida.png" alt="Canchita y bebidas para disfrutar una película">
+            </div>
+        </div>
+    </section>
+
+    <section class="dulceria-categorias" id="productos">
+        <div class="contenedor">
+            <div class="dulceria-encabezado">
+                <span class="dulceria-subtitulo">ENCUENTRA TUS FAVORITOS</span>
+                <h2>Explora nuestras categorías</h2>
+                <p>
+                    Diferentes opciones para acompañar
+                    tu próxima aventura cinematográfica.
+                </p>
+            </div>
+
+            <div class="categorias-grid">
+                <a href="#canchita" class="categoria-card">
+                    <div class="categoria-icono">
+                        <img src="../Recursos/Imagenes/Dulceria/PopCorn.png" alt="Canchita">
+                    </div>
+                    <h3>Canchita</h3>
+                    <span>Ver productos →</span>
+                </a>
+                <a href="#bebidas" class="categoria-card">
+                    <div class="categoria-icono">
+                        <img src="../Recursos/Imagenes/Dulceria/Bebidas.png" alt="Bebidas">
+                    </div>
+                    <h3>Bebidas</h3>
+                    <span>Ver productos →</span>
+                </a>
+                <a href="#dulces" class="categoria-card">
+                    <div class="categoria-icono">
+                        <img src="../Recursos/Imagenes/Dulceria/Bocaditos.png" alt="Dulces">
+                    </div>
+                    <h3>Dulces</h3>
+                    <span>Ver productos →</span>
+                </a>
+                <a href="#combos" class="categoria-card">
+                    <div class="categoria-icono">
+                        <img src="../Recursos/Imagenes/Dulceria/FamiliaCombo.png" alt="Combos">
+                    </div>
+                    <h3>Combos</h3>
+                    <span>Ver productos →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS: CANCHITA -->
+    <section class="productos-seccion" id="canchita">
+        <div class="contenedor">
+            <div class="productos-encabezado">
+                <div>
+                    <span class="dulceria-subtitulo">EL CLÁSICO DEL CINE</span>
+                    <h2>Nuestra canchita</h2>
+                    <p>El acompañamiento tradicional que nunca puede faltar.</p>
+                </div>
+            </div>
+
+            <div class="productos-grid">
+                <article class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="../Recursos/Imagenes/Dulceria/PopCornPequeño.png" alt="Canchita pequeña">
+                        <span class="producto-etiqueta">CLÁSICO</span>
+                    </div>
+                    <div class="producto-informacion">
+                        <span class="producto-categoria">CANCHITA</span>
+                        <h3>Canchita Pequeña</h3>
+                        <p>Una porción individual para acompañar tu película.</p>
+                        <div class="producto-pie">
+                            <strong>S/ 8.00</strong>
+                            <button type="button" class="producto-boton">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="../Recursos/Imagenes/Dulceria/PopCornMediano.png" alt="Canchita mediana">
+                        <span class="producto-etiqueta">POPULAR</span>
+                    </div>
+                    <div class="producto-informacion">
+                        <span class="producto-categoria">CANCHITA</span>
+                        <h3>Canchita Mediana</h3>
+                        <p>El tamaño ideal para disfrutar una función completa.</p>
+                        <div class="producto-pie">
+                            <strong>S/ 12.00</strong>
+                            <button type="button" class="producto-boton">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="../Recursos/Imagenes/Dulceria/PopCornGrande.png" alt="Canchita grande">
+                        <span class="producto-etiqueta">PARA COMPARTIR</span>
+                    </div>
+                    <div class="producto-informacion">
+                        <span class="producto-categoria">CANCHITA</span>
+                        <h3>Canchita Grande</h3>
+                        <p>Una porción generosa para compartir con tus acompañantes.</p>
+                        <div class="producto-pie">
+                            <strong>S/ 16.00</strong>
+                            <button type="button" class="producto-boton">+</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS: BEBIDAS -->
+    <section class="productos-seccion productos-alternos" id="bebidas">
+        <div class="contenedor">
+            <div class="productos-encabezado">
+                <div>
+                    <span class="dulceria-subtitulo">REFRESCA TU EXPERIENCIA</span>
+                    <h2>Nuestras bebidas</h2>
+                    <p>Acompaña tus momentos favoritos con algo refrescante.</p>
+                </div>
+            </div>
+
+            <div class="productos-grid">
+                <article class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="../Recursos/Imagenes/Dulceria/RefrescoPequeño.png" alt="Vaso de bebida gaseosa">
+                        <span class="producto-etiqueta">CLÁSICO</span>
+                    </div>
+                    <div class="producto-informacion">
+                        <span class="producto-categoria">BEBIDAS</span>
+                        <h3>Gaseosa Personal</h3>
+                        <p>Una bebida refrescante para disfrutar durante la función.</p>
+                        <div class="producto-pie">
+                            <strong>S/ 7.00</strong>
+                            <button type="button" class="producto-boton">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="../Recursos/Imagenes/Dulceria/RefrescoGrande.png" alt="Vaso grande de bebida">
+                        <span class="producto-etiqueta">POPULAR</span>
+                    </div>
+                    <div class="producto-informacion">
+                        <span class="producto-categoria">BEBIDAS</span>
+                        <h3>Gaseosa Grande</h3>
+                        <p>Más bebida para disfrutar de principio a fin.</p>
+                        <div class="producto-pie">
+                            <strong>S/ 10.00</strong>
+                            <button type="button" class="producto-boton">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="../Recursos/Imagenes/Dulceria/RefrescoAgua.png" alt="Botella de agua">
+                        <span class="producto-etiqueta">REFRESCANTE</span>
+                    </div>
+                    <div class="producto-informacion">
+                        <span class="producto-categoria">BEBIDAS</span>
+                        <h3>Agua Mineral</h3>
+                        <p>Una alternativa ligera para acompañar tu película.</p>
+                        <div class="producto-pie">
+                            <strong>S/ 5.00</strong>
+                            <button type="button" class="producto-boton">+</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS: DULCES -->
+    <section class="productos-seccion" id="dulces">
+        <div class="contenedor">
+            <div class="productos-encabezado">
+                <div>
+                    <span class="dulceria-subtitulo">UN TOQUE DULCE</span>
+                    <h2>Algo para endulzar tu función</h2>
+                    <p>Pequeños antojos para disfrutar durante cada historia.</p>
+                </div>
+            </div>
+
+            <div class="productos-grid">
+                <article class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="../Recursos/Imagenes/Dulceria/BocaditoChocolate.png" alt="Barra de chocolate">
+                    </div>
+                    <div class="producto-informacion">
+                        <span class="producto-categoria">DULCES</span>
+                        <h3>Chocolate</h3>
+                        <p>Un clásico dulce para disfrutar en cualquier momento.</p>
+                        <div class="producto-pie">
+                            <strong>S/ 6.00</strong>
+                            <button type="button" class="producto-boton">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="../Recursos/Imagenes/Dulceria/BocaditosGomitas.png" alt="Gomitas de diferentes sabores">
+                    </div>
+                    <div class="producto-informacion">
+                        <span class="producto-categoria">DULCES</span>
+                        <h3>Gomitas</h3>
+                        <p>Dulces y coloridas para compartir durante la película.</p>
+                        <div class="producto-pie">
+                            <strong>S/ 5.00</strong>
+                            <button type="button" class="producto-boton">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="../Recursos/Imagenes/Dulceria/BocaditosDulces.png" alt="Caramelos surtidos">
+                    </div>
+                    <div class="producto-informacion">
+                        <span class="producto-categoria">DULCES</span>
+                        <h3>Caramelos</h3>
+                        <p>Una selección de sabores para los amantes de lo dulce.</p>
+                        <div class="producto-pie">
+                            <strong>S/ 4.00</strong>
+                            <button type="button" class="producto-boton">+</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMBOS -->
+    <section class="combos-seccion" id="combos">
+        <div class="contenedor">
+            <div class="productos-encabezado">
+                <div>
+                    <span class="dulceria-subtitulo">LA COMBINACIÓN PERFECTA</span>
+                    <h2>Combos CineHub</h2>
+                    <p>Nuestras propuestas para disfrutar de una experiencia completa.</p>
+                </div>
+            </div>
+
+            <div class="combos-grid">
+                <article class="combo-card">
+                    <div class="combo-imagen">
+                        <img src="../Recursos/Imagenes/Dulceria/ComboPersonal.png" alt="Combo personal de canchita y bebida">
+                    </div>
+                    <div class="combo-contenido">
+                        <span class="combo-etiqueta">INDIVIDUAL</span>
+                        <h3>Combo Personal</h3>
+                        <p>Una canchita mediana y una bebida personal para disfrutar tu función.</p>
+                        <div class="combo-pie">
+                            <strong>S/ 17.00</strong>
+                            <button type="button">Elegir combo</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="combo-card combo-destacado">
+                    <div class="combo-imagen">
+                        <img src="../Recursos/Imagenes/Dulceria/ComboPareja.png" alt="Combo de canchita y bebidas para dos">
+                        <span class="combo-insignia">DESTACADO</span>
+                    </div>
+                    <div class="combo-contenido">
+                        <span class="combo-etiqueta">PARA DOS</span>
+                        <h3>Combo Pareja</h3>
+                        <p>Una canchita grande y dos bebidas para compartir una buena película.</p>
+                        <div class="combo-pie">
+                            <strong>S/ 28.00</strong>
+                            <button type="button">Elegir combo</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="combo-card">
+                    <div class="combo-imagen">
+                        <img src="../Recursos/Imagenes/Dulceria/FamiliaCombo.png" alt="Combo de dulcería para compartir en familia">
+                    </div>
+                    <div class="combo-contenido">
+                        <span class="combo-etiqueta">PARA COMPARTIR</span>
+                        <h3>Combo Familiar</h3>
+                        <p>Una combinación de canchita, bebidas y dulces para compartir.</p>
+                        <div class="combo-pie">
+                            <strong>S/ 42.00</strong>
+                            <button type="button">Elegir combo</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL CON VIDEO DE FONDO -->
+    <section class="dulceria-final">
+        <div class="dulceria-final-video">
+            <video src="../Recursos/Videos/Dulceria/VideoPromocion.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="dulceria-final-overlay"></div>
+        <div class="contenedor dulceria-final-contenido">
+            <span class="dulceria-subtitulo">PREPARA TU PRÓXIMA FUNCIÓN</span>
+            <h2>Una gran película.<br>Un combo perfecto.</h2>
+            <p>
+                Encuentra tu próxima película y prepárate
+                para disfrutar de una experiencia completa.
+            </p>
+            <a href="cartelera.html" class="dulceria-boton">Explorar cartelera</a>
+        </div>
+    </section>
+</main>
+
+<footer class="pie-pagina">
+    <div class="contenedor">
+        <div class="footer-contenido">
+            <div class="footer-marca">
+                <a href="../index.html" class="logo-footer">
+                    <div class="logo-simbolo"><img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub"></div>
+                    <div class="logo-texto"><h2>CINEHUB</h2><span>TODO EL CINE. EN UN SOLO LUGAR.</span></div>
+                </a>
+                <p>Creamos experiencias cinematográficas para que cada película se convierta en un recuerdo inolvidable.</p>
+            </div>
+            <div class="footer-columna">
+                <h3>Explora</h3>
+                <a href="cartelera.html">Cartelera</a>
+                <a href="estrenos.html">Estrenos</a>
+                <a href="peliculas.html">Películas</a>
+                <a href="promociones.html">Promociones</a>
+            </div>
+            <div class="footer-columna">
+                <h3>CineHub</h3>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="sedes.html">Nuestras sedes</a>
+                <a href="salas.html">Nuestras salas</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-redes">
+                <h3>Síguenos</h3>
+                <p>Mantente al tanto de nuestros estrenos, novedades y promociones.</p>
+                <div class="redes-lista">
+                    <a href="#" aria-label="Facebook"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Facebook.png" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Instagram.png" alt="Instagram"></a>
+                    <a href="#" aria-label="TikTok"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/TikTok.png" alt="TikTok"></a>
+                    <a href="#" aria-label="YouTube"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Youtube_logo.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>© 2026 CineHub. Todos los derechos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Accesibilidad</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CineHub: todo el cine, en un solo lugar. Cartelera, estrenos, promociones y experiencias cinematográficas únicas.">
+    <meta name="author" content="CineHub">
+    <title>CineHub | Todo el cine. En un solo lugar.</title>
+
+    <link rel="stylesheet" href="CSS/CSSGeneral.css">
+    <link rel="stylesheet" href="CSS/CSSInicio.css">
+</head>
+<body>
+<header class="encabezado">
+    <div class="contenedor encabezado-contenido">
+        <a href="index.html" class="logo">
+            <div class="logo-simbolo">
+                <img src="Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub">
+            </div>
+            <div class="logo-texto">
+                <h1>CINEHUB</h1>
+                <span>TODO EL CINE. EN UN SOLO LUGAR.</span>
+            </div>
+        </a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <ul class="menu">
+                <li><a href="index.html" class="enlace-activo">Inicio</a></li>
+                <li><a href="Pages/cartelera.html">Cartelera</a></li>
+                <li><a href="Pages/estrenos.html">Estrenos</a></li>
+                <li><a href="Pages/peliculas.html">Películas</a></li>
+                <li><a href="Pages/salas.html">Salas</a></li>
+                <li><a href="Pages/promociones.html">Promociones</a></li>
+                <li><a href="Pages/dulceria.html">Dulcería</a></li>
+                <li><a href="Pages/sedes.html">Sedes</a></li>
+                <li><a href="Pages/nosotros.html">Nosotros</a></li>
+                <li><a href="Pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="acciones-encabezado">
+            <a href="Pages/cartelera.html" class="accion-icono" aria-label="Buscar películas">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="10.8" cy="10.8" r="6.8"></circle>
+                    <path d="m16 16 5 5"></path>
+                </svg>
+            </a>
+            <a href="Pages/contacto.html" class="accion-icono" aria-label="Mi cuenta">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"></path>
+                </svg>
+            </a>
+            <a href="Pages/cartelera.html" class="boton-entradas">Comprar entradas</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="portada">
+        <video autoplay muted loop playsinline class="portada-video">
+            <source src="Recursos/Videos/Inicio/Vector%202.mp4" type="video/mp4">
+        </video>
+        <div class="portada-degradado"></div>
+        <div class="contenedor portada-contenido">
+            <div class="portada-informacion">
+                <span class="portada-etiqueta">
+                    <span class="punto-etiqueta"></span>
+                    EXPERIENCIA DESTACADA
+                </span>
+                <h2>GRANDES HISTORIAS,<br>EN LA MEJOR PANTALLA</h2>
+                <h3>VIVE LA MAGIA DEL CINE</h3>
+                <p>
+                    Descubre mundos extraordinarios, historias
+                    inolvidables y experiencias que van más allá
+                    de la pantalla. En CineHub, cada película
+                    tiene su propio universo.
+                </p>
+                <div class="portada-botones">
+                    <a href="Pages/cartelera.html" class="boton-principal">
+                        VER CARTELERA <span>➜</span>
+                    </a>
+                    <a href="Pages/estrenos.html" class="boton-secundario">
+                        Próximos estrenos
+                    </a>
+                </div>
+                <div class="portada-indicadores">
+                    <span class="indicador activo"></span>
+                    <span class="indicador"></span>
+                    <span class="indicador"></span>
+                </div>
+            </div>
+            <div class="portada-identificador">
+                <span class="identificador-linea"></span>
+                <div>
+                    <strong>UN UNIVERSO POR DESCUBRIR</strong>
+                    <span>Reino de Dragones</span>
+                </div>
+            </div>
+        </div>
+        <a href="#categorias" class="portada-desplazamiento">
+            <span>DESCUBRE CINEHUB</span>
+            <span class="flecha-desplazamiento">↓</span>
+        </a>
+    </section>
+
+    <section class="seccion-categorias" id="categorias">
+        <div class="categorias-lista">
+            <a href="Pages/peliculas.html" class="categoria">
+                <img src="Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_All.png" alt="" class="categoria-icono">
+                <span>Todas</span>
+            </a>
+            <a href="Pages/accion.html" class="categoria">
+                <img src="Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_Accion.png" alt="" class="categoria-icono">
+                <span>Acción</span>
+            </a>
+            <a href="Pages/terror.html" class="categoria">
+                <img src="Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_Terror.png" alt="" class="categoria-icono">
+                <span>Terror</span>
+            </a>
+            <a href="Pages/ciencia-ficcion.html" class="categoria">
+                <img src="Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_CienciaFiccion.png" alt="" class="categoria-icono">
+                <span>Ciencia ficción</span>
+            </a>
+            <a href="Pages/animacion.html" class="categoria">
+                <img src="Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_Animacion.png" alt="" class="categoria-icono">
+                <span>Animación</span>
+            </a>
+            <a href="Pages/peliculas.html" class="categoria">
+                <img src="Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_Romance.png" alt="" class="categoria-icono">
+                <span>Romance</span>
+            </a>
+            <a href="Pages/peliculas.html" class="categoria">
+                <img src="Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_Aventura.png" alt="" class="categoria-icono">
+                <span>Aventura</span>
+            </a>
+            <a href="Pages/peliculas.html" class="categoria categoria-mas">
+                <img src="Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_More.png" alt="" class="categoria-icono">
+                <span>Más categorías</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="seccion-cartelera">
+        <div class="encabezado-seccion">
+            <div class="titulo-seccion">
+                <span class="texto-superior">NO TE LAS PUEDES PERDER</span>
+                <h2>EN CARTELERA</h2>
+                <p>Las historias que están conquistando la pantalla.</p>
+            </div>
+            <a href="Pages/cartelera.html" class="enlace-ver-mas">
+                Ver toda la cartelera <span>→</span>
+            </a>
+        </div>
+
+        <div class="peliculas-lista">
+            <article class="tarjeta-pelicula">
+                <a href="Pages/seleccion-pelicula.html">
+                    <div class="pelicula-imagen">
+                        <img src="Recursos/Imagenes/Compartidos/Peliculas/Duna2.jpg" alt="Póster de Duna Parte Dos" class="pelicula-poster">
+                        <video class="pelicula-trailer" autoplay muted loop playsinline>
+                            <source src="Recursos/Videos/Compartidos/Trailer/Duna_2.mp4" type="video/mp4">
+                        </video>
+                        <span class="pelicula-etiqueta">DESTACADA</span>
+                        <span class="pelicula-calificacion">★ 8.5</span>
+                    </div>
+                    <div class="pelicula-informacion">
+                        <h3>Duna: Parte Dos</h3>
+                        <p>Ciencia ficción · Aventura</p>
+                        <span class="pelicula-duracion">166 min</span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="tarjeta-pelicula">
+                <a href="Pages/seleccion-pelicula.html">
+                    <div class="pelicula-imagen">
+                        <img src="Recursos/Imagenes/Compartidos/Peliculas/Exorcista.jpg" alt="Póster de El Exorcista" class="pelicula-poster">
+                        <video class="pelicula-trailer" autoplay muted loop playsinline>
+                            <source src="Recursos/Videos/Compartidos/Trailer/El_Exorcista.mp4" type="video/mp4">
+                        </video>
+                        <span class="pelicula-calificacion">★ 7.2</span>
+                    </div>
+                    <div class="pelicula-informacion">
+                        <h3>El Exorcista</h3>
+                        <p>Terror · Suspenso</p>
+                        <span class="pelicula-duracion">111 min</span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="tarjeta-pelicula">
+                <a href="Pages/seleccion-pelicula.html">
+                    <div class="pelicula-imagen">
+                        <img src="Recursos/Imagenes/Compartidos/Peliculas/Mi_Villano_Favorito_4.jpg" alt="Póster de Mi Villano Favorito 4" class="pelicula-poster">
+                        <video class="pelicula-trailer" autoplay muted loop playsinline>
+                            <source src="Recursos/Videos/Compartidos/Trailer/Mi_Villano_Favorito_4.mp4" type="video/mp4">
+                        </video>
+                        <span class="pelicula-calificacion">★ 7.8</span>
+                    </div>
+                    <div class="pelicula-informacion">
+                        <h3>Mi Villano Favorito 4</h3>
+                        <p>Animación · Comedia</p>
+                        <span class="pelicula-duracion">94 min</span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="tarjeta-pelicula">
+                <a href="Pages/seleccion-pelicula.html">
+                    <div class="pelicula-imagen">
+                        <img src="Recursos/Imagenes/Compartidos/Peliculas/Spiderman.jpg" alt="Póster de Spider-Man" class="pelicula-poster">
+                        <video class="pelicula-trailer" autoplay muted loop playsinline>
+                            <source src="Recursos/Videos/Compartidos/Trailer/Spiderman.mp4" type="video/mp4">
+                        </video>
+                        <span class="pelicula-calificacion">★ 8.2</span>
+                    </div>
+                    <div class="pelicula-informacion">
+                        <h3>Spider-Man</h3>
+                        <p>Acción · Aventura</p>
+                        <span class="pelicula-duracion">148 min</span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="tarjeta-pelicula">
+                <a href="Pages/seleccion-pelicula.html">
+                    <div class="pelicula-imagen">
+                        <img src="Recursos/Imagenes/Compartidos/Peliculas/Intensamente2.jpg" alt="Póster de Intensamente 2" class="pelicula-poster">
+                        <video class="pelicula-trailer" autoplay muted loop playsinline>
+                            <source src="Recursos/Videos/Compartidos/Trailer/Intensamente_2.mp4" type="video/mp4">
+                        </video>
+                        <span class="pelicula-calificacion">★ 8.0</span>
+                    </div>
+                    <div class="pelicula-informacion">
+                        <h3>Intensamente 2</h3>
+                        <p>Animación · Familiar</p>
+                        <span class="pelicula-duracion">96 min</span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="tarjeta-pelicula">
+                <a href="Pages/seleccion-pelicula.html">
+                    <div class="pelicula-imagen">
+                        <img src="Recursos/Imagenes/Compartidos/Peliculas/John_Wick_4.jpg" alt="Póster de John Wick 4" class="pelicula-poster">
+                        <video class="pelicula-trailer" autoplay muted loop playsinline>
+                            <source src="Recursos/Videos/Compartidos/Trailer/John_Wick_4.mp4" type="video/mp4">
+                        </video>
+                        <span class="pelicula-calificacion">★ 8.1</span>
+                    </div>
+                    <div class="pelicula-informacion">
+                        <h3>John Wick 4</h3>
+                        <p>Acción · Suspenso</p>
+                        <span class="pelicula-duracion">169 min</span>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <section class="seccion-experiencias">
+        <div class="encabezado-seccion">
+            <div class="titulo-seccion">
+                <span class="texto-superior">DESCUBRE TODO LO QUE TENEMOS</span>
+                <h2>MUCHO MÁS QUE UNA PELÍCULA</h2>
+                <p>Preparamos una experiencia especial para cada visita.</p>
+            </div>
+        </div>
+
+        <div class="promociones-lista">
+            <article class="tarjeta-promocion">
+                <img src="Recursos/Imagenes/Promociones/Plan_Familiar.png" alt="Combo Familiar" class="promocion-imagen">
+                <div class="promocion-degradado"></div>
+                <div class="promocion-contenido">
+                    <span class="promocion-etiqueta">COMPARTE LA EXPERIENCIA</span>
+                    <h3>Combo Familiar</h3>
+                    <p>Disfruta tus películas favoritas acompañado de quienes más quieres.</p>
+                    <a href="Pages/dulceria.html">DESCUBRIR MÁS <span>→</span></a>
+                </div>
+            </article>
+
+            <article class="tarjeta-promocion">
+                <img src="Recursos/Imagenes/Salas/Salas_Premium.png" alt="Salas Premium" class="promocion-imagen">
+                <div class="promocion-degradado"></div>
+                <div class="promocion-contenido">
+                    <span class="promocion-etiqueta">UNA EXPERIENCIA DIFERENTE</span>
+                    <h3>Salas Premium</h3>
+                    <p>Comodidad, tecnología y una experiencia cinematográfica extraordinaria.</p>
+                    <a href="Pages/salas.html">CONOCER SALAS <span>→</span></a>
+                </div>
+            </article>
+
+            <article class="tarjeta-promocion">
+                <img src="Recursos/Imagenes/Promociones/Compra_Linea.png" alt="Compra en línea" class="promocion-imagen">
+                <div class="promocion-degradado"></div>
+                <div class="promocion-contenido">
+                    <span class="promocion-etiqueta">FÁCIL Y RÁPIDO</span>
+                    <h3>Compra en línea</h3>
+                    <p>Selecciona tu película, elige tus asientos y prepárate para disfrutar.</p>
+                    <a href="Pages/seleccion-pelicula.html">COMPRAR ENTRADAS <span>→</span></a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="seccion-invitacion">
+        <div class="invitacion-contenido">
+            <div>
+                <span class="texto-superior">TU PRÓXIMA AVENTURA COMIENZA AQUÍ</span>
+                <h2>¿LISTO PARA VIVIR<br>UNA NUEVA HISTORIA?</h2>
+            </div>
+            <a href="Pages/cartelera.html" class="boton-principal">
+                ENCUENTRA TU PELÍCULA <span>➜</span>
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="pie-pagina">
+    <div class="contenedor">
+        <div class="footer-contenido">
+            <div class="footer-marca">
+                <a href="index.html" class="logo-footer">
+                    <div class="logo-simbolo">
+                        <img src="Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub">
+                    </div>
+                    <div class="logo-texto">
+                        <h2>CINEHUB</h2>
+                        <span>TODO EL CINE. EN UN SOLO LUGAR.</span>
+                    </div>
+                </a>
+                <p>Creamos experiencias cinematográficas para que cada película se convierta en un recuerdo inolvidable.</p>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Explora</h3>
+                <a href="Pages/cartelera.html">Cartelera</a>
+                <a href="Pages/estrenos.html">Estrenos</a>
+                <a href="Pages/peliculas.html">Películas</a>
+                <a href="Pages/promociones.html">Promociones</a>
+            </div>
+
+            <div class="footer-columna">
+                <h3>CineHub</h3>
+                <a href="Pages/nosotros.html">Nosotros</a>
+                <a href="Pages/sedes.html">Nuestras sedes</a>
+                <a href="Pages/salas.html">Nuestras salas</a>
+                <a href="Pages/contacto.html">Contacto</a>
+            </div>
+
+            <div class="footer-redes">
+                <h3>Síguenos</h3>
+                <p>Mantente al tanto de nuestros estrenos, novedades y promociones.</p>
+                <div class="redes-lista">
+                    <a href="#" aria-label="Facebook">
+                        <img src="Recursos/Imagenes/Compartidos/RedesSociales/Facebook.png" alt="Facebook">
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <img src="Recursos/Imagenes/Compartidos/RedesSociales/Instagram.png" alt="Instagram">
+                    </a>
+                    <a href="#" aria-label="TikTok">
+                        <img src="Recursos/Imagenes/Compartidos/RedesSociales/TikTok.png" alt="TikTok">
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <img src="Recursos/Imagenes/Compartidos/RedesSociales/Youtube_logo.png" alt="YouTube">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-inferior">
+            <p>© 2026 CineHub. Todos los derechos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Accesibilidad</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

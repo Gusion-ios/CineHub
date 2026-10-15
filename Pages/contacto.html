@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | CineHub</title>
+    <link rel="stylesheet" href="../CSS/CSSGeneral.css">
+    <link rel="stylesheet" href="../CSS/CSSContacto.css">
+</head>
+<body>
+
+<header class="encabezado">
+    <div class="contenedor encabezado-contenido">
+        <a href="../index.html" class="logo">
+            <div class="logo-simbolo"><img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub"></div>
+            <div class="logo-texto"><h1>CINEHUB</h1><span>TODO EL CINE. EN UN SOLO LUGAR.</span></div>
+        </a>
+        <nav class="navegacion" aria-label="Navegación principal">
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="cartelera.html">Cartelera</a></li>
+                <li><a href="estrenos.html">Estrenos</a></li>
+                <li><a href="peliculas.html">Películas</a></li>
+                <li><a href="salas.html">Salas</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="dulceria.html">Dulcería</a></li>
+                <li><a href="sedes.html">Sedes</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html" class="enlace-activo">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="acciones-encabezado">
+            <a href="cartelera.html" class="accion-icono" aria-label="Buscar películas">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+            </a>
+            <a href="contacto.html" class="accion-icono" aria-label="Mi cuenta">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"></path></svg>
+            </a>
+            <a href="cartelera.html" class="boton-entradas">Comprar entradas</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="contacto-portada">
+        <div class="contacto-portada-fondo">
+            <img src="../Recursos/Imagenes/Contacto/Vestíbulo%20cinematográfico%20CineHub%20al%20atardecer.png" alt="Fondo de Contacto">
+        </div>
+        <div class="contacto-portada-degradado"></div>
+        <div class="contenedor contacto-portada-contenido">
+            <span class="portada-etiqueta"><span class="punto-etiqueta"></span>ESTAMOS PARA AYUDARTE</span>
+            <h2>Contáctanos</h2>
+            <p>¿Tienes alguna duda, sugerencia o comentario? Escríbenos y nuestro equipo te responderá a la brevedad.</p>
+        </div>
+    </section>
+
+    <section class="contacto-informacion">
+        <div class="contenedor info-grid">
+            <div class="info-card">
+                <div class="info-icono">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5a2 2 0 0 1 2-2h3.2a1 1 0 0 1 1 .76l1.1 4.4a1 1 0 0 1-.5 1.1l-2 1.1a14.6 14.6 0 0 0 6.8 6.8l1.1-2a1 1 0 0 1 1.1-.5l4.4 1.1a1 1 0 0 1 .76 1V19a2 2 0 0 1-2 2h-1C9.6 21 3 14.4 3 6V5Z"></path></svg>
+                </div>
+                <h3>Llámanos</h3>
+                <p>Línea de atención al cliente</p>
+                <a href="tel:+51084123456">+51 084 123 456</a>
+            </div>
+            <div class="info-card">
+                <div class="info-icono">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6Z"></path><path d="m3 7 9 6 9-6"></path></svg>
+                </div>
+                <h3>Escríbenos</h3>
+                <p>Respuesta en menos de 24 horas</p>
+                <a href="mailto:contacto@cinehub.com">contacto@cinehub.com</a>
+            </div>
+            <div class="info-card">
+                <div class="info-icono">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"></path><circle cx="12" cy="9.5" r="2.4"></circle></svg>
+                </div>
+                <h3>Visítanos</h3>
+                <p>Nuestra sede principal</p>
+                <a href="sedes.html">Av. Cinema 450, Arequipa</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacto-formulario-seccion">
+        <div class="contenedor formulario-grid">
+            <div class="formulario-columna">
+                <span class="portada-etiqueta"><span class="punto-etiqueta"></span>FORMULARIO</span>
+                <h2>Envíanos un mensaje</h2>
+                <p>Completa el siguiente formulario y uno de nuestros asesores se pondrá en contacto contigo.</p>
+
+                <form class="formulario-contacto" action="#" method="post">
+                    <div class="campo-grupo campo-doble">
+                        <div class="campo">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                        </div>
+                        <div class="campo">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="987 654 321">
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+                    </div>
+                    <div class="campo">
+                        <label for="asunto">Asunto</label>
+                        <select id="asunto" name="asunto">
+                            <option value="general">Consulta general</option>
+                            <option value="reservas">Reservas y entradas</option>
+                            <option value="promociones">Promociones y membresías</option>
+                            <option value="sugerencias">Sugerencias</option>
+                            <option value="soporte">Soporte técnico</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos en qué podemos ayudarte" required></textarea>
+                    </div>
+                    <button type="submit" class="boton-entradas boton-formulario">Enviar mensaje</button>
+                </form>
+            </div>
+
+            <div class="formulario-columna contacto-horarios-columna">
+                <span class="portada-etiqueta"><span class="punto-etiqueta"></span>HORARIO DE ATENCIÓN</span>
+                <h2>Cuándo podemos ayudarte</h2>
+
+                <table class="horarios-tabla">
+                    <caption>Horario de atención al cliente CineHub</caption>
+                    <thead>
+                    <tr>
+                        <th scope="col">Día</th>
+                        <th scope="col">Horario</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Lunes a viernes</td>
+                        <td>09:00 a. m. – 09:00 p. m.</td>
+                    </tr>
+                    <tr>
+                        <td>Sábados</td>
+                        <td>10:00 a. m. – 10:00 p. m.</td>
+                    </tr>
+                    <tr>
+                        <td>Domingos y feriados</td>
+                        <td>11:00 a. m. – 09:00 p. m.</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="contacto-mapa">
+                    <img src="../Recursos/Imagenes/Sedes/Mapa%20CINEHUB_%20Sede%20Principal%20en%20Arequipa.png" alt="Ubicación de la sede principal">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacto-faq">
+        <div class="contenedor">
+            <div class="encabezado-seccion">
+                <div class="titulo-seccion">
+                    <h2>Preguntas frecuentes</h2>
+                    <p>Resolvemos las dudas más comunes de nuestros usuarios</p>
+                </div>
+            </div>
+            <div class="faq-lista">
+                <details class="faq-item">
+                    <summary>¿Cómo puedo reservar mis entradas con anticipación?</summary>
+                    <p>Puedes comprar tus entradas desde la sección Cartelera, eligiendo la función, la sala y tus asientos preferidos.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Puedo cambiar o cancelar una compra ya realizada?</summary>
+                    <p>Sí, escríbenos por este formulario o llama a nuestra línea de atención con al menos 2 horas de anticipación a la función.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Tienen promociones para estudiantes?</summary>
+                    <p>Sí, revisa nuestra sección de Promociones para conocer los descuentos vigentes y requisitos.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Cómo me afilio al plan familiar?</summary>
+                    <p>Puedes inscribirte desde la sección Promociones o acercarte a cualquiera de nuestras sedes.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="pie-pagina">
+    <div class="contenedor">
+        <div class="footer-contenido">
+            <div class="footer-marca">
+                <a href="../index.html" class="logo-footer">
+                    <div class="logo-simbolo"><img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub"></div>
+                    <div class="logo-texto"><h2>CINEHUB</h2><span>TODO EL CINE. EN UN SOLO LUGAR.</span></div>
+                </a>
+                <p>Creamos experiencias cinematográficas para que cada película se convierta en un recuerdo inolvidable.</p>
+            </div>
+            <div class="footer-columna">
+                <h3>Explora</h3>
+                <a href="cartelera.html">Cartelera</a>
+                <a href="estrenos.html">Estrenos</a>
+                <a href="peliculas.html">Películas</a>
+                <a href="promociones.html">Promociones</a>
+            </div>
+            <div class="footer-columna">
+                <h3>CineHub</h3>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="sedes.html">Nuestras sedes</a>
+                <a href="salas.html">Nuestras salas</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-redes">
+                <h3>Síguenos</h3>
+                <p>Mantente al tanto de nuestros estrenos, novedades y promociones.</p>
+                <div class="redes-lista">
+                    <a href="#" aria-label="Facebook"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Facebook.png" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Instagram.png" alt="Instagram"></a>
+                    <a href="#" aria-label="TikTok"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/TikTok.png" alt="TikTok"></a>
+                    <a href="#" aria-label="YouTube"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Youtube_logo.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>© 2026 CineHub. Todos los derechos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Accesibilidad</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,767 @@
+/* =========================================
+   CINEHUB - PÁGINA DE DULCERÍA
+   Archivo: CSSDulceria.css
+========================================= */
+
+/* HERO CON VIDEO DE FONDO */
+.dulceria-hero {
+    position: relative;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--negro);
+}
+
+.dulceria-hero-video {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.dulceria-hero-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.dulceria-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+            linear-gradient(90deg, rgba(10, 10, 10, 0.97) 0%, rgba(10, 10, 10, 0.82) 48%, rgba(10, 10, 10, 0.25) 100%),
+            linear-gradient(to top, rgba(10, 10, 10, 0.85) 0%, transparent 45%);
+}
+
+.dulceria-hero-contenido {
+    position: relative;
+    z-index: 2;
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+.dulceria-etiqueta,
+.dulceria-subtitulo {
+    display: inline-block;
+    color: var(--dorado);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.dulceria-hero h1 {
+    color: var(--blanco);
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.15;
+    max-width: 680px;
+    margin-bottom: 20px;
+}
+
+.dulceria-hero h1 span {
+    color: var(--dorado);
+}
+
+.dulceria-hero p {
+    max-width: 520px;
+    color: var(--plateado);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.dulceria-boton {
+    display: inline-block;
+    padding: 15px 34px;
+    background: var(--dorado);
+    color: var(--negro);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.dulceria-boton:hover {
+    background: var(--dorado-suave);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* INTRODUCCIÓN */
+.dulceria-introduccion {
+    padding: 90px 0;
+    background: var(--negro-suave);
+}
+
+.dulceria-intro-contenido {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.dulceria-intro-texto .dulceria-subtitulo {
+    display: block;
+}
+
+.dulceria-intro-texto h2 {
+    color: var(--blanco);
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.dulceria-intro-texto p {
+    color: var(--plateado);
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 14px;
+}
+
+.dulceria-enlace {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--dorado);
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+    transition: 0.3s;
+}
+
+.dulceria-enlace:hover {
+    border-color: var(--dorado);
+    color: var(--blanco);
+}
+
+.dulceria-intro-imagen {
+    position: relative;
+    height: 360px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dulceria-intro-imagen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid var(--dorado);
+    border-radius: 10px;
+    z-index: 2;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.dulceria-intro-imagen:hover::before {
+    box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.25), 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+.dulceria-intro-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.dulceria-intro-imagen:hover img {
+    transform: scale(1.05);
+}
+
+/* CATEGORÍAS */
+.dulceria-categorias {
+    padding: 90px 0;
+    background: var(--negro);
+}
+
+.dulceria-encabezado {
+    max-width: 650px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.dulceria-encabezado h2 {
+    color: var(--blanco);
+    font-size: clamp(28px, 4vw, 38px);
+    margin-bottom: 14px;
+}
+
+.dulceria-encabezado p {
+    color: var(--plateado);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.categoria-card {
+    position: relative;
+    min-height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    background-color: rgba(10, 10, 10, 0.88);
+    box-shadow:
+            inset 0 0 0 1px rgba(212, 175, 55, 0.15),
+            0 8px 25px rgba(0, 0, 0, 0.55);
+}
+
+.categoria-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+    z-index: 0;
+    opacity: 0.75;
+}
+
+.categoria-card:nth-child(1)::before {
+    background-image: url("../Recursos/Imagenes/Fondos/Dulceria/PopCorn.png");
+}
+.categoria-card:nth-child(2)::before {
+    background-image: url("../Recursos/Imagenes/Fondos/Dulceria/Bebidas.png");
+}
+.categoria-card:nth-child(3)::before {
+    background-image: url("../Recursos/Imagenes/Fondos/Dulceria/Bocaditos.png");
+}
+.categoria-card:nth-child(4)::before {
+    background-image: url("../Recursos/Imagenes/Fondos/Dulceria/FamiliaCombo.png");
+}
+
+.categoria-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+            linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.45) 50%, rgba(0, 0, 0, 0.2) 100%);
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.categoria-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--dorado);
+    box-shadow:
+            inset 0 0 0 1px rgba(212, 175, 55, 0.25),
+            0 18px 40px rgba(0, 0, 0, 0.65),
+            0 0 0 1px rgba(212, 175, 55, 0.45);
+}
+
+.categoria-card:hover::before {
+    transform: scale(1.08);
+    opacity: 0.85;
+}
+
+.categoria-card:hover::after {
+    background:
+            linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.55) 60%, rgba(0, 0, 0, 0.25) 100%);
+}
+
+.categoria-card h3,
+.categoria-card span {
+    position: relative;
+    z-index: 2;
+}
+
+.categoria-card h3 {
+    color: var(--blanco);
+    font-size: 20px;
+    margin-bottom: 6px;
+    transition: color 0.3s;
+}
+
+.categoria-card:hover h3 {
+    color: var(--dorado);
+}
+
+.categoria-card span {
+    color: var(--dorado);
+    font-size: 13px;
+    font-weight: 700;
+    opacity: 0.9;
+}
+
+/* PRODUCTOS */
+.productos-seccion {
+    padding: 90px 0;
+    background: var(--negro-suave);
+}
+
+.productos-alternos {
+    background: var(--negro);
+}
+
+.productos-encabezado {
+    margin-bottom: 45px;
+}
+
+.productos-encabezado .dulceria-subtitulo {
+    display: block;
+}
+
+.productos-encabezado h2 {
+    color: var(--blanco);
+    font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.25;
+}
+
+.productos-encabezado p {
+    color: var(--plateado);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.producto-card {
+    position: relative;
+    min-height: 360px;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    background-color: rgba(10, 10, 10, 0.88);
+    box-shadow:
+            inset 0 0 0 1px rgba(212, 175, 55, 0.15),
+            0 8px 25px rgba(0, 0, 0, 0.55);
+}
+
+.producto-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--dorado);
+    box-shadow:
+            inset 0 0 0 1px rgba(212, 175, 55, 0.25),
+            0 20px 45px rgba(0, 0, 0, 0.65),
+            0 0 0 1px rgba(212, 175, 55, 0.45);
+}
+
+.producto-imagen {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+    opacity: 0.75;
+}
+
+.producto-card:hover .producto-imagen img {
+    transform: scale(1.08);
+    opacity: 0.85;
+}
+
+.producto-etiqueta {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 7px 12px;
+    background: var(--dorado);
+    color: var(--negro);
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    z-index: 3;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.producto-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+            linear-gradient(to top, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.45) 55%, rgba(10, 10, 0, 0.2) 100%);
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.producto-card:hover::after {
+    background:
+            linear-gradient(to top, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.55) 65%, rgba(10, 10, 0, 0.25) 100%);
+}
+
+.producto-informacion {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    margin-top: auto;
+}
+
+.producto-categoria {
+    color: var(--dorado);
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.producto-informacion h3 {
+    color: var(--blanco);
+    font-size: 18px;
+    margin: 8px 0 6px;
+    transition: color 0.3s;
+}
+
+.producto-card:hover h3 {
+    color: var(--dorado-claro);
+}
+
+.producto-informacion p {
+    color: var(--plateado);
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.producto-pie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.producto-pie strong {
+    color: var(--dorado);
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.producto-boton {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dorado);
+    color: var(--negro);
+    font-size: 20px;
+    font-weight: 900;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.producto-boton:hover {
+    background: var(--blanco);
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.35);
+}
+
+/* COMBOS */
+.combos-seccion {
+    padding: 90px 0;
+    background: var(--negro-suave);
+}
+
+.combos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.combo-card {
+    position: relative;
+    min-height: 380px;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    background-color: rgba(10, 10, 10, 0.88);
+    box-shadow:
+            inset 0 0 0 1px rgba(212, 175, 55, 0.15),
+            0 8px 25px rgba(0, 0, 0, 0.55);
+}
+
+.combo-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--dorado);
+    box-shadow:
+            inset 0 0 0 1px rgba(212, 175, 55, 0.25),
+            0 20px 45px rgba(212, 175, 55, 0.15),
+            0 0 0 1px rgba(212, 175, 55, 0.45);
+}
+
+.combo-destacado {
+    border-color: var(--dorado);
+    box-shadow:
+            0 0 0 1px var(--dorado),
+            0 16px 40px rgba(212, 175, 55, 0.15);
+}
+
+.combo-destacado:hover {
+    box-shadow:
+            0 0 0 2px var(--dorado),
+            0 22px 50px rgba(212, 175, 55, 0.2);
+}
+
+.combo-imagen {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.combo-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+    opacity: 0.75;
+}
+
+.combo-card:hover .combo-imagen img {
+    transform: scale(1.08);
+    opacity: 0.85;
+}
+
+.combo-insignia {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 9px 14px;
+    background: var(--dorado);
+    color: var(--negro);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    border-radius: 5px;
+    z-index: 3;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.combo-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+            linear-gradient(to top, rgba(10, 10, 10, 0.92) 0%, rgba(10, 10, 10, 0.45) 55%, rgba(10, 10, 0, 0.2) 100%);
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.combo-card:hover::after {
+    background:
+            linear-gradient(to top, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.55) 65%, rgba(10, 10, 0, 0.25) 100%);
+}
+
+.combo-contenido {
+    position: relative;
+    z-index: 2;
+    padding: 22px;
+    margin-top: auto;
+}
+
+.combo-etiqueta {
+    color: var(--dorado);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.combo-contenido h3 {
+    color: var(--blanco);
+    font-size: 20px;
+    margin: 8px 0 6px;
+    transition: color 0.3s;
+}
+
+.combo-card:hover h3 {
+    color: var(--dorado-claro);
+}
+
+.combo-contenido > p {
+    color: var(--plateado);
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+
+.combo-pie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.combo-pie strong {
+    color: var(--dorado);
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.combo-pie button {
+    padding: 11px 18px;
+    background: var(--dorado);
+    color: var(--negro);
+    font-size: 12.5px;
+    font-weight: 800;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.combo-pie button:hover {
+    background: var(--plateado);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* CTA FINAL CON VIDEO DE FONDO */
+.dulceria-final {
+    position: relative;
+    padding: 95px 20px;
+    text-align: center;
+    overflow: hidden;
+    background: var(--negro);
+}
+
+.dulceria-final-video {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.dulceria-final-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.dulceria-final-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: rgba(10, 10, 10, 0.85);
+}
+
+.dulceria-final-contenido {
+    position: relative;
+    z-index: 2;
+}
+
+.dulceria-final h2 {
+    color: var(--blanco);
+    font-size: clamp(28px, 4vw, 42px);
+    margin-bottom: 17px;
+}
+
+.dulceria-final p {
+    color: var(--plateado);
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0 auto 28px;
+    max-width: 560px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .categorias-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .combos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .dulceria-intro-contenido {
+        gap: 35px;
+    }
+    .dulceria-intro-imagen {
+        height: 300px;
+    }
+}
+
+@media (max-width: 700px) {
+    .dulceria-hero {
+        min-height: 420px;
+    }
+    .dulceria-introduccion,
+    .dulceria-categorias,
+    .productos-seccion,
+    .combos-seccion {
+        padding: 55px 0;
+    }
+    .dulceria-intro-contenido {
+        grid-template-columns: 1fr;
+    }
+    .dulceria-intro-imagen {
+        height: 260px;
+    }
+    .categorias-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+    .combos-grid {
+        grid-template-columns: 1fr;
+    }
+    .dulceria-final {
+        padding: 65px 15px;
+    }
+}
+
+@media (max-width: 450px) {
+    .dulceria-hero h1 {
+        font-size: 32px;
+    }
+    .categorias-grid {
+        grid-template-columns: 1fr;
+    }
+    .combo-pie {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    .combo-pie button {
+        width: 100%;
+    }
+}

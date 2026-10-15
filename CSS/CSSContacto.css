@@ -1,0 +1,408 @@
+/* =========================================
+   CINEHUB - PÁGINA DE CONTACTO
+   Archivo: CSSContacto.css
+========================================= */
+
+/* =========================================
+   PORTADA
+========================================= */
+.contacto-portada {
+    position: relative;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--negro-suave);
+}
+
+.contacto-portada-fondo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.contacto-portada-fondo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contacto-portada-degradado {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+            linear-gradient(
+                    to right,
+                    rgba(10, 10, 10, 0.95) 0%,
+                    rgba(10, 10, 10, 0.72) 45%,
+                    rgba(10, 10, 10, 0.3) 100%
+            ),
+            linear-gradient(
+                    to top,
+                    rgba(10, 10, 10, 0.9) 0%,
+                    transparent 40%
+            );
+}
+
+.contacto-portada-contenido {
+    position: relative;
+    z-index: 2;
+    padding: 60px 0;
+    max-width: 640px;
+}
+
+.portada-etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--dorado);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.punto-etiqueta {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--dorado);
+}
+
+.contacto-portada-contenido h2 {
+    color: var(--blanco);
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.contacto-portada-contenido p {
+    color: var(--plateado);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* =========================================
+   TARJETAS DE INFORMACIÓN
+========================================= */
+.contacto-informacion {
+    background-color: var(--negro);
+    padding: 60px 40px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.info-card {
+    background-color: var(--gris-tarjeta);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    padding: 28px 24px;
+    text-align: center;
+    transition: var(--transicion);
+}
+
+.info-card:hover {
+    border-color: var(--dorado);
+    transform: translateY(-6px);
+}
+
+.info-icono {
+    width: var(--tamano-icono);
+    height: var(--tamano-icono);
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(212, 175, 55, 0.12);
+}
+
+.info-icono svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: var(--dorado);
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.info-card h3 {
+    color: var(--blanco);
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.info-card p {
+    color: var(--plateado);
+    font-size: 0.82rem;
+    margin-bottom: 10px;
+}
+
+.info-card a {
+    color: var(--dorado-claro);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* =========================================
+   FORMULARIO + HORARIOS
+========================================= */
+.contacto-formulario-seccion {
+    background-color: var(--negro-suave);
+    padding: 70px 40px;
+}
+
+.formulario-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.formulario-columna h2 {
+    color: var(--blanco);
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.formulario-columna > p {
+    color: var(--plateado);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.campo-grupo.campo-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    color: var(--plateado);
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.campo input, .campo select, .campo textarea {
+    background-color: var(--gris-tarjeta);
+    border: 1px solid var(--borde-dorado);
+    border-radius: 6px;
+    padding: 12px 14px;
+    color: var(--blanco);
+    font-family: var(--font-principal);
+    font-size: 0.9rem;
+    transition: var(--transicion);
+}
+
+.campo input::placeholder, .campo textarea::placeholder {
+    color: rgba(245, 245, 245, 0.4);
+}
+
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    outline: none;
+    border-color: var(--dorado);
+    background-color: var(--gris-hover);
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+.boton-formulario {
+    align-self: flex-start;
+    border: none;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+.contacto-horarios-columna {
+    background-color: var(--gris-tarjeta);
+    border: 1px solid var(--borde-dorado);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.contacto-horarios-columna h2 {
+    color: var(--blanco);
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.horarios-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+}
+
+.horarios-tabla caption {
+    text-align: left;
+    color: var(--plateado);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.horarios-tabla th, .horarios-tabla td {
+    padding: 12px 10px;
+    text-align: left;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.horarios-tabla th {
+    color: var(--dorado);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.horarios-tabla td {
+    color: var(--plateado);
+}
+
+.horarios-tabla tbody tr:last-child th, .horarios-tabla tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.contacto-mapa {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--borde-dorado);
+}
+
+.contacto-mapa img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* =========================================
+   FAQ
+========================================= */
+.contacto-faq {
+    background-color: var(--negro);
+    padding: 70px 40px;
+}
+
+.encabezado-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.titulo-seccion h2 {
+    color: var(--blanco);
+    font-size: 1.7rem;
+    margin-bottom: 8px;
+}
+
+.titulo-seccion p {
+    color: var(--plateado);
+    font-size: 0.85rem;
+}
+
+.faq-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 800px;
+}
+
+.faq-item {
+    background-color: var(--gris-tarjeta);
+    border: 1px solid var(--borde-dorado);
+    border-radius: 8px;
+    padding: 18px 22px;
+}
+
+.faq-item summary {
+    color: var(--blanco);
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    float: right;
+    color: var(--dorado);
+    font-size: 1.2rem;
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+.faq-item p {
+    color: var(--plateado);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin-top: 12px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 1050px) {
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .formulario-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 700px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-grupo.campo-doble {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-informacion,
+    .contacto-formulario-seccion,
+    .contacto-faq {
+        padding: 50px 20px;
+    }
+
+    .encabezado-seccion {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

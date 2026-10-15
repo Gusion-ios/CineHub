@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Consulta la cartelera de CineHub. Descubre las películas disponibles, sus géneros y comienza a comprar tus entradas.">
+    <meta name="author" content="CineHub">
+    <title>Cartelera | CineHub</title>
+    <link rel="stylesheet" href="../CSS/CSSGeneral.css">
+    <link rel="stylesheet" href="../CSS/CSSCartelera.css">
+</head>
+<body>
+<header class="encabezado">
+    <div class="contenedor encabezado-contenido">
+        <a href="../index.html" class="logo">
+            <div class="logo-simbolo">
+                <img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub">
+            </div>
+            <div class="logo-texto">
+                <h1>CINEHUB</h1>
+                <span>TODO EL CINE. EN UN SOLO LUGAR.</span>
+            </div>
+        </a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="cartelera.html" class="enlace-activo">Cartelera</a></li>
+                <li><a href="estrenos.html">Estrenos</a></li>
+                <li><a href="peliculas.html">Películas</a></li>
+                <li><a href="salas.html">Salas</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="dulceria.html">Dulcería</a></li>
+                <li><a href="sedes.html">Sedes</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="acciones-encabezado">
+            <a href="cartelera.html"
+               class="accion-icono"
+               aria-label="Buscar películas">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="10.8" cy="10.8" r="6.8"></circle>
+                    <path d="m16 16 5 5"></path>
+                </svg>
+            </a>
+            <a href="contacto.html"
+               class="accion-icono"
+               aria-label="Mi cuenta">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"></path>
+                </svg>
+            </a>
+            <a href="cartelera.html" class="boton-entradas">
+                Comprar entradas
+            </a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="cartelera-banner">
+        <div class="cartelera-carrusel-contenedor">
+            <div class="cartelera-carrusel-pista">
+                <div class="carrusel-grupo">
+                    <img src="../Recursos/Imagenes/Compartidos/Peliculas/Duna2.jpg" alt="Duna: Parte Dos">
+                    <img src="../Recursos/Imagenes/Compartidos/Peliculas/Exorcista.jpg" alt="The Exorcista">
+                    <img src="../Recursos/Imagenes/Compartidos/Peliculas/Mi_Villano_Favorito_4.jpg" alt="Mi Villano Favorito 4">
+                </div>
+                <div class="carrusel-grupo">
+                    <img src="../Recursos/Imagenes/Compartidos/Peliculas/Spiderman.jpg" alt="Spider-Man">
+                    <img src="../Recursos/Imagenes/Compartidos/Peliculas/Intensamente2.jpg" alt="Intensamente 2">
+                    <img src="../Recursos/Imagenes/Compartidos/Peliculas/Oppenheimer.png" alt="Oppenheimer">
+                </div>
+            </div>
+        </div>
+
+        <div class="cartelera-banner-degradado"></div>
+
+        <div class="contenedor cartelera-banner-contenido">
+            <div class="cartelera-migas">
+                <a href="../index.html">Inicio</a>
+                <span>/</span>
+                <span>Cartelera</span>
+            </div>
+
+            <span class="cartelera-etiqueta">
+            <span class="punto-etiqueta"></span>
+            DESCUBRE TU PRÓXIMA PELÍCULA
+        </span>
+
+            <h2>
+                NUESTRA<br>
+                CARTELERA
+            </h2>
+
+            <p>
+                Grandes historias te esperan. Explora las películas
+                disponibles y encuentra la experiencia cinematográfica
+                que estás buscando.
+            </p>
+
+            <a href="#peliculas" class="boton-principal">
+                EXPLORAR PELÍCULAS
+                <span>➜</span>
+            </a>
+
+            <div class="cartelera-indicadores">
+                <span class="indicador activo" data-indicador="0"></span>
+                <span class="indicador" data-indicador="1"></span>
+                <span class="indicador" data-indicador="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-cartelera-pagina" id="peliculas">
+        <div class="contenedor">
+            <div class="cartelera-encabezado">
+                <div>
+                    <span class="texto-superior">ENCUENTRA TU PRÓXIMA AVENTURA</span>
+                    <h2>PELÍCULAS EN CARTELERA</h2>
+                    <p>Consulta las películas disponibles actualmente en CineHub.</p>
+                </div>
+                <div class="cantidad-peliculas">
+                    <strong>08</strong>
+                    <span>PELÍCULAS<br>DISPONIBLES</span>
+                </div>
+            </div>
+
+            <div class="cartelera-filtros">
+                <div class="filtros-categorias">
+                    <span class="filtros-titulo">GÉNEROS:</span>
+                    <a href="cartelera.html" class="filtro-activo">
+                        <img src="../Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_All.png" alt="" class="filtro-icono">
+                        Todas
+                    </a>
+                    <a href="accion.html">
+                        <img src="../Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_Accion.png" alt="" class="filtro-icono">
+                        Acción
+                    </a>
+                    <a href="terror.html">
+                        <img src="../Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_Terror.png" alt="" class="filtro-icono">
+                        Terror
+                    </a>
+                    <a href="ciencia-ficcion.html">
+                        <img src="../Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_CienciaFiccion.png" alt="" class="filtro-icono">
+                        Ciencia ficción
+                    </a>
+                    <a href="animacion.html">
+                        <img src="../Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_Animacion.png" alt="" class="filtro-icono">
+                        Animación
+                    </a>
+                </div>
+
+                <div class="filtros-orden">
+                    <label for="orden-peliculas">Ordenar:</label>
+                    <select id="orden-peliculas" name="orden">
+                        <option value="destacadas">Destacadas</option>
+                        <option value="nombre">Nombre</option>
+                        <option value="calificacion">Calificación</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- LISTA DE PELÍCULAS — MISMA ESTRUCTURA QUE EL INICIO -->
+            <div class="peliculas-lista">
+                <article class="tarjeta-pelicula">
+                    <a href="seleccion-pelicula.html" class="pelicula-enlace-principal">
+                        <div class="pelicula-imagen">
+                            <img src="../Recursos/Imagenes/Compartidos/Peliculas/Duna2.jpg" alt="Póster de Duna: Parte Dos" class="pelicula-poster">
+                            <video class="pelicula-trailer" autoplay muted loop playsinline>
+                                <source src="../Recursos/Videos/Compartidos/Trailer/Duna_2.mp4" type="video/mp4">
+                            </video>
+                            <span class="pelicula-etiqueta">DESTACADA</span>
+                            <span class="pelicula-calificacion">★ 8.5</span>
+                        </div>
+                        <div class="pelicula-informacion">
+                            <h3>Duna: Parte Dos</h3>
+                            <p>Ciencia ficción · Aventura</p>
+                        </div>
+                    </a>
+                    <div class="pelicula-pie">
+                        <span class="pelicula-duracion">166 min</span>
+                        <a href="horarios.html" class="pelicula-horarios-enlace">Horarios →</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-pelicula">
+                    <a href="seleccion-pelicula.html" class="pelicula-enlace-principal">
+                        <div class="pelicula-imagen">
+                            <img src="../Recursos/Imagenes/Compartidos/Peliculas/Exorcista.jpg" alt="Póster de El Exorcista" class="pelicula-poster">
+                            <video class="pelicula-trailer" autoplay muted loop playsinline>
+                                <source src="../Recursos/Videos/Compartidos/Trailer/El_Exorcista.mp4" type="video/mp4">
+                            </video>
+                            <span class="pelicula-calificacion">★ 7.2</span>
+                        </div>
+                        <div class="pelicula-informacion">
+                            <h3>El Exorcista</h3>
+                            <p>Terror · Suspenso</p>
+                        </div>
+                    </a>
+                    <div class="pelicula-pie">
+                        <span class="pelicula-duracion">111 min</span>
+                        <a href="horarios.html" class="pelicula-horarios-enlace">Horarios →</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-pelicula">
+                    <a href="seleccion-pelicula.html" class="pelicula-enlace-principal">
+                        <div class="pelicula-imagen">
+                            <img src="../Recursos/Imagenes/Compartidos/Peliculas/Mi_Villano_Favorito_4.jpg" alt="Póster de Mi Villano Favorito 4" class="pelicula-poster">
+                            <video class="pelicula-trailer" autoplay muted loop playsinline>
+                                <source src="../Recursos/Videos/Compartidos/Trailer/Mi_Villano_Favorito_4.mp4" type="video/mp4">
+                            </video>
+                            <span class="pelicula-calificacion">★ 7.8</span>
+                        </div>
+                        <div class="pelicula-informacion">
+                            <h3>Mi Villano Favorito 4</h3>
+                            <p>Animación · Comedia</p>
+                        </div>
+                    </a>
+                    <div class="pelicula-pie">
+                        <span class="pelicula-duracion">94 min</span>
+                        <a href="horarios.html" class="pelicula-horarios-enlace">Horarios →</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-pelicula">
+                    <a href="seleccion-pelicula.html" class="pelicula-enlace-principal">
+                        <div class="pelicula-imagen">
+                            <img src="../Recursos/Imagenes/Compartidos/Peliculas/Spiderman.jpg" alt="Póster de Spider-Man" class="pelicula-poster">
+                            <video class="pelicula-trailer" autoplay muted loop playsinline>
+                                <source src="../Recursos/Videos/Compartidos/Trailer/Spiderman.mp4" type="video/mp4">
+                            </video>
+                            <span class="pelicula-calificacion">★ 8.2</span>
+                        </div>
+                        <div class="pelicula-informacion">
+                            <h3>Spider-Man</h3>
+                            <p>Acción · Aventura</p>
+                        </div>
+                    </a>
+                    <div class="pelicula-pie">
+                        <span class="pelicula-duracion">148 min</span>
+                        <a href="horarios.html" class="pelicula-horarios-enlace">Horarios →</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-pelicula">
+                    <a href="seleccion-pelicula.html" class="pelicula-enlace-principal">
+                        <div class="pelicula-imagen">
+                            <img src="../Recursos/Imagenes/Compartidos/Peliculas/Intensamente2.jpg" alt="Póster de Intensamente 2" class="pelicula-poster">
+                            <video class="pelicula-trailer" autoplay muted loop playsinline>
+                                <source src="../Recursos/Videos/Compartidos/Trailer/Intensamente_2.mp4" type="video/mp4">
+                            </video>
+                            <span class="pelicula-calificacion">★ 8.0</span>
+                        </div>
+                        <div class="pelicula-informacion">
+                            <h3>Intensamente 2</h3>
+                            <p>Animación · Familiar</p>
+                        </div>
+                    </a>
+                    <div class="pelicula-pie">
+                        <span class="pelicula-duracion">96 min</span>
+                        <a href="horarios.html" class="pelicula-horarios-enlace">Horarios →</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-pelicula">
+                    <a href="seleccion-pelicula.html" class="pelicula-enlace-principal">
+                        <div class="pelicula-imagen">
+                            <img src="../Recursos/Imagenes/Compartidos/Peliculas/John_Wick_4.jpg" alt="Póster de John Wick 4" class="pelicula-poster">
+                            <video class="pelicula-trailer" autoplay muted loop playsinline>
+                                <source src="../Recursos/Videos/Compartidos/Trailer/John_Wick_4.mp4" type="video/mp4">
+                            </video>
+                            <span class="pelicula-calificacion">★ 8.1</span>
+                        </div>
+                        <div class="pelicula-informacion">
+                            <h3>John Wick 4</h3>
+                            <p>Acción · Suspenso</p>
+                        </div>
+                    </a>
+                    <div class="pelicula-pie">
+                        <span class="pelicula-duracion">169 min</span>
+                        <a href="horarios.html" class="pelicula-horarios-enlace">Horarios →</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-pelicula">
+                    <a href="seleccion-pelicula.html" class="pelicula-enlace-principal">
+                        <div class="pelicula-imagen">
+                            <img src="../Recursos/Imagenes/Compartidos/Peliculas/Avatar.png" alt="Póster de Avatar" class="pelicula-poster">
+                            <video class="pelicula-trailer" autoplay muted loop playsinline>
+                                <source src="../Recursos/Videos/Compartidos/Trailer/Avatar.mp4" type="video/mp4">
+                            </video>
+                            <span class="pelicula-calificacion">★ 7.9</span>
+                        </div>
+                        <div class="pelicula-informacion">
+                            <h3>Avatar</h3>
+                            <p>Ciencia ficción · Fantasía</p>
+                        </div>
+                    </a>
+                    <div class="pelicula-pie">
+                        <span class="pelicula-duracion">192 min</span>
+                        <a href="horarios.html" class="pelicula-horarios-enlace">Horarios →</a>
+                    </div>
+                </article>
+
+                <article class="tarjeta-pelicula">
+                    <a href="seleccion-pelicula.html" class="pelicula-enlace-principal">
+                        <div class="pelicula-imagen">
+                            <img src="../Recursos/Imagenes/Compartidos/Peliculas/Oppenheimer.png" alt="Póster de Oppenheimer" class="pelicula-poster">
+                            <video class="pelicula-trailer" autoplay muted loop playsinline>
+                                <source src="../Recursos/Videos/Compartidos/Trailer/Oppenheimer.mp4" type="video/mp4">
+                            </video>
+                            <span class="pelicula-calificacion">★ 8.3</span>
+                        </div>
+                        <div class="pelicula-informacion">
+                            <h3>Oppenheimer</h3>
+                            <p>Drama · Historia</p>
+                        </div>
+                    </a>
+                    <div class="pelicula-pie">
+                        <span class="pelicula-duracion">180 min</span>
+                        <a href="horarios.html" class="pelicula-horarios-enlace">Horarios →</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="cartelera-paginacion">
+                <a href="#" class="pagina-flecha" aria-label="Página anterior">‹</a>
+                <a href="#" class="pagina-numero pagina-activa">1</a>
+                <a href="#" class="pagina-numero">2</a>
+                <a href="#" class="pagina-numero">3</a>
+                <span class="pagina-puntos">...</span>
+                <a href="#" class="pagina-flecha" aria-label="Página siguiente">›</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cartelera-invitacion">
+        <div class="contenedor cartelera-invitacion-contenido">
+            <div>
+                <span class="texto-superior">TU EXPERIENCIA COMIENZA AQUÍ</span>
+                <h2>ENCUENTRA TU ASIENTO<br>Y DISFRUTA LA FUNCIÓN</h2>
+                <p>Elige tu película favorita y prepárate para vivir una experiencia inolvidable.</p>
+            </div>
+            <a href="seleccion-pelicula.html" class="boton-principal">
+                COMENZAR COMPRA
+                <span>➜</span>
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="pie-pagina">
+    <div class="contenedor">
+        <div class="footer-contenido">
+            <div class="footer-marca">
+                <a href="../index.html" class="logo-footer">
+                    <div class="logo-simbolo">
+                        <img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub">
+                    </div>
+                    <div class="logo-texto">
+                        <h2>CINEHUB</h2>
+                        <span>TODO EL CINE. EN UN SOLO LUGAR.</span>
+                    </div>
+                </a>
+                <p>Creamos experiencias cinematográficas para que cada película se convierta en un recuerdo inolvidable.</p>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Explora</h3>
+                <a href="cartelera.html">Cartelera</a>
+                <a href="estrenos.html">Estrenos</a>
+                <a href="peliculas.html">Películas</a>
+                <a href="horarios.html">Horarios</a>
+                <a href="promociones.html">Promociones</a>
+            </div>
+
+            <div class="footer-columna">
+                <h3>CineHub</h3>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="sedes.html">Nuestras sedes</a>
+                <a href="salas.html">Nuestras salas</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+
+            <div class="footer-redes">
+                <h3>Síguenos</h3>
+                <p>Mantente al tanto de nuestros estrenos, novedades y promociones.</p>
+                <div class="redes-lista">
+                    <a href="#" aria-label="Facebook">
+                        <img src="../Recursos/Imagenes/Compartidos/RedesSociales/Facebook.png" alt="Facebook">
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <img src="../Recursos/Imagenes/Compartidos/RedesSociales/Instagram.png" alt="Instagram">
+                    </a>
+                    <a href="#" aria-label="TikTok">
+                        <img src="../Recursos/Imagenes/Compartidos/RedesSociales/TikTok.png" alt="TikTok">
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <img src="../Recursos/Imagenes/Compartidos/RedesSociales/Youtube_logo.png" alt="YouTube">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-inferior">
+            <p>© 2026 CineHub. Todos los derechos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Accesibilidad</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
