@@ -6,9 +6,9 @@ Proyecto del curso **Taller de Programación Web** — Universidad Tecnológica 
 
 | | |
 |---|---|
-| **Autor** | [COMPLETAR: nombre completo y código] |
-| **Docente** | [COMPLETAR] |
-| **Ciclo** | [COMPLETAR] |
+| **Autor** | Franco Valerio Ccorahua Tizon |
+| **Docente** | Edmundo Aurelio Aparicio Maldonado |
+|
 | **Entregas** | APF1 (HTML) · APF2 (CSS) · APF3 (JavaScript) · Proyecto final |
 
 ---
@@ -149,24 +149,6 @@ Se diseñó para tres tamaños y se comprobó en cada uno:
 | Móvil | ≤ 600 px | Menú hamburguesa, columnas apiladas, botones a ancho completo |
 | Tablet | 601 – 1050 px | Menú hamburguesa, rejillas de 2 columnas |
 | Escritorio | > 1050 px | Navegación completa y rejillas de 3 o 4 columnas |
-
----
-
-## Pruebas realizadas
-
-Probado en [COMPLETAR: navegador y versión] sobre `http://localhost:63342`.
-
-| Prueba | Móvil | Tablet | Escritorio |
-|---|:-:|:-:|:-:|
-| Navegación y menú hamburguesa | [ ] | [ ] | [ ] |
-| Ficha de película (los 9 ambientes) | [ ] | [ ] | [ ] |
-| Filtros y búsqueda (Películas, géneros, Selección, Horarios) | [ ] | [ ] | [ ] |
-| Flujo completo: ficha → horarios → asientos → confirmación | [ ] | [ ] | [ ] |
-| Código promocional aplicado al total | [ ] | [ ] | [ ] |
-| Carrito de Dulcería | [ ] | [ ] | [ ] |
-| Validación del formulario de Contacto | [ ] | [ ] | [ ] |
-
-Capturas en `docs/capturas/`: [COMPLETAR].
 
 ---
 
