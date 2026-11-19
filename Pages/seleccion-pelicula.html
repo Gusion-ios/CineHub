@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Selecciona tu película favorita y comienza tu compra de entradas en CineHub.">
+    <meta name="author" content="CineHub">
+
+    <title>Seleccionar película | CineHub</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../CSS/CSSGeneral.css">
+    <link rel="stylesheet" href="../CSS/CSSCompras.css">
+
+    <!-- Scripts -->
+    <script src="../JS/peliculas.js" defer></script>
+    <script src="../JS/compras.js" defer></script>
+    <script src="../JS/filtros.js" defer></script>
+    <script src="../JS/menu.js" defer></script>
+
+</head>
+
+<body>
+
+<!-- Encabezado -->
+<header class="encabezado">
+    <div class="contenedor encabezado-contenido">
+
+        <a href="../index.html" class="logo">
+            <div class="logo-simbolo">
+                <img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub">
+            </div>
+            <div class="logo-texto">
+                <h1>CINEHUB</h1>
+                <span>TODO EL CINE. EN UN SOLO LUGAR.</span>
+            </div>
+        </a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="cartelera.html" class="enlace-activo">Cartelera</a></li>
+                <li><a href="estrenos.html">Estrenos</a></li>
+                <li><a href="peliculas.html">Películas</a></li>
+                <li><a href="salas.html">Salas</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="dulceria.html">Dulcería</a></li>
+                <li><a href="sedes.html">Sedes</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="acciones-encabezado">
+            <a href="peliculas.html#catalogo" class="accion-icono" aria-label="Buscar películas">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+            </a>
+            <a href="contacto.html" class="accion-icono" aria-label="Mi cuenta">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"></path></svg>
+            </a>
+            <a href="seleccion-pelicula.html" class="boton-entradas">Comprar entradas</a>
+        </div>
+
+    </div>
+</header>
+
+<!-- Contenido principal -->
+<main>
+
+    <section class="compra-progreso" aria-label="Progreso de compra">
+        <div class="contenedor">
+            <div class="progreso-pasos">
+
+                <div class="progreso-paso paso-activo">
+                    <span>1</span>
+                    <p>Película</p>
+                </div>
+
+                <div class="progreso-linea"></div>
+
+                <div class="progreso-paso">
+                    <span>2</span>
+                    <p>Función</p>
+                </div>
+
+                <div class="progreso-linea"></div>
+
+                <div class="progreso-paso">
+                    <span>3</span>
+                    <p>Asientos</p>
+                </div>
+
+                <div class="progreso-linea"></div>
+
+                <div class="progreso-paso">
+                    <span>4</span>
+                    <p>Confirmación</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="seleccion-hero">
+        <div class="contenedor">
+
+            <span class="compra-etiqueta">TU EXPERIENCIA COMIENZA AQUÍ</span>
+
+            <h1>
+                Elige tu próxima
+                <span>película favorita.</span>
+            </h1>
+
+            <p>
+                Explora las películas disponibles y selecciona
+                la historia que deseas vivir en CineHub.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="seleccion-filtros">
+        <div class="contenedor">
+            <div class="filtros-superiores">
+
+                <div class="filtro-busqueda">
+                    <span aria-hidden="true">⌕</span>
+                    <input type="search"
+                           id="buscar-pelicula"
+                           placeholder="Buscar película..."
+                           aria-label="Buscar película">
+                </div>
+
+                <div class="filtro-genero">
+                    <label for="genero">Género:</label>
+                    <select id="genero">
+                        <option value="todos">Todos los géneros</option>
+                        <option value="accion">Acción</option>
+                        <option value="terror">Terror</option>
+                        <option value="ciencia-ficcion">Ciencia ficción</option>
+                        <option value="animacion">Animación</option>
+                        <option value="drama">Drama</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="seleccion-peliculas">
+        <div class="contenedor">
+
+            <div class="seleccion-titulo">
+                <div>
+                    <span class="compra-etiqueta">CARTELERA CINEHUB</span>
+                    <h2>Selecciona una película</h2>
+                </div>
+                <span class="peliculas-disponibles" id="contador-peliculas">9 películas disponibles</span>
+            </div>
+
+            <div class="peliculas-compra-grid" id="lista-peliculas">
+
+                <article class="pelicula-compra-card" data-genero="ciencia-ficcion" data-titulo="Duna: Parte Dos" data-calificacion="8.5">
+                    <div class="pelicula-compra-imagen">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Duna2.jpg" alt="Póster de Duna: Parte Dos" loading="lazy">
+                        <span class="pelicula-compra-genero">CIENCIA FICCIÓN</span>
+                        <span class="pelicula-clasificacion">+13</span>
+                    </div>
+                    <div class="pelicula-compra-contenido">
+                        <h3>Duna: Parte Dos</h3>
+                        <div class="pelicula-metadatos">
+                            <span>★ 8.5</span>
+                            <span>166 min</span>
+                        </div>
+                        <p>Paul Atreides se une a los Fremen para vengar a su familia y evitar un futuro terrible.</p>
+                        <a href="horarios.html" class="boton-seleccionar-pelicula">
+                            Seleccionar película
+                            <span>➜</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="pelicula-compra-card" data-genero="animacion" data-titulo="Intensamente 2" data-calificacion="7.6">
+                    <div class="pelicula-compra-imagen">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Intensamente2.jpg" alt="Póster de Intensamente 2" loading="lazy">
+                        <span class="pelicula-compra-genero">ANIMACIÓN</span>
+                        <span class="pelicula-clasificacion">APT</span>
+                    </div>
+                    <div class="pelicula-compra-contenido">
+                        <h3>Intensamente 2</h3>
+                        <div class="pelicula-metadatos">
+                            <span>★ 7.6</span>
+                            <span>96 min</span>
+                        </div>
+                        <p>Riley crece y llegan emociones nuevas que lo cambian todo en su cabeza.</p>
+                        <a href="horarios.html" class="boton-seleccionar-pelicula">
+                            Seleccionar película
+                            <span>➜</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="pelicula-compra-card" data-genero="accion" data-titulo="John Wick 4" data-calificacion="7.7">
+                    <div class="pelicula-compra-imagen">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/John_Wick_4.jpg" alt="Póster de John Wick 4" loading="lazy">
+                        <span class="pelicula-compra-genero">ACCIÓN</span>
+                        <span class="pelicula-clasificacion">+16</span>
+                    </div>
+                    <div class="pelicula-compra-contenido">
+                        <h3>John Wick 4</h3>
+                        <div class="pelicula-metadatos">
+                            <span>★ 7.7</span>
+                            <span>169 min</span>
+                        </div>
+                        <p>John Wick se enfrenta a la Alta Mesa en una lucha por su libertad.</p>
+                        <a href="horarios.html" class="boton-seleccionar-pelicula">
+                            Seleccionar película
+                            <span>➜</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="pelicula-compra-card" data-genero="terror" data-titulo="El Exorcista" data-calificacion="7.4">
+                    <div class="pelicula-compra-imagen">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Exorcista.jpg" alt="Póster de El Exorcista" loading="lazy">
+                        <span class="pelicula-compra-genero">TERROR</span>
+                        <span class="pelicula-clasificacion">+18</span>
+                    </div>
+                    <div class="pelicula-compra-contenido">
+                        <h3>El Exorcista</h3>
+                        <div class="pelicula-metadatos">
+                            <span>★ 7.4</span>
+                            <span>121 min</span>
+                        </div>
+                        <p>Una madre pide ayuda a dos sacerdotes para salvar a su hija de una presencia aterradora.</p>
+                        <a href="horarios.html" class="boton-seleccionar-pelicula">
+                            Seleccionar película
+                            <span>➜</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="pelicula-compra-card" data-genero="accion" data-titulo="Spider-Man" data-calificacion="7.4">
+                    <div class="pelicula-compra-imagen">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Spiderman.jpg" alt="Póster de Spider-Man" loading="lazy">
+                        <span class="pelicula-compra-genero">ACCIÓN</span>
+                        <span class="pelicula-clasificacion">+13</span>
+                    </div>
+                    <div class="pelicula-compra-contenido">
+                        <h3>Spider-Man</h3>
+                        <div class="pelicula-metadatos">
+                            <span>★ 7.4</span>
+                            <span>136 min</span>
+                        </div>
+                        <p>Un joven con poderes inesperados debe aprender qué significa ser un héroe.</p>
+                        <a href="horarios.html" class="boton-seleccionar-pelicula">
+                            Seleccionar película
+                            <span>➜</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="pelicula-compra-card" data-genero="ciencia-ficcion" data-titulo="Avatar" data-calificacion="7.9">
+                    <div class="pelicula-compra-imagen">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Avatar.png" alt="Póster de Avatar" loading="lazy">
+                        <span class="pelicula-compra-genero">CIENCIA FICCIÓN</span>
+                        <span class="pelicula-clasificacion">+13</span>
+                    </div>
+                    <div class="pelicula-compra-contenido">
+                        <h3>Avatar</h3>
+                        <div class="pelicula-metadatos">
+                            <span>★ 7.9</span>
+                            <span>162 min</span>
+                        </div>
+                        <p>Un marine viaja a Pandora y debe elegir entre su misión y el pueblo Na'vi.</p>
+                        <a href="horarios.html" class="boton-seleccionar-pelicula">
+                            Seleccionar película
+                            <span>➜</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="pelicula-compra-card" data-genero="ciencia-ficcion" data-titulo="Interestellar" data-calificacion="8.7">
+                    <div class="pelicula-compra-imagen">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Interestellar.png" alt="Póster de Interestellar" loading="lazy">
+                        <span class="pelicula-compra-genero">CIENCIA FICCIÓN</span>
+                        <span class="pelicula-clasificacion">+13</span>
+                    </div>
+                    <div class="pelicula-compra-contenido">
+                        <h3>Interestellar</h3>
+                        <div class="pelicula-metadatos">
+                            <span>★ 8.7</span>
+                            <span>169 min</span>
+                        </div>
+                        <p>Un grupo de astronautas cruza un agujero de gusano para salvar a la humanidad.</p>
+                        <a href="horarios.html" class="boton-seleccionar-pelicula">
+                            Seleccionar película
+                            <span>➜</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="pelicula-compra-card" data-genero="animacion" data-titulo="Mi Villano Favorito 4" data-calificacion="6.5">
+                    <div class="pelicula-compra-imagen">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Mi_Villano_Favorito_4.jpg" alt="Póster de Mi Villano Favorito 4" loading="lazy">
+                        <span class="pelicula-compra-genero">ANIMACIÓN</span>
+                        <span class="pelicula-clasificacion">APT</span>
+                    </div>
+                    <div class="pelicula-compra-contenido">
+                        <h3>Mi Villano Favorito 4</h3>
+                        <div class="pelicula-metadatos">
+                            <span>★ 6.5</span>
+                            <span>94 min</span>
+                        </div>
+                        <p>Gru y su familia enfrentan a un nuevo enemigo y a un miembro más en casa.</p>
+                        <a href="horarios.html" class="boton-seleccionar-pelicula">
+                            Seleccionar película
+                            <span>➜</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="pelicula-compra-card" data-genero="drama" data-titulo="Oppenheimer" data-calificacion="8.3">
+                    <div class="pelicula-compra-imagen">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Oppenheimer.png" alt="Póster de Oppenheimer" loading="lazy">
+                        <span class="pelicula-compra-genero">DRAMA</span>
+                        <span class="pelicula-clasificacion">+16</span>
+                    </div>
+                    <div class="pelicula-compra-contenido">
+                        <h3>Oppenheimer</h3>
+                        <div class="pelicula-metadatos">
+                            <span>★ 8.3</span>
+                            <span>180 min</span>
+                        </div>
+                        <p>La historia del científico que lideró el Proyecto Manhattan y cambió el mundo.</p>
+                        <a href="horarios.html" class="boton-seleccionar-pelicula">
+                            Seleccionar película
+                            <span>➜</span>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="sin-resultados" id="sin-resultados" hidden>
+                No encontramos películas con esa búsqueda. Prueba con otro nombre o género.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="compra-mensaje-final">
+        <div class="contenedor">
+            <div class="compra-mensaje-contenido">
+
+                <span aria-hidden="true">✦</span>
+
+                <div>
+                    <h2>Tu próxima aventura está por comenzar.</h2>
+                    <p>Selecciona una película y continúa con la elección de tu función.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Pie de página -->
+<footer class="pie-pagina">
+    <div class="contenedor">
+        <div class="footer-contenido">
+            <div class="footer-marca">
+                <a href="../index.html" class="logo-footer">
+                    <div class="logo-simbolo"><img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub"></div>
+                    <div class="logo-texto"><h2>CINEHUB</h2><span>TODO EL CINE. EN UN SOLO LUGAR.</span></div>
+                </a>
+                <p>Creamos experiencias cinematográficas para que cada película se convierta en un recuerdo inolvidable.</p>
+            </div>
+            <div class="footer-columna">
+                <h3>Explora</h3>
+                <a href="cartelera.html">Cartelera</a>
+                <a href="estrenos.html">Estrenos</a>
+                <a href="peliculas.html">Películas</a>
+                <a href="promociones.html">Promociones</a>
+            </div>
+            <div class="footer-columna">
+                <h3>CineHub</h3>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="sedes.html">Nuestras sedes</a>
+                <a href="salas.html">Nuestras salas</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-redes">
+                <h3>Síguenos</h3>
+                <p>Mantente al tanto de nuestras películas, novedades y promociones.</p>
+                <div class="redes-lista">
+                    <a href="#" aria-label="Facebook"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Facebook.png" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Instagram.png" alt="Instagram"></a>
+                    <a href="#" aria-label="TikTok"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/TikTok.png" alt="TikTok"></a>
+                    <a href="#" aria-label="YouTube"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Youtube_logo.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>© 2026 CineHub. Todos los derechos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Accesibilidad</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

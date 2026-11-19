@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Descubre las mejores películas animadas en CineHub. Aventuras, fantasía, comedia y mundos llenos de imaginación.">
+    <meta name="author" content="CineHub">
+
+    <title>Animación | CineHub</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../CSS/CSSGeneral.css">
+    <link rel="stylesheet" href="../CSS/CSSAnimacion.css">
+
+    <!-- Scripts -->
+    <script src="../JS/peliculas.js" defer></script>
+    <script src="../JS/catalogo.js" defer></script>
+    <script src="../JS/menu.js" defer></script>
+
+</head>
+
+<body>
+
+<!-- Encabezado -->
+<header class="encabezado">
+    <div class="contenedor encabezado-contenido">
+
+        <a href="../index.html" class="logo">
+            <div class="logo-simbolo">
+                <img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub">
+            </div>
+            <div class="logo-texto">
+                <h1>CINEHUB</h1>
+                <span>TODO EL CINE. EN UN SOLO LUGAR.</span>
+            </div>
+        </a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="cartelera.html">Cartelera</a></li>
+                <li><a href="estrenos.html">Estrenos</a></li>
+                <li><a href="peliculas.html" class="enlace-activo">Películas</a></li>
+                <li><a href="salas.html">Salas</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="dulceria.html">Dulcería</a></li>
+                <li><a href="sedes.html">Sedes</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="acciones-encabezado">
+            <a href="peliculas.html#catalogo" class="accion-icono" aria-label="Buscar películas">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+            </a>
+            <a href="contacto.html" class="accion-icono" aria-label="Mi cuenta">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"></path></svg>
+            </a>
+            <a href="cartelera.html" class="boton-entradas">Comprar entradas</a>
+        </div>
+
+    </div>
+</header>
+
+<!-- Contenido principal -->
+<main>
+
+    <section class="hero-animacion">
+
+        <div class="contenedor hero-animacion-contenido">
+
+            <nav class="animacion-migas" aria-label="Migas de pan">
+                <a href="../index.html">Inicio</a>
+                <span>/</span>
+                <a href="peliculas.html">Películas</a>
+                <span>/</span>
+                <span>Animación</span>
+            </nav>
+
+            <span class="texto-superior">UN MUNDO SIN LÍMITES</span>
+
+            <h1>
+                La imaginación
+                <span>cobra vida.</span>
+            </h1>
+
+            <p>
+                Prepárate para descubrir mundos fantásticos, personajes
+                inolvidables y aventuras que emocionan a grandes y pequeños.
+            </p>
+
+            <div class="hero-animacion-botones">
+                <a href="#catalogo" class="boton-principal">
+                    DESCUBRIR PELÍCULAS
+                    <span>➜</span>
+                </a>
+                <a href="cartelera.html" class="boton-secundario">
+                    VER CARTELERA
+                </a>
+            </div>
+
+            <div class="hero-animacion-etiqueta-inferior">
+                <span>✦</span> DIVERSIÓN PARA TODAS LAS EDADES
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="introduccion-animacion">
+
+        <div class="contenedor introduccion-animacion-contenido">
+
+            <div class="introduccion-animacion-imagen">
+                <img src="../Recursos/Imagenes/Generos/AnimacionIntro.png"
+                     alt="Dibujos que cobran vida en un taller de animación"
+                     loading="lazy">
+            </div>
+
+            <div class="introduccion-animacion-texto">
+
+                <span class="texto-superior">UN UNIVERSO DE CREATIVIDAD</span>
+
+                <h2>
+                    Historias que despiertan
+                    <span>emociones.</span>
+                </h2>
+
+                <p>
+                    La animación transforma ideas en experiencias visuales
+                    extraordinarias. Desde aventuras llenas de humor hasta
+                    historias que nos hacen reflexionar, cada película tiene
+                    algo especial que compartir.
+                </p>
+
+                <p>
+                    En CineHub queremos que cada visita sea una oportunidad
+                    para disfrutar, imaginar y compartir momentos inolvidables.
+                </p>
+
+                <a href="#catalogo" class="enlace-animacion">
+                    Explorar el catálogo <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="destacada-animacion">
+
+        <div class="contenedor destacada-animacion-contenido">
+
+            <div class="destacada-animacion-texto">
+
+                <span class="texto-superior">UNA AVENTURA EXTRAORDINARIA</span>
+
+                <h2>Spider-Man: A través del Spider-Verso</h2>
+
+                <div class="destacada-animacion-datos">
+                    <span>2023</span>
+                    <span>140 min</span>
+                    <span>Animación</span>
+                </div>
+
+                <p>
+                    Miles Morales regresa para vivir una aventura que lo
+                    llevará a recorrer diferentes dimensiones y conocer
+                    distintas versiones de Spider-Man.
+                </p>
+
+                <div class="destacada-animacion-nota">
+                    <span>✦</span>
+                    <p>Una experiencia visual llena de color y creatividad.</p>
+                </div>
+
+                <a href="seleccion-pelicula.html" class="boton-principal">
+                    COMPRAR ENTRADAS
+                    <span>➜</span>
+                </a>
+
+            </div>
+
+            <div class="destacada-animacion-poster">
+                <img src="../Recursos/Imagenes/Compartidos/Peliculas/Spider_Verse.jpg"
+                     alt="Póster de Spider-Man: A través del Spider-Verso"
+                     loading="lazy">
+                <span>PELÍCULA DESTACADA</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="categorias-animacion">
+
+        <div class="contenedor">
+
+            <div class="titulo-animacion">
+                <span class="texto-superior">ENCUENTRA TU AVENTURA</span>
+                <h2>Un estilo para cada imaginación</h2>
+                <p>Explora diferentes formas de vivir la animación.</p>
+            </div>
+
+            <div class="categorias-animacion-grid">
+
+                <a href="#catalogo" class="categoria-animacion categoria-aventura" data-filtro="aventura">
+                    <span class="categoria-icono" aria-hidden="true">✦</span>
+                    <h3>Aventura y fantasía</h3>
+                    <p>Viajes extraordinarios y mundos mágicos.</p>
+                </a>
+
+                <a href="#catalogo" class="categoria-animacion categoria-comedia" data-filtro="comedia">
+                    <span class="categoria-icono" aria-hidden="true">☀</span>
+                    <h3>Comedia</h3>
+                    <p>Personajes divertidos y momentos inolvidables.</p>
+                </a>
+
+                <a href="#catalogo" class="categoria-animacion categoria-familiar" data-filtro="familiar">
+                    <span class="categoria-icono" aria-hidden="true">♥</span>
+                    <h3>Familiar</h3>
+                    <p>Historias para disfrutar juntos.</p>
+                </a>
+
+                <a href="#catalogo" class="categoria-animacion categoria-anime" data-filtro="anime">
+                    <span class="categoria-icono" aria-hidden="true">✧</span>
+                    <h3>Anime</h3>
+                    <p>Universos únicos y emociones intensas.</p>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="catalogo-animacion" id="catalogo">
+
+        <div class="contenedor">
+
+            <div class="titulo-animacion">
+                <span class="texto-superior">CATÁLOGO CINEHUB</span>
+                <h2>Películas animadas</h2>
+                <p>Elige tu próxima historia favorita.</p>
+            </div>
+
+            <div class="filtros-animacion">
+                <a href="#catalogo" class="filtro-animacion-activo" data-filtro="todas">Todas</a>
+                <a href="#catalogo" data-filtro="aventura">Aventura</a>
+                <a href="#catalogo" data-filtro="comedia">Comedia</a>
+                <a href="#catalogo" data-filtro="familiar">Familiar</a>
+                <a href="#catalogo" data-filtro="anime">Anime</a>
+            </div>
+
+            <div class="peliculas-animacion-grid">
+
+                <article class="pelicula-animacion" data-categoria="familiar">
+                    <a href="seleccion-pelicula.html" class="poster-animacion" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Toy_Story.jpg" alt="Póster de Toy Story" loading="lazy">
+                        <span>Familiar</span>
+                    </a>
+                    <div class="info-animacion">
+                        <h3>Toy Story</h3>
+                        <p>1995 · 81 min</p>
+                        <a href="seleccion-pelicula.html">Ver película →</a>
+                    </div>
+                </article>
+
+                <article class="pelicula-animacion" data-categoria="aventura">
+                    <a href="seleccion-pelicula.html" class="poster-animacion" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Coco.jpg" alt="Póster de Coco" loading="lazy">
+                        <span>Aventura</span>
+                    </a>
+                    <div class="info-animacion">
+                        <h3>Coco</h3>
+                        <p>2017 · 105 min</p>
+                        <a href="seleccion-pelicula.html">Ver película →</a>
+                    </div>
+                </article>
+
+                <article class="pelicula-animacion" data-categoria="comedia">
+                    <a href="seleccion-pelicula.html" class="poster-animacion" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Shrek.jpg" alt="Póster de Shrek" loading="lazy">
+                        <span>Comedia</span>
+                    </a>
+                    <div class="info-animacion">
+                        <h3>Shrek</h3>
+                        <p>2001 · 90 min</p>
+                        <a href="seleccion-pelicula.html">Ver película →</a>
+                    </div>
+                </article>
+
+                <article class="pelicula-animacion" data-categoria="anime">
+                    <a href="seleccion-pelicula.html" class="poster-animacion" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Your_Name.jpg" alt="Póster de Your Name" loading="lazy">
+                        <span>Anime</span>
+                    </a>
+                    <div class="info-animacion">
+                        <h3>Your Name</h3>
+                        <p>2016 · 106 min</p>
+                        <a href="seleccion-pelicula.html">Ver película →</a>
+                    </div>
+                </article>
+
+                <article class="pelicula-animacion" data-categoria="familiar">
+                    <a href="seleccion-pelicula.html" class="poster-animacion" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Intensamente2.jpg" alt="Póster de Intensamente 2" loading="lazy">
+                        <span>Familiar</span>
+                    </a>
+                    <div class="info-animacion">
+                        <h3>Intensamente 2</h3>
+                        <p>2024 · 96 min</p>
+                        <a href="seleccion-pelicula.html">Ver película →</a>
+                    </div>
+                </article>
+
+                <article class="pelicula-animacion" data-categoria="comedia">
+                    <a href="seleccion-pelicula.html" class="poster-animacion" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Mi_Villano_Favorito_4.jpg" alt="Póster de Mi Villano Favorito 4" loading="lazy">
+                        <span>Comedia</span>
+                    </a>
+                    <div class="info-animacion">
+                        <h3>Mi Villano Favorito 4</h3>
+                        <p>2024 · 95 min</p>
+                        <a href="seleccion-pelicula.html">Ver película →</a>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="experiencia-familiar">
+
+        <div class="contenedor experiencia-familiar-contenido">
+
+            <div class="experiencia-familiar-texto">
+
+                <span class="texto-superior">MOMENTOS PARA COMPARTIR</span>
+
+                <h2>
+                    La magia del cine se disfruta
+                    <span>en compañía.</span>
+                </h2>
+
+                <p>
+                    Reúne a tus amigos y familiares y disfruta de historias
+                    que pueden emocionar, divertir e inspirar a todos.
+                    En CineHub siempre hay una aventura esperando por ti.
+                </p>
+
+                <a href="promociones.html" class="boton-principal">
+                    DESCUBRIR PROMOCIONES
+                    <span>➜</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="cierre-animacion">
+
+        <div class="contenedor">
+
+            <span class="texto-superior">LA AVENTURA COMIENZA AQUÍ</span>
+
+            <h2>Porque nunca dejamos de imaginar.</h2>
+
+            <p>Encuentra tu próxima película y vive la experiencia CineHub.</p>
+
+            <a href="cartelera.html" class="boton-principal">
+                ELEGIR PELÍCULA
+                <span>➜</span>
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- Pie de página -->
+<footer class="pie-pagina">
+    <div class="contenedor">
+        <div class="footer-contenido">
+            <div class="footer-marca">
+                <a href="../index.html" class="logo-footer">
+                    <div class="logo-simbolo"><img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub"></div>
+                    <div class="logo-texto"><h2>CINEHUB</h2><span>TODO EL CINE. EN UN SOLO LUGAR.</span></div>
+                </a>
+                <p>Creamos experiencias cinematográficas para que cada película se convierta en un recuerdo inolvidable.</p>
+            </div>
+            <div class="footer-columna">
+                <h3>Explora</h3>
+                <a href="cartelera.html">Cartelera</a>
+                <a href="estrenos.html">Estrenos</a>
+                <a href="peliculas.html">Películas</a>
+                <a href="promociones.html">Promociones</a>
+            </div>
+            <div class="footer-columna">
+                <h3>CineHub</h3>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="sedes.html">Nuestras sedes</a>
+                <a href="salas.html">Nuestras salas</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-redes">
+                <h3>Síguenos</h3>
+                <p>Mantente al tanto de nuestras películas, novedades y promociones.</p>
+                <div class="redes-lista">
+                    <a href="#" aria-label="Facebook"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Facebook.png" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Instagram.png" alt="Instagram"></a>
+                    <a href="#" aria-label="TikTok"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/TikTok.png" alt="TikTok"></a>
+                    <a href="#" aria-label="YouTube"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Youtube_logo.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>© 2026 CineHub. Todos los derechos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Accesibilidad</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

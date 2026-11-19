@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | CineHub</title>
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="../CSS/CSSGeneral.css">
     <link rel="stylesheet" href="../CSS/CSSContacto.css">
+
+    <!-- Scripts -->
+    <script src="../JS/modal.js" defer></script>
+    <script src="../JS/contacto.js" defer></script>
+    <script src="../JS/menu.js" defer></script>
+
 </head>
 <body>
 
+<!-- Encabezado -->
 <header class="encabezado">
     <div class="contenedor encabezado-contenido">
         <a href="../index.html" class="logo">
@@ -30,7 +43,7 @@
             </ul>
         </nav>
         <div class="acciones-encabezado">
-            <a href="cartelera.html" class="accion-icono" aria-label="Buscar películas">
+            <a href="peliculas.html#catalogo" class="accion-icono" aria-label="Buscar películas">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
             </a>
             <a href="contacto.html" class="accion-icono" aria-label="Mi cuenta">
@@ -41,10 +54,11 @@
     </div>
 </header>
 
+<!-- Contenido principal -->
 <main>
     <section class="contacto-portada">
         <div class="contacto-portada-fondo">
-            <img src="../Recursos/Imagenes/Contacto/Vestíbulo%20cinematográfico%20CineHub%20al%20atardecer.png" alt="Fondo de Contacto">
+            <img src="../Recursos/Imagenes/Contacto/VestibuloCinematograficoCineHubAlAtardecer.png" alt="Fondo de Contacto">
         </div>
         <div class="contacto-portada-degradado"></div>
         <div class="contenedor contacto-portada-contenido">
@@ -152,7 +166,7 @@
                 </table>
 
                 <div class="contacto-mapa">
-                    <img src="../Recursos/Imagenes/Sedes/Mapa%20CINEHUB_%20Sede%20Principal%20en%20Arequipa.png" alt="Ubicación de la sede principal">
+                    <img src="../Recursos/Imagenes/Sedes/MapaCINEHUBSedePrincipalEnArequipa.png" alt="Ubicación de la sede principal">
                 </div>
             </div>
         </div>
@@ -186,8 +200,22 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal: mensaje enviado (lo abre contacto.js) -->
+    <div class="modal" id="modal-gracias" role="dialog" aria-modal="true" aria-labelledby="modal-gracias-titulo" hidden>
+        <div class="modal__panel">
+            <button type="button" class="modal__cerrar" data-modal-cerrar aria-label="Cerrar">×</button>
+            <h2 id="modal-gracias-titulo">¡Gracias, <span id="modal-gracias-nombre"></span>!</h2>
+            <p>Recibimos tu mensaje y te responderemos en menos de 24 horas.</p>
+            <div class="modal__acciones">
+                <button type="button" class="boton-principal" data-modal-cerrar data-modal-foco>Entendido</button>
+            </div>
+        </div>
+    </div>
+
 </main>
 
+<!-- Pie de página -->
 <footer class="pie-pagina">
     <div class="contenedor">
         <div class="footer-contenido">

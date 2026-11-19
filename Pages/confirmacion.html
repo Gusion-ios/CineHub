@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Confirmación de tu reserva en CineHub.">
+    <meta name="author" content="CineHub">
+
+    <title>Confirmación de compra | CineHub</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../CSS/CSSGeneral.css">
+    <link rel="stylesheet" href="../CSS/CSSCompras.css">
+
+    <!-- Scripts -->
+    <script src="../JS/peliculas.js" defer></script>
+    <script src="../JS/compras.js" defer></script>
+    <script src="../JS/menu.js" defer></script>
+
+</head>
+
+<body>
+
+<!-- Encabezado -->
+<header class="encabezado">
+    <div class="contenedor encabezado-contenido">
+
+        <a href="../index.html" class="logo">
+            <div class="logo-simbolo">
+                <img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub">
+            </div>
+            <div class="logo-texto">
+                <h1>CINEHUB</h1>
+                <span>TODO EL CINE. EN UN SOLO LUGAR.</span>
+            </div>
+        </a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="cartelera.html" class="enlace-activo">Cartelera</a></li>
+                <li><a href="estrenos.html">Estrenos</a></li>
+                <li><a href="peliculas.html">Películas</a></li>
+                <li><a href="salas.html">Salas</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="dulceria.html">Dulcería</a></li>
+                <li><a href="sedes.html">Sedes</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="acciones-encabezado">
+            <a href="peliculas.html#catalogo" class="accion-icono" aria-label="Buscar películas">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+            </a>
+            <a href="contacto.html" class="accion-icono" aria-label="Mi cuenta">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"></path></svg>
+            </a>
+            <a href="seleccion-pelicula.html" class="boton-entradas">Comprar entradas</a>
+        </div>
+
+    </div>
+</header>
+
+<!-- Contenido principal -->
+<main class="pagina-confirmacion">
+
+    <section class="compra-progreso" aria-label="Progreso de compra">
+        <div class="contenedor">
+            <div class="progreso-pasos">
+
+                <div class="progreso-paso completado">
+                    <span>✓</span>
+                    <p>Película</p>
+                </div>
+
+                <div class="progreso-linea completada"></div>
+
+                <div class="progreso-paso completado">
+                    <span>✓</span>
+                    <p>Función</p>
+                </div>
+
+                <div class="progreso-linea completada"></div>
+
+                <div class="progreso-paso completado">
+                    <span>✓</span>
+                    <p>Asientos</p>
+                </div>
+
+                <div class="progreso-linea completada"></div>
+
+                <div class="progreso-paso paso-activo">
+                    <span>4</span>
+                    <p>Confirmación</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="confirmacion-hero">
+        <div class="contenedor">
+
+            <div class="confirmacion-icono" aria-hidden="true">✓</div>
+
+            <p class="confirmacion-etiqueta">¡TODO ESTÁ LISTO!</p>
+
+            <h1>¡Tu experiencia <span>comienza aquí!</span></h1>
+
+            <p class="confirmacion-descripcion">
+                Tu reserva ha sido registrada correctamente.
+                Prepárate para disfrutar de una experiencia cinematográfica
+                diferente en CineHub.
+            </p>
+
+            <div class="estado-reserva">
+                <span class="estado-punto"></span>
+                Reserva confirmada
+            </div>
+
+        </div>
+    </section>
+
+    <section class="seccion-detalle-confirmacion">
+        <div class="contenedor">
+
+            <div class="confirmacion-columnas">
+
+                <article class="entrada-digital">
+
+                    <div class="entrada-encabezado">
+                        <div>
+                            <span class="entrada-etiqueta">CINEHUB PRESENTA</span>
+                            <h2>Tu entrada digital</h2>
+                        </div>
+                        <span class="entrada-tipo">E-TICKET</span>
+                    </div>
+
+                    <div class="entrada-pelicula">
+                        <div class="entrada-poster">
+                            <img src="../Recursos/Imagenes/Compartidos/Peliculas/Duna2.jpg" alt="Póster de Duna: Parte Dos">
+                        </div>
+
+                        <div class="entrada-pelicula-info">
+                            <span class="entrada-genero">CIENCIA FICCIÓN · AVENTURA</span>
+                            <h3>Duna: Parte Dos</h3>
+                            <p>Una aventura que merece vivirse en pantalla grande.</p>
+                        </div>
+                    </div>
+
+                    <div class="entrada-separador" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="entrada-datos">
+
+                        <div class="dato-entrada">
+                            <span>FECHA</span>
+                            <strong>Sáb 24 oct 2026</strong>
+                        </div>
+
+                        <div class="dato-entrada">
+                            <span>HORA</span>
+                            <strong>6:50 p. m.</strong>
+                        </div>
+
+                        <div class="dato-entrada">
+                            <span>SEDE</span>
+                            <strong>CineHub Arequipa</strong>
+                        </div>
+
+                        <div class="dato-entrada">
+                            <span>SALA</span>
+                            <strong>Sala 3D</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="entrada-asientos">
+                        <span>ASIENTOS RESERVADOS</span>
+                        <div class="asientos-confirmados">
+                            <span>A4</span>
+                            <span>A5</span>
+                        </div>
+                    </div>
+
+                    <div class="entrada-separador" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="entrada-pie">
+                        <div>
+                            <span>CÓDIGO DE RESERVA</span>
+                            <strong>CH-2026-08421</strong>
+                        </div>
+
+                        <div class="codigo-barras" aria-hidden="true">
+                            <span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span>
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+
+                </article>
+
+                <aside class="panel-confirmacion">
+
+                    <div class="qr-contenedor">
+                        <span class="qr-etiqueta">ACCESO A LA FUNCIÓN</span>
+
+                        <div class="qr-imagen">
+                            <img src="../Recursos/Imagenes/Confirmacion/QRReserva.png" alt="Código QR de la reserva CH-2026-08421">
+                        </div>
+
+                        <p>Presenta este código en el ingreso de tu sala.</p>
+                    </div>
+
+                    <div class="resumen-pago">
+                        <h3>Resumen de compra</h3>
+
+                        <div class="resumen-fila">
+                            <span>Entradas (2)</span>
+                            <strong>S/ 50.00</strong>
+                        </div>
+
+                        <div class="resumen-fila">
+                            <span>Servicio</span>
+                            <strong>S/ 2.00</strong>
+                        </div>
+
+                        <div class="resumen-fila resumen-total">
+                            <span>Total</span>
+                            <strong>S/ 52.00</strong>
+                        </div>
+                    </div>
+
+                    <div class="panel-acciones">
+                        <a href="../index.html" class="boton-inicio">Volver al inicio</a>
+                        <a href="cartelera.html" class="boton-cartelera">Explorar cartelera</a>
+                    </div>
+
+                </aside>
+
+            </div>
+
+            <div class="recomendaciones-confirmacion">
+
+                <div class="recomendacion-icono" aria-hidden="true">✦</div>
+
+                <div>
+                    <h3>¡Una última recomendación!</h3>
+                    <p>
+                        Llega al cine con anticipación, ten tu entrada digital
+                        preparada y disfruta de tu próxima aventura en CineHub.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- Pie de página -->
+<footer class="pie-pagina">
+    <div class="contenedor">
+        <div class="footer-contenido">
+            <div class="footer-marca">
+                <a href="../index.html" class="logo-footer">
+                    <div class="logo-simbolo"><img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub"></div>
+                    <div class="logo-texto"><h2>CINEHUB</h2><span>TODO EL CINE. EN UN SOLO LUGAR.</span></div>
+                </a>
+                <p>Creamos experiencias cinematográficas para que cada película se convierta en un recuerdo inolvidable.</p>
+            </div>
+            <div class="footer-columna">
+                <h3>Explora</h3>
+                <a href="cartelera.html">Cartelera</a>
+                <a href="estrenos.html">Estrenos</a>
+                <a href="peliculas.html">Películas</a>
+                <a href="promociones.html">Promociones</a>
+            </div>
+            <div class="footer-columna">
+                <h3>CineHub</h3>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="sedes.html">Nuestras sedes</a>
+                <a href="salas.html">Nuestras salas</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-redes">
+                <h3>Síguenos</h3>
+                <p>Mantente al tanto de nuestras películas, novedades y promociones.</p>
+                <div class="redes-lista">
+                    <a href="#" aria-label="Facebook"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Facebook.png" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Instagram.png" alt="Instagram"></a>
+                    <a href="#" aria-label="TikTok"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/TikTok.png" alt="TikTok"></a>
+                    <a href="#" aria-label="YouTube"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Youtube_logo.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>© 2026 CineHub. Todos los derechos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Accesibilidad</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

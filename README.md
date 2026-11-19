@@ -1,146 +1,189 @@
-CineHub — Todo el cine. En un solo lugar.
+# CineHub — Todo el cine. En un solo lugar.
 
-Sitio web de un cine desarrollado como proyecto del curso Taller de Programación Web
-(Ingeniería de Sistemas — Universidad Tecnológica del Perú, sede Arequipa).
+Sitio web de un cine desarrollado con **HTML5, CSS3 y JavaScript** (sin frameworks), con identidad visual en negro y dorado. Incluye cartelera, fichas de película dinámicas con ambientación propia y un flujo de compra completo (película → horarios → asientos → confirmación).
 
-Entrega: Avance del proyecto final 2
-Alumno: Ccorahua Tizon, Franco Valerio
-Docente: Aparicio Maldonado, Edmundo Aurelio
-Fecha:15/10/2026
+Proyecto del curso **Taller de Programación Web** — Universidad Tecnológica del Perú (UTP), sede Arequipa.
 
+| | |
+|---|---|
+| **Autor** | [COMPLETAR: nombre completo y código] |
+| **Docente** | [COMPLETAR] |
+| **Ciclo** | [COMPLETAR] |
+| **Entregas** | APF1 (HTML) · APF2 (CSS) · APF3 (JavaScript) · Proyecto final |
 
-1. Descripción
+---
 
-CineHub es una propuesta de página web para una cadena de cines. Reúne cartelera,
-horarios, salas, dulcería, promociones, sedes y contacto en una sola experiencia
-visual coherente, con identidad en negro y dorado.
+## Cómo ejecutarlo
 
-2. Alcance de esta entrega
+1. Descomprime la carpeta `CineHub/`.
+2. Abre `index.html` (en la raíz).
 
-Estructura completa en HTML y estilos en CSS externos.
-No incluye JavaScript (por el momento).
-Los datos (películas, horarios, precios) son de demostración.
+Para que **todo** funcione (audio, vídeo y `localStorage`) conviene abrirlo con un servidor local. Con IntelliJ IDEA: clic derecho sobre `index.html` → *Open in Browser*. Otras opciones: la extensión *Live Server* de VS Code o `python -m http.server`.
 
-3. Tecnologías
+> No requiere instalar nada ni conexión a internet, salvo la tipografía Montserrat (Google Fonts).
 
-Tecnologia y su uso:
-HTML - Estructura semántica (`header`, `nav`, `main`, `section`, `article`, `footer`) 
-CSS - Variables, Flexbox, Grid, `clamp()`, media queries, transiciones y animaciones 
-IntelliJ IDEA - Como principal entorno de desarrollo
+---
 
-Sin frameworks ni librerías externas (hasta el momento)
+## Tecnologías
 
-4. Páginas
+- **HTML5** semántico: `header`, `nav`, `main`, `section`, `article`, `footer`, tablas con `caption`, `th` y `td`, formularios y multimedia (`video`, `audio`).
+- **CSS3**: variables CSS, Flexbox, Grid, transiciones, `transform`, `@keyframes`, `@media` (móvil, tablet y escritorio) y `prefers-reduced-motion`.
+- **JavaScript** (vanilla): variables y constantes, arreglos y objetos, funciones, estructuras de control, DOM, eventos, `localStorage`, `sessionStorage`, `URLSearchParams`, `alert` / `confirm` / `prompt` y mensajes en consola.
+- **Decisión sobre Bootstrap:** no se usó. Todo el diseño es CSS propio con Flexbox y Grid, para controlar la identidad visual (negro y dorado) y mantener cada hoja de estilo ligera.
 
-Terminadas
+---
 
-Pagina - Archivo - Contenido principal
-
-Inicio - `index.html` - Portada con video, categorías, películas en cartelera, promociones 
-Cartelera - `Pages/cartelera.html` - Carrusel de pósters, filtros por género, 8 películas con trailer al pasar el cursor
-Horarios - `Pages/horarios.html` - Selector de fechas, filtros, funciones por película, tabla resumen 
-Dulcería - `Pages/dulceria.html` - Canchita, bebidas, dulces y combos, con audio y video de fondo 
-Promociones - `Pages/promociones.html` - Ofertas destacadas, combos y beneficios 
-Nosotros - `Pages/nosotros.html` - Historia, misión, visión, valores y experiencia por género 
-Contacto - `Pages/contacto.html` - Formulario, horario de atención (tabla), mapa y preguntas frecuentes 
-
-Maquetadas, en revisión
-
-Pagina - Archivo - Pendiente
-
-Salas - `Pages/salas.html` - Actualizar rutas de recursos y revisar 
-Sedes - `Pages/sedes.html` - Actualizar rutas de recursos y revisar 
-
-Por desarrollar
-
-`estrenos.html`, `peliculas.html`, `accion.html`, `animacion.html`,
-`ciencia-ficcion.html`, `terror.html`, `seleccion-pelicula.html`.
-
-
-Nota
-Horarios no aparece en el menú principal a propósito. Se llega desde el enlace
-"Horarios →" de cada película en Cartelera y desde el pie de página.
-
-5. Requisitos del curso cubiertos
-
-Estructura `header` / `nav` / `main` / `footer` en todas las páginas.
-CSS externo: `CSSGeneral.css` (variables, encabezado, pie, botones) más un CSS por página.
-Elementos multimedia: imagen, video (portadas y trailers) y audio (Dulcería) 
-(la cantidad puede variar dependiendo de los posteriores avances en las paginas faltantes).
-Tablas reales** con `<caption>` y `<th scope="col">`: Contacto, Horarios y Salas.
-Formulario con `label`/`id` asociados.
-Diseño responsive con media queries.
-Animaciones y transiciones: carrusel de pósters, efectos hover en tarjetas, cambio de póster a trailer 
-(tambien puede aumentar la cantidad usada en posteriores avances de las paginas).
-Accesibilidad básica: `aria-label`, `alt` descriptivo y `aria-hidden` en íconos decorativos.
-
-6. Estructura del proyecto
+## Estructura del proyecto
 
 ```
 CineHub/
 ├── index.html
 ├── README.md
 ├── CSS/
-│   ├── CSSGeneral.css
-│   ├── CSSInicio.css
-│   ├── CSSCartelera.css
+│   ├── CSSGeneral.css          ← variables, encabezado, pie de página y menú móvil (compartido)
+│   ├── CSSAmbientes.css        ← cursor, aperturas y animaciones de asientos por ambientación
+│   ├── CSSPelicula.css         ← ficha dinámica de película
+│   ├── CSSCompras.css          ← selección, asientos, confirmación y resultado
 │   ├── CSSHorarios.css
-│   ├── CSSDulceria.css
-│   ├── CSSPromociones.css
-│   ├── CSSNosotros.css
-│   ├── CSSContacto.css
-│   ├── CSSSalas.css
-│   └── CSSSedes.css
+│   ├── CSSPeliculas.css
+│   ├── CSSAccion.css · CSSAnimacion.css · CSSCienciaFiccion.css · CSSTerror.css
+│   ├── CSSContacto.css · CSSDulceria.css · CSSPromociones.css
+│   └── CSSSalas.css · CSSSedes.css · CSSNosotros.css · CSSEstrenos.css · CSSCartelera.css · CSSIndex.css
+├── JS/
+│   ├── peliculas.js            ← datos: 23 películas y 9 ambientaciones (arreglos y objetos)
+│   ├── menu.js                 ← menú hamburguesa responsive
+│   ├── ambientes.js            ← cursor, apertura, sonido y animación de asientos
+│   ├── pelicula.js             ← ficha dinámica (pelicula.html?id=...)
+│   ├── catalogo.js             ← búsqueda, orden y filtros (Películas y géneros)
+│   ├── filtros.js              ← filtros de Selección de película y Horarios
+│   ├── compras.js              ← flujo de compra (localStorage)
+│   ├── contacto.js             ← validación del formulario
+│   ├── dulceria.js             ← carrito de dulcería
+│   └── promociones.js          ← códigos promocionales
 ├── Pages/
-│   ├── cartelera.html
-│   ├── horarios.html
-│   ├── dulceria.html
-│   ├── promociones.html
-│   ├── nosotros.html
-│   ├── contacto.html
-│   ├── salas.html
-│   └── sedes.html
+│   ├── cartelera.html · estrenos.html · peliculas.html
+│   ├── accion.html · animacion.html · ciencia-ficcion.html · terror.html
+│   ├── pelicula.html           ← plantilla dinámica de ficha
+│   ├── seleccion-pelicula.html · horarios.html · asientos.html · confirmacion.html · resultado.html
+│   ├── salas.html · sedes.html · nosotros.html
+│   └── promociones.html · dulceria.html · contacto.html
 └── Recursos/
-    ├── Audio/
-    │   └── Dulceria/
-    ├── Fuentes/
-    ├── Imagenes/
-    │   ├── Compartidos/        (logos, iconos, pósters, redes sociales)
-    │   ├── Contacto/
-    │   ├── Dulceria/
-    │   ├── Horarios/
-    │   ├── Nosotros/
-    │   ├── Promociones/
-    │   ├── Salas/
-    │   └── Sedes/
-    └── Videos/
-        ├── Compartidos/
-        │   └── Trailer/
-        ├── Dulceria/
-        ├── Inicio/
-        └── Nosotros/
+    ├── Audio/{Dulceria, Ambientes}/
+    ├── Imagenes/{Compartidos, Generos, Estrenos, Confirmacion, Contacto, Dulceria, Promociones, Salas, Sedes, Nosotros, Peliculas}/
+    └── Videos/{Compartidos/Trailer, Dulceria, Inicio}/
 ```
 
-Criterio de organización de `Recursos/`: lo que se usa en más de una página va en
-`Compartidos/`; lo exclusivo de una página va en la carpeta con su nombre.
+---
 
-7. Cómo ejecutarlo
+## Páginas
 
-   1. Descargar o clonar el proyecto.
-   2. Abrir `index.html` en el navegador (o con el servidor integrado de IntelliJ).
-   3. Navegar con el menú superior.
+| Página | Estado | Contenido principal |
+|---|---|---|
+| Inicio (`index.html`) | Terminada | Portada, cartelera destacada, promociones y accesos |
+| Cartelera | Terminada | Películas en cartelera |
+| Estrenos | Terminada (datos de ejemplo) | Próximos lanzamientos y tráiler |
+| Películas | Terminada + JS | Catálogo de 12 títulos con búsqueda, orden y filtro |
+| Acción · Animación · Ciencia ficción · Terror | Terminadas + JS | Película destacada, tráiler y catálogo filtrable por subgénero |
+| **Ficha de película** (`pelicula.html?id=…`) | Terminada + JS | Plantilla dinámica para las 23 películas |
+| Selección de película | Terminada + JS | 9 películas con búsqueda y filtro por género |
+| Horarios | Terminada + JS | Fechas, sede, formato y género |
+| Asientos | Terminada + JS | Mapa de sala, precio y resumen |
+| Confirmación / Resultado | Terminadas + JS | Entrada digital con QR; pantalla de error |
+| Salas · Sedes · Nosotros | Terminadas | Información del cine |
+| Promociones | Terminada + JS | Códigos promocionales activables |
+| Dulcería | Terminada + JS | Productos, combos y carrito |
+| Contacto | Terminada + JS | Formulario validado, horarios (tabla) y preguntas frecuentes |
 
-Las rutas son relativas: se debe mantener la estructura de carpetas tal como está.
+---
 
-8. Próximos pasos
+## Funcionalidades de JavaScript
 
-Terminar las páginas por desarrollar (estrenos, películas y géneros).
-Incorporar una tipografía externa en `Recursos/Fuentes/`.
-Reemplazar los datos de demostración por contenido final.
+### Ficha de película dinámica
+Una sola página (`pelicula.html`) sirve para las **23 películas**: lee el `id` de la URL (`?id=el-exorcista`), lo busca en el arreglo `PELICULAS` y rellena el DOM. Si el `id` no existe, muestra un mensaje de error.
 
-Nota:
-Para un futuro se planea implementar JavaScript para dar funcionabilidad a algunas paginas como por ejemplo: 
-selector de fechas y filtros de Horarios,
-orden y paginación de Cartelera, validación del formulario de Contacto,
-indicadores del carrusel y selección de asientos, 
-entre otras ideas que se nos iran ocurriendo.
+Cada película tiene una **ambientación** tomada de un catálogo de 9 reutilizables:
+
+| Ambientación | Ejemplos | Apertura | Animación de asientos |
+|---|---|---|---|
+| Demonios | El Exorcista, It, El Conjuro | Parpadeo de luz | Temblor |
+| Espacio | Interestellar, Matrix | Estrellas | Levitar |
+| Desierto | Duna: Parte Dos | Arena | Onda |
+| Killer | John Wick 4 | Corte | Destello |
+| Bioluminiscente | Avatar | Luciérnagas | Brillo |
+| Superhéroe | Spider-Man, Avengers | Telaraña | Balanceo |
+| Emociones | Intensamente 2, Coco | Burbujas | Rebote |
+| Humor | Mi Villano Favorito 4, Shrek | Confeti | Salto |
+| Histórico | Oppenheimer | Cuenta atrás | Fundido |
+
+Cada ambientación aporta un color de acento, un cursor personalizado (**solo con ratón**) y una animación de apertura (una vez por película y sesión; se salta con el botón o con `Esc`). El **sonido está desactivado por defecto**: se activa con el botón "Activar sonido". Con `prefers-reduced-motion` activo se omiten la apertura y el cursor.
+
+### Flujo de compra
+1. **Selección de película**: búsqueda y filtro por género; cada tarjeta lleva a su ficha.
+2. **Ficha** → "Ver horarios".
+3. **Horarios**: filtra por sede, formato y género; al elegir una hora se guarda la función.
+4. **Asientos**: muestra la película y la hora elegidas, calcula el total (2D S/ 18, 3D S/ 25, IMAX S/ 30), máximo 8 asientos, y anima cada asiento según la ambientación de la película.
+5. **Confirmación**: entrada digital con los datos reales y un código de reserva generado.
+
+La reserva viaja entre páginas en `localStorage` (clave `cinehubReserva`). Si se entra a la confirmación sin una reserva completa, se redirige a la pantalla de error.
+
+### Promociones y descuentos
+En Promociones, cada oferta de entradas tiene un código (`DOBLE2X1`, `FAMILIA15`, `ESTRENO10`, `GRUPO20`). El código activo se guarda y **se aplica al total** en asientos y confirmación, con su fila de descuento. Se consume al terminar la compra.
+
+### Dulcería
+Botones `+` y "Elegir combo" que llenan un carrito flotante: subir, bajar o quitar cantidades, total, vaciar y confirmar con `confirm`/`alert`. El pedido se conserva al recargar (`localStorage`). Incluye un botón para activar o pausar la música de fondo.
+
+### Contacto
+Validación con mensajes bajo cada campo (nombre, teléfono opcional, correo y mensaje), contador de caracteres, `prompt` si no se deja teléfono y `confirm` antes de "enviar". El envío es simulado: el mensaje se guarda en `localStorage`.
+
+### Menú responsive
+Menú hamburguesa en pantallas de hasta 1050 px: se abre y cierra con el botón, con `Esc`, al pulsar un enlace o fuera del menú, y se cierra solo al ampliar la ventana.
+
+---
+
+## Diseño responsive
+
+Se diseñó para tres tamaños y se comprobó en cada uno:
+
+| Dispositivo | Ancho | Cambios principales |
+|---|---|---|
+| Móvil | ≤ 600 px | Menú hamburguesa, columnas apiladas, botones a ancho completo |
+| Tablet | 601 – 1050 px | Menú hamburguesa, rejillas de 2 columnas |
+| Escritorio | > 1050 px | Navegación completa y rejillas de 3 o 4 columnas |
+
+---
+
+## Pruebas realizadas
+
+Probado en [COMPLETAR: navegador y versión] sobre `http://localhost:63342`.
+
+| Prueba | Móvil | Tablet | Escritorio |
+|---|:-:|:-:|:-:|
+| Navegación y menú hamburguesa | [ ] | [ ] | [ ] |
+| Ficha de película (los 9 ambientes) | [ ] | [ ] | [ ] |
+| Filtros y búsqueda (Películas, géneros, Selección, Horarios) | [ ] | [ ] | [ ] |
+| Flujo completo: ficha → horarios → asientos → confirmación | [ ] | [ ] | [ ] |
+| Código promocional aplicado al total | [ ] | [ ] | [ ] |
+| Carrito de Dulcería | [ ] | [ ] | [ ] |
+| Validación del formulario de Contacto | [ ] | [ ] | [ ] |
+
+Capturas en `docs/capturas/`: [COMPLETAR].
+
+---
+
+## Notas y limitaciones
+
+- Es un **prototipo académico**: no existe backend, no hay pagos reales ni reservas reales. Los datos se guardan solo en el navegador del usuario.
+- Las calificaciones, clasificaciones y funciones mostradas son datos de ejemplo del sitio.
+- Las 14 películas sin tráiler muestran el aviso "disponible próximamente".
+- Los archivos de audio de las ambientaciones (`Recursos/Audio/Ambientes/`) están pendientes: mientras tanto el botón de sonido indica "Audio no disponible" y no produce errores.
+- El código QR de la confirmación es una imagen fija.
+- Estrenos conserva datos de ejemplo.
+- Los pósters y tráilers de películas pertenecen a sus respectivos titulares y se usan solo con fines educativos.
+
+---
+
+## Créditos
+
+- Tipografía: **Montserrat** (Google Fonts).
+- Pósters y tráilers: © sus respectivos estudios (uso educativo).
+- Imágenes de ambientación y de género: generadas con IA para este proyecto.

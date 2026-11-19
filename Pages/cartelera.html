@@ -7,10 +7,18 @@
           content="Consulta la cartelera de CineHub. Descubre las películas disponibles, sus géneros y comienza a comprar tus entradas.">
     <meta name="author" content="CineHub">
     <title>Cartelera | CineHub</title>
+    <!-- Estilos -->
     <link rel="stylesheet" href="../CSS/CSSGeneral.css">
     <link rel="stylesheet" href="../CSS/CSSCartelera.css">
+
+    <!-- Scripts -->
+    <script src="../JS/peliculas.js" defer></script>
+    <script src="../JS/catalogo.js" defer></script>
+    <script src="../JS/menu.js" defer></script>
+
 </head>
 <body>
+<!-- Encabezado -->
 <header class="encabezado">
     <div class="contenedor encabezado-contenido">
         <a href="../index.html" class="logo">
@@ -62,6 +70,7 @@
     </div>
 </header>
 
+<!-- Contenido principal -->
 <main>
     <section class="cartelera-banner">
         <div class="cartelera-carrusel-contenedor">
@@ -162,11 +171,12 @@
                         <option value="destacadas">Destacadas</option>
                         <option value="nombre">Nombre</option>
                         <option value="calificacion">Calificación</option>
+                        <option value="genero">Género</option>
+                        <option value="duracion">Duración (menor a mayor)</option>
                     </select>
                 </div>
             </div>
 
-            <!-- LISTA DE PELÍCULAS — MISMA ESTRUCTURA QUE EL INICIO -->
             <div class="peliculas-lista">
                 <article class="tarjeta-pelicula">
                     <a href="seleccion-pelicula.html" class="pelicula-enlace-principal">
@@ -356,6 +366,7 @@
     </section>
 </main>
 
+<!-- Pie de página -->
 <footer class="pie-pagina">
     <div class="contenedor">
         <div class="footer-contenido">

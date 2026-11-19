@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Resultado de tu operación en CineHub.">
+    <meta name="author" content="CineHub">
+    <meta name="robots" content="noindex">
+
+    <title>Compra no completada | CineHub</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../CSS/CSSGeneral.css">
+    <link rel="stylesheet" href="../CSS/CSSCompras.css">
+
+    <!-- Scripts -->
+    <script src="../JS/menu.js" defer></script>
+
+</head>
+
+<body>
+
+<!-- Encabezado -->
+<header class="encabezado">
+    <div class="contenedor encabezado-contenido">
+
+        <a href="../index.html" class="logo">
+            <div class="logo-simbolo">
+                <img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub">
+            </div>
+            <div class="logo-texto">
+                <h1>CINEHUB</h1>
+                <span>TODO EL CINE. EN UN SOLO LUGAR.</span>
+            </div>
+        </a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="cartelera.html" class="enlace-activo">Cartelera</a></li>
+                <li><a href="estrenos.html">Estrenos</a></li>
+                <li><a href="peliculas.html">Películas</a></li>
+                <li><a href="salas.html">Salas</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="dulceria.html">Dulcería</a></li>
+                <li><a href="sedes.html">Sedes</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="acciones-encabezado">
+            <a href="peliculas.html#catalogo" class="accion-icono" aria-label="Buscar películas">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+            </a>
+            <a href="contacto.html" class="accion-icono" aria-label="Mi cuenta">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"></path></svg>
+            </a>
+            <a href="seleccion-pelicula.html" class="boton-entradas">Comprar entradas</a>
+        </div>
+
+    </div>
+</header>
+
+<!-- Contenido principal -->
+<main class="pagina-resultado">
+
+    <section class="resultado-contenido">
+        <div class="contenedor">
+
+            <div class="resultado-tarjeta" role="alert">
+
+                <div class="resultado-icono" aria-hidden="true">!</div>
+
+                <span class="resultado-etiqueta">RESULTADO DE LA OPERACIÓN</span>
+
+                <h1>No pudimos completar tu compra</h1>
+
+                <p class="resultado-descripcion">
+                    Hubo un problema al procesar tu operación y no se realizó
+                    ningún cobro. Tus asientos se liberarán en unos minutos,
+                    así que puedes volver a intentarlo.
+                </p>
+
+                <div class="resultado-estado">
+                    <span class="resultado-punto"></span>
+                    Operación no completada
+                </div>
+
+                <div class="resultado-detalle">
+
+                    <h2>¿Qué puedes hacer?</h2>
+
+                    <div class="resultado-recomendacion">
+                        <span class="recomendacion-numero">01</span>
+                        <div>
+                            <h3>Verifica tu información</h3>
+                            <p>Comprueba que los datos ingresados durante el proceso sean correctos.</p>
+                        </div>
+                    </div>
+
+                    <div class="resultado-recomendacion">
+                        <span class="recomendacion-numero">02</span>
+                        <div>
+                            <h3>Inténtalo nuevamente</h3>
+                            <p>Inicia otra compra y selecciona de nuevo tu película, función y asientos.</p>
+                        </div>
+                    </div>
+
+                    <div class="resultado-recomendacion">
+                        <span class="recomendacion-numero">03</span>
+                        <div>
+                            <h3>Escríbenos</h3>
+                            <p>Si el problema continúa, nuestro equipo puede ayudarte desde la página de contacto.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="resultado-acciones">
+
+                    <a href="seleccion-pelicula.html" class="boton-reintentar">
+                        <span aria-hidden="true">↻</span>
+                        Intentar nuevamente
+                    </a>
+
+                    <a href="../index.html" class="boton-volver-inicio">
+                        Volver al inicio
+                    </a>
+
+                </div>
+
+                <a href="contacto.html" class="resultado-contacto">
+                    ¿Necesitas ayuda? Ve a la página de contacto.
+                </a>
+
+            </div>
+
+            <div class="resultado-mensaje-final">
+                <span aria-hidden="true">✦</span>
+                <p>
+                    En CineHub queremos que cada visita se convierta
+                    en una experiencia inolvidable.
+                </p>
+            </div>
+
+            <p class="resultado-nota">
+                Esta pantalla es una demostración visual. El estado de la
+                operación no está conectado a un sistema real de pagos.
+            </p>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- Pie de página -->
+<footer class="pie-pagina">
+    <div class="contenedor">
+        <div class="footer-contenido">
+            <div class="footer-marca">
+                <a href="../index.html" class="logo-footer">
+                    <div class="logo-simbolo"><img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub"></div>
+                    <div class="logo-texto"><h2>CINEHUB</h2><span>TODO EL CINE. EN UN SOLO LUGAR.</span></div>
+                </a>
+                <p>Creamos experiencias cinematográficas para que cada película se convierta en un recuerdo inolvidable.</p>
+            </div>
+            <div class="footer-columna">
+                <h3>Explora</h3>
+                <a href="cartelera.html">Cartelera</a>
+                <a href="estrenos.html">Estrenos</a>
+                <a href="peliculas.html">Películas</a>
+                <a href="promociones.html">Promociones</a>
+            </div>
+            <div class="footer-columna">
+                <h3>CineHub</h3>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="sedes.html">Nuestras sedes</a>
+                <a href="salas.html">Nuestras salas</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-redes">
+                <h3>Síguenos</h3>
+                <p>Mantente al tanto de nuestras películas, novedades y promociones.</p>
+                <div class="redes-lista">
+                    <a href="#" aria-label="Facebook"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Facebook.png" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Instagram.png" alt="Instagram"></a>
+                    <a href="#" aria-label="TikTok"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/TikTok.png" alt="TikTok"></a>
+                    <a href="#" aria-label="YouTube"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Youtube_logo.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>© 2026 CineHub. Todos los derechos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Accesibilidad</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

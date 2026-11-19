@@ -1,78 +1,95 @@
-/* =========================================
-   CINEHUB - PÁGINA DE HORARIOS
-   Estilo unificado con diseño de Dulcería
-   Archivo: CSSHorarios.css
-   ========================================= */
+/* 0. elementos compartidos de la página */
 
-/* =====================================================
-   1. BANNER — EXACTAMENTE IGUAL QUE EN CARTELERA
-   ===================================================== */
-.cartelera-banner {
+.texto-superior {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--dorado);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+}
+
+.boton-principal {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 24px;
+    border: 1px solid var(--dorado);
+    border-radius: 8px;
+    background-color: var(--dorado);
+    color: var(--negro);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.boton-principal:hover {
+    background-color: var(--dorado-suave);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);
+}
+
+/* 1. banner */
+
+.horarios-banner {
     position: relative;
-    min-height: 430px;
+    min-height: 460px;
     display: flex;
     align-items: center;
     overflow: hidden;
     background-color: var(--negro);
 }
 
-.cartelera-carrusel-contenedor {
+.horarios-carrusel {
     position: absolute;
     inset: 0;
-    z-index: 0;
     overflow: hidden;
 }
 
-.cartelera-carrusel-pista {
-    display: flex;
-    align-items: center;
+.horarios-carrusel-pista {
+    width: max-content;
     height: 100%;
-    animation: desplazamiento 24s linear infinite;
+    display: flex;
+    animation: desplazamiento 45s linear infinite;
 }
 
-.cartelera-carrusel-pista:hover {
+.horarios-carrusel-pista:hover {
     animation-play-state: paused;
 }
 
 .carrusel-grupo {
-    display: flex;
-    align-items: center;
     height: 100%;
+    display: flex;
     flex-shrink: 0;
 }
 
 .carrusel-grupo img {
-    width: 33.333%;
+    width: 33.333vw;
     height: 100%;
-    object-fit: cover;
-    object-position: center 40%;
     flex-shrink: 0;
-    opacity: 0.65;
-    transform: scale(1);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+    opacity: 0.6;
+    transition: opacity 0.5s ease;
 }
 
 .carrusel-grupo img:hover {
     opacity: 0.9;
-    transform: scale(1.03);
 }
 
-@keyframes desplazamiento {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-33.333%); }
-}
-
-.cartelera-banner-degradado {
+.horarios-banner-degradado {
     position: absolute;
     inset: 0;
-    z-index: 1;
     background:
             linear-gradient(
                     90deg,
                     rgba(10, 10, 10, 0.97) 0%,
-                    rgba(10, 10, 10, 0.70) 30%,
-                    rgba(10, 10, 10, 0.40) 60%,
-                    rgba(10, 10, 10, 0.20) 100%
+                    rgba(10, 10, 10, 0.78) 35%,
+                    rgba(10, 10, 10, 0.4) 70%,
+                    rgba(10, 10, 10, 0.25) 100%
             ),
             linear-gradient(
                     0deg,
@@ -81,42 +98,44 @@
             );
 }
 
-.cartelera-banner-contenido {
+.horarios-banner-contenido {
     position: relative;
     z-index: 2;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    animation: aparecer 0.9s ease both;
 }
 
-.cartelera-migas {
+.horarios-migas {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 10px;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
     color: #999;
-    font-size: 10px;
+    font-size: 12px;
 }
 
-.cartelera-migas a {
+.horarios-migas a {
     color: var(--plateado);
     transition: 0.3s;
 }
 
-.cartelera-migas a:hover {
+.horarios-migas a:hover {
     color: var(--dorado);
 }
 
-.cartelera-etiqueta {
+.horarios-etiqueta {
     display: inline-flex;
     align-items: center;
     gap: 9px;
     margin-bottom: 18px;
-    padding: 8px 13px;
+    padding: 8px 14px;
     border: 1px solid rgba(212, 175, 55, 0.35);
     border-radius: 30px;
     background-color: rgba(212, 175, 55, 0.08);
     color: var(--dorado);
-    font-size: 9px;
+    font-size: 11px;
     font-weight: 800;
     letter-spacing: 1.5px;
 }
@@ -127,91 +146,31 @@
     border-radius: 50%;
     background-color: var(--dorado);
     box-shadow: 0 0 10px var(--dorado);
+    animation: pulso 2.2s ease-in-out infinite;
 }
 
-.cartelera-banner-contenido h2 {
+.horarios-banner-contenido h1 {
     margin-bottom: 17px;
     color: var(--blanco);
-    font-size: clamp(42px, 5vw, 65px);
+    font-size: clamp(40px, 5.5vw, 66px);
     font-weight: 900;
     line-height: 1.05;
     letter-spacing: -2px;
 }
 
-.cartelera-banner-contenido > p {
-    max-width: 570px;
-    margin-bottom: 25px;
+.horarios-banner-contenido > p {
+    max-width: 560px;
+    margin-bottom: 26px;
     color: var(--plateado);
-    font-size: 12px;
+    font-size: 15px;
     line-height: 1.9;
 }
 
-.cartelera-indicadores {
-    display: flex;
-    gap: 8px;
-    margin-top: 25px;
-}
+/* 2. introducción */
 
-.indicador {
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background-color: rgba(245, 245, 245, 0.25);
-    transition: all 0.3s;
-    cursor: pointer;
-}
-
-.indicador.activo {
-    background-color: var(--dorado);
-    width: 22px;
-    border-radius: 5px;
-}
-
-@media (max-width: 900px) {
-    .cartelera-banner {
-        min-height: 390px;
-    }
-    .carrusel-grupo img {
-        width: 50%;
-    }
-    @keyframes desplazamiento {
-        0%   { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-    }
-}
-
-@media (max-width: 600px) {
-    .cartelera-banner {
-        min-height: 400px;
-    }
-    .cartelera-banner-contenido h2 {
-        font-size: 43px;
-    }
-    .cartelera-banner-contenido > p {
-        font-size: 11px;
-    }
-    .carrusel-grupo img {
-        width: 100%;
-        opacity: 0.5;
-    }
-    @keyframes desplazamiento {
-        0%   { transform: translateX(0); }
-        100% { transform: translateX(-100%); }
-    }
-}
-
-@media (max-width: 380px) {
-    .cartelera-banner-contenido h2 {
-        font-size: 35px;
-    }
-}
-
-/* =====================================================
-   2. SECCIÓN INTRODUCCIÓN — IMÁGENES COMPLETAS ✨
-   ===================================================== */
 .introduccion-horarios {
     padding: 90px 0;
-    background: var(--negro);
+    background-color: var(--negro);
 }
 
 .horarios-encabezado {
@@ -220,19 +179,11 @@
     text-align: center;
 }
 
-.horarios-subtitulo {
-    display: inline-block;
-    color: var(--dorado);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-}
-
 .horarios-encabezado h2 {
+    margin-bottom: 14px;
     color: var(--blanco);
     font-size: clamp(28px, 4vw, 38px);
-    margin-bottom: 14px;
+    font-weight: 900;
 }
 
 .horarios-encabezado p {
@@ -243,216 +194,114 @@
 
 .caracteristicas-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 22px;
 }
 
 .caracteristica-card {
-    position: relative;
-    min-height: 260px;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: all 0.35s ease;
+    min-height: 250px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 20px;
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    background-color: rgba(10, 10, 10, 0.88);
-    box-shadow:
-            inset 0 0 0 1px rgba(212, 175, 55, 0.15),
-            0 8px 25px rgba(0, 0, 0, 0.55);
-}
-
-/* Imagen de fondo — COMPLETA SIN RECORTES */
-.caracteristica-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-size: contain;       /* ↓ MUESTRA IMAGEN COMPLETA ↓ */
-    background-repeat: no-repeat;   /* No repite la imagen */
-    background-position: center;    /* Centra la imagen */
-    transition: transform 0.5s ease;
-    z-index: 0;
-    opacity: 0.85;
-}
-
-.caracteristica-card:nth-child(1)::before {
-    background-image: url("../Recursos/Imagenes/Compartidos/Iconos/Horarios/RelojDorado.png");
-}
-
-.caracteristica-card:nth-child(2)::before {
-    background-image: url("../Recursos/Imagenes/Compartidos/Iconos/Horarios/IconoCinematografico.png");
-}
-
-.caracteristica-card:nth-child(3)::before {
-    background-image: url("../Recursos/Imagenes/Compartidos/Iconos/Horarios/AsientoVip.png");
-}
-
-.caracteristica-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-            linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.45) 55%, rgba(0, 0, 0, 0.15) 100%);
-    z-index: 1;
-    transition: background 0.3s ease;
+    align-items: flex-start;
+    padding: 28px 24px;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 12px;
+    background: linear-gradient(145deg, var(--gris-tarjeta), var(--negro-suave));
+    transition: 0.35s;
 }
 
 .caracteristica-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     border-color: var(--dorado);
-    box-shadow:
-            inset 0 0 0 1px rgba(212, 175, 55, 0.25),
-            0 18px 40px rgba(0, 0, 0, 0.65),
-            0 0 0 1px rgba(212, 175, 55, 0.45);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
 }
 
-.caracteristica-card:hover::before {
-    transform: scale(1.05);
-    opacity: 1;
-}
-
-.caracteristica-card:hover::after {
-    background:
-            linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.55) 65%, rgba(0, 0, 0, 0.2) 100%);
-}
-
-/* Icono superior */
 .caracteristica-icono {
-    position: relative;
-    z-index: 2;
-    margin-bottom: 8px;
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
+    margin-bottom: 20px;
 }
 
 .caracteristica-icono img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    display: block;
     filter: drop-shadow(0 0 6px rgba(212, 175, 55, 0.4));
+    transition: transform 0.4s ease;
 }
 
-.caracteristica-card h3,
-.caracteristica-card span {
-    position: relative;
-    z-index: 2;
+.caracteristica-card:hover .caracteristica-icono img {
+    transform: scale(1.1);
 }
 
 .caracteristica-card h3 {
+    margin-bottom: 9px;
     color: var(--blanco);
-    font-size: 20px;
-    margin-bottom: 6px;
-    transition: color 0.3s;
+    font-size: 19px;
+    font-weight: 900;
+    transition: 0.3s;
 }
 
 .caracteristica-card:hover h3 {
     color: var(--dorado);
 }
 
-.caracteristica-card span {
-    color: var(--dorado);
+.caracteristica-card p {
+    margin-bottom: 16px;
+    color: var(--plateado);
     font-size: 13px;
-    font-weight: 700;
-    opacity: 0.9;
+    line-height: 1.7;
 }
 
-/* ---------- Responsive — Sección Características ---------- */
-@media (max-width: 1000px) {
-    .caracteristicas-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 700px) {
-    .introduccion-horarios {
-        padding: 55px 0;
-    }
-    .caracteristicas-grid {
-        grid-template-columns: 1fr;
-    }
-    .caracteristica-card {
-        min-height: 240px;
-    }
-}
-
-/* =====================================================
-   3. RESTO DE SECCIONES — PROGRAMACIÓN, FILTROS, TABLA, ETC.
-   ===================================================== */
-.subtitulo-horarios {
-    display: inline-block;
+.caracteristica-card span {
+    margin-top: auto;
     color: var(--dorado);
-    font-size: 0.78rem;
+    font-size: 12px;
     font-weight: 800;
-    letter-spacing: 3px;
-    margin-bottom: 18px;
 }
 
-.boton-horarios {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 14px 26px;
-    border-radius: 7px;
-    font-weight: 800;
-    text-decoration: none;
-    transition: var(--transicion);
-}
+/* 3. programación */
 
-.boton-horarios.principal {
-    color: var(--negro);
-    background: linear-gradient(
-            110deg,
-            var(--dorado),
-            var(--dorado-claro)
-    );
-    box-shadow: 0 0 22px rgba(212, 175, 55, 0.2);
-}
-
-.boton-horarios.principal:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+.programacion-horarios {
+    padding: 100px 0;
+    background-color: var(--negro-suave);
 }
 
 .titulo-horarios {
-    text-align: center;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 .titulo-horarios h2,
 .titulo-horarios h3 {
-    color: var(--blanco);
-    font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: 15px;
+    color: var(--blanco);
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 900;
 }
 
 .titulo-horarios > p {
     color: var(--plateado);
+    font-size: 14px;
     line-height: 1.7;
 }
 
 .titulo-horarios-izquierda {
-    text-align: left;
     margin-bottom: 25px;
+    text-align: left;
 }
 
 .titulo-horarios-izquierda h3 {
-    font-size: clamp(1.4rem, 3vw, 1.8rem);
-}
-
-.programacion-horarios {
-    padding: 100px 0;
-    background: var(--negro-suave);
+    font-size: clamp(23px, 3vw, 29px);
 }
 
 .selector-fechas {
-    padding: 28px;
     margin-bottom: 30px;
-    background: var(--gris-tarjeta);
-    border: 1px solid rgba(212, 175, 55, 0.1);
+    padding: 28px;
+    border: 1px solid rgba(212, 175, 55, 0.12);
     border-radius: 12px;
+    background-color: var(--gris-tarjeta);
 }
 
 .selector-fechas-titulo {
@@ -460,19 +309,20 @@
 }
 
 .selector-fechas-titulo h3 {
-    color: var(--blanco);
-    font-size: 1.15rem;
     margin-bottom: 7px;
+    color: var(--blanco);
+    font-size: 18px;
+    font-weight: 900;
 }
 
 .selector-fechas-titulo p {
     color: var(--plateado);
-    font-size: 0.85rem;
+    font-size: 13px;
 }
 
 .fechas-lista {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 12px;
 }
 
@@ -482,41 +332,48 @@
     align-items: center;
     gap: 5px;
     padding: 15px 10px;
-    color: var(--blanco);
-    background: var(--gris-hover);
-    border: 1px solid transparent;
+    border: 1px solid rgba(212, 175, 55, 0.12);
     border-radius: 8px;
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-family: inherit;
     cursor: pointer;
-    transition: var(--transicion);
+    transition: 0.3s;
 }
 
 .fecha-item:hover,
 .fecha-item.fecha-activa {
-    color: var(--negro);
-    background: var(--dorado);
     border-color: var(--dorado);
+    background-color: var(--dorado);
+    color: var(--negro);
     box-shadow: 0 0 18px rgba(212, 175, 55, 0.2);
+}
+
+.fecha-item:hover {
+    transform: translateY(-3px);
 }
 
 .fecha-item span,
 .fecha-item small {
-    font-size: 0.7rem;
+    font-size: 11px;
     font-weight: 800;
     letter-spacing: 1px;
 }
 
 .fecha-item strong {
-    font-size: 1.6rem;
+    font-size: 26px;
+    font-weight: 900;
 }
 
 .filtros-horarios {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
-    padding: 25px;
     margin-bottom: 30px;
-    background: var(--gris-tarjeta);
+    padding: 25px;
+    border: 1px solid rgba(212, 175, 55, 0.12);
     border-radius: 12px;
+    background-color: var(--gris-tarjeta);
 }
 
 .filtro-grupo {
@@ -527,20 +384,22 @@
 
 .filtro-grupo label {
     color: var(--blanco);
-    font-size: 0.85rem;
+    font-size: 13px;
     font-weight: 700;
 }
 
 .filtro-grupo select {
     width: 100%;
     padding: 13px 15px;
-    color: var(--blanco);
-    background: var(--gris-hover);
-    border: 1px solid var(--dorado-suave);
+    border: 1px solid rgba(212, 175, 55, 0.3);
     border-radius: 6px;
     outline: none;
+    background-color: var(--negro);
+    color: var(--blanco);
     font: inherit;
+    font-size: 14px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .filtro-grupo select:focus {
@@ -548,40 +407,49 @@
 }
 
 .filtro-grupo select option {
-    background: var(--gris-tarjeta);
+    background-color: var(--gris-tarjeta);
     color: var(--blanco);
 }
 
 .funcion-pelicula {
     display: grid;
-    grid-template-columns: 180px 1fr;
+    grid-template-columns: 180px minmax(0, 1fr);
     gap: 28px;
-    padding: 25px;
     margin-bottom: 22px;
-    background: var(--gris-tarjeta);
+    padding: 25px;
     border: 1px solid rgba(212, 175, 55, 0.1);
     border-radius: 12px;
-    transition: var(--transicion);
+    background-color: var(--gris-tarjeta);
+    transition: 0.3s;
 }
 
 .funcion-pelicula:hover {
-    border-color: rgba(212, 175, 55, 0.4);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+    border-color: rgba(212, 175, 55, 0.45);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
 }
 
 .funcion-poster {
-    height: 245px;
+    aspect-ratio: 2 / 3;
     overflow: hidden;
     border-radius: 8px;
+    background-color: var(--negro-suave);
 }
 
 .funcion-poster img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.funcion-pelicula:hover .funcion-poster img {
+    transform: scale(1.05);
 }
 
 .funcion-informacion {
+    min-width: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -589,41 +457,42 @@
 
 .funcion-titulo {
     display: flex;
-    align-items: flex-start;
     justify-content: space-between;
+    align-items: flex-start;
     gap: 15px;
     margin-bottom: 18px;
 }
 
 .funcion-genero {
     display: inline-block;
+    margin-bottom: 8px;
     color: var(--dorado);
-    font-size: 0.7rem;
+    font-size: 11px;
     font-weight: 800;
     letter-spacing: 2px;
-    margin-bottom: 8px;
 }
 
 .funcion-titulo h3 {
-    color: var(--blanco);
-    font-size: 1.6rem;
     margin-bottom: 8px;
+    color: var(--blanco);
+    font-size: 26px;
+    font-weight: 900;
 }
 
 .funcion-titulo p {
     color: var(--plateado);
-    font-size: 0.88rem;
+    font-size: 14px;
 }
 
 .funcion-clasificacion {
-    min-width: 42px;
+    min-width: 44px;
     padding: 8px;
-    text-align: center;
-    color: var(--blanco);
-    background: var(--gris-hover);
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.25);
     border-radius: 6px;
-    font-size: 0.8rem;
+    background-color: var(--negro);
+    color: var(--blanco);
+    text-align: center;
+    font-size: 13px;
     font-weight: 800;
 }
 
@@ -636,10 +505,10 @@
 
 .funcion-formatos span {
     padding: 7px 12px;
-    color: var(--plateado);
-    background: var(--gris-hover);
     border-radius: 5px;
-    font-size: 0.75rem;
+    background-color: var(--negro);
+    color: var(--plateado);
+    font-size: 12px;
     font-weight: 700;
 }
 
@@ -651,22 +520,22 @@
 }
 
 .hora-funcion {
-    min-width: 75px;
+    min-width: 78px;
     padding: 11px 15px;
-    text-align: center;
-    color: var(--dorado);
-    background: rgba(212, 175, 55, 0.08);
     border: 1px solid rgba(212, 175, 55, 0.4);
     border-radius: 6px;
-    text-decoration: none;
+    background-color: rgba(212, 175, 55, 0.08);
+    color: var(--dorado);
+    text-align: center;
+    font-size: 14px;
     font-weight: 800;
-    transition: var(--transicion);
+    transition: 0.3s;
 }
 
 .hora-funcion:hover {
-    color: var(--negro);
-    background: var(--dorado);
     border-color: var(--dorado);
+    background-color: var(--dorado);
+    color: var(--negro);
     transform: translateY(-3px);
 }
 
@@ -675,41 +544,62 @@
     justify-content: space-between;
     align-items: center;
     gap: 15px;
+    margin-top: auto;
     padding-top: 15px;
     border-top: 1px solid rgba(212, 175, 55, 0.1);
 }
 
 .funcion-pie span {
-    color: var(--plateado);
-    font-size: 0.78rem;
+    color: #999;
+    font-size: 12px;
 }
 
 .funcion-pie a {
     color: var(--dorado);
-    text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 13px;
     font-weight: 800;
+    transition: 0.3s;
+}
+
+.funcion-pie a:hover {
+    color: var(--blanco);
+}
+
+.sin-funciones {
+    padding: 35px 20px;
+    color: var(--plateado);
+    text-align: center;
+    font-size: 15px;
+}
+
+.sin-funciones[hidden] {
+    display: none;
 }
 
 .resumen-horarios {
     margin-top: 45px;
     padding: 30px;
-    background: var(--gris-tarjeta);
-    border: 1px solid rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.12);
     border-radius: 12px;
+    background-color: var(--gris-tarjeta);
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
 }
 
 .tabla-horarios {
     width: 100%;
+    min-width: 640px;
     border-collapse: collapse;
 }
 
 .tabla-horarios caption {
-    caption-side: top;
-    text-align: left;
     padding-bottom: 14px;
+    caption-side: top;
     color: var(--dorado);
-    font-size: 0.7rem;
+    text-align: left;
+    font-size: 11px;
     font-weight: 800;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -717,11 +607,11 @@
 
 .tabla-horarios thead th {
     padding: 14px 16px;
-    text-align: left;
+    background-color: var(--negro);
     color: var(--blanco);
-    font-size: 0.8rem;
+    text-align: left;
+    font-size: 13px;
     font-weight: 800;
-    background: var(--gris-hover);
 }
 
 .tabla-horarios thead th:first-child {
@@ -734,9 +624,9 @@
 
 .tabla-horarios tbody td {
     padding: 14px 16px;
-    color: var(--plateado);
-    font-size: 0.82rem;
     border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    color: var(--plateado);
+    font-size: 13px;
 }
 
 .tabla-horarios tbody tr:last-child td {
@@ -744,8 +634,8 @@
 }
 
 .tabla-horarios tbody tr:hover td {
+    background-color: rgba(212, 175, 55, 0.05);
     color: var(--blanco);
-    background: rgba(212, 175, 55, 0.05);
 }
 
 .tabla-horarios tbody td:first-child {
@@ -753,148 +643,256 @@
     font-weight: 700;
 }
 
+/* 4. información de funciones */
+
 .informacion-funciones {
     padding: 90px 0;
-    background: linear-gradient(
-            120deg,
-            var(--gris-tarjeta),
-            var(--negro-suave)
-    );
+    background-color: var(--negro);
 }
 
 .informacion-funciones-contenido {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
     align-items: center;
+    gap: 60px;
 }
 
-.info-imagen img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 1px solid rgba(212, 175, 55, 0.2);
-}
-
-.informacion-funciones h2 {
-    color: var(--blanco);
-    font-size: clamp(2rem, 4vw, 3rem);
+.informacion-texto h2 {
     margin-bottom: 20px;
+    color: var(--blanco);
+    font-size: clamp(30px, 4vw, 42px);
+    font-weight: 900;
+    line-height: 1.15;
 }
 
-.informacion-funciones-contenido > div:first-child > p {
+.informacion-texto > p {
+    margin-bottom: 28px;
     color: var(--plateado);
+    font-size: 14px;
     line-height: 1.9;
 }
 
 .consejos-horarios {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 14px;
 }
 
 .consejo-horario {
     display: flex;
     align-items: center;
     gap: 18px;
-    padding: 17px;
-    background: rgba(212, 175, 55, 0.05);
+    padding: 16px 18px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
     border-radius: 8px;
+    background-color: rgba(212, 175, 55, 0.05);
+    transition: 0.3s;
+}
+
+.consejo-horario:hover {
+    border-color: rgba(212, 175, 55, 0.4);
+    transform: translateX(5px);
 }
 
 .consejo-horario span {
     color: var(--dorado);
-    font-size: 1.3rem;
+    font-size: 20px;
     font-weight: 900;
 }
 
 .consejo-horario p {
     color: var(--plateado);
+    font-size: 14px;
     line-height: 1.6;
 }
+
+.info-imagen {
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.info-imagen img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.info-imagen:hover img {
+    transform: scale(1.05);
+}
+
+/* 5. cierre */
 
 .cierre-horarios {
     padding: 100px 0;
     text-align: center;
     background:
-            radial-gradient(
-                    ellipse at center,
-                    rgba(212, 175, 55, 0.14),
-                    transparent 65%
-            ),
-            var(--negro);
+            radial-gradient(ellipse at center, rgba(212, 175, 55, 0.14), transparent 65%),
+            var(--negro-suave);
 }
 
 .cierre-horarios h2 {
     max-width: 800px;
     margin: 0 auto 20px;
     color: var(--blanco);
-    font-size: clamp(2rem, 4vw, 3.3rem);
+    font-size: clamp(30px, 4vw, 50px);
+    font-weight: 900;
+    line-height: 1.15;
 }
 
 .cierre-horarios p {
-    color: var(--plateado);
-    line-height: 1.7;
     margin-bottom: 30px;
+    color: var(--plateado);
+    font-size: 15px;
+    line-height: 1.7;
 }
 
-/* ---------- Responsive General ---------- */
+/* 6. animaciones */
+
+@keyframes desplazamiento {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulso {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.45;
+        transform: scale(0.75);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .horarios-carrusel-pista,
+    .horarios-banner-contenido,
+    .punto-etiqueta {
+        animation: none;
+    }
+
+}
+
+/* 7. responsive */
+
 @media (max-width: 900px) {
+
+    .horarios-banner {
+        min-height: 420px;
+    }
+
+    .carrusel-grupo img {
+        width: 50vw;
+    }
+
+    .caracteristicas-grid {
+        gap: 14px;
+    }
+
+    .caracteristica-card {
+        padding: 22px 16px;
+    }
+
     .fechas-lista {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .funcion-pelicula {
-        grid-template-columns: 145px 1fr;
+        grid-template-columns: 145px minmax(0, 1fr);
         gap: 20px;
-    }
-
-    .funcion-poster {
-        height: 220px;
     }
 
     .informacion-funciones-contenido {
         gap: 30px;
     }
 
-    .tabla-horarios {
-        display: block;
-        overflow-x: auto;
+    .info-imagen img {
+        height: 360px;
     }
+
 }
 
 @media (max-width: 700px) {
+
+    .carrusel-grupo img {
+        width: 100vw;
+        opacity: 0.5;
+    }
+
+    .horarios-banner-degradado {
+        background: linear-gradient(
+                90deg,
+                rgba(10, 10, 10, 0.97),
+                rgba(10, 10, 10, 0.7)
+        );
+    }
+
+    .horarios-banner-contenido h1 {
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
+
+    .horarios-banner-contenido > p {
+        font-size: 14px;
+    }
+
     .introduccion-horarios,
     .programacion-horarios,
     .informacion-funciones {
-        padding: 70px 0;
+        padding: 65px 0;
     }
 
-    .fechas-lista {
-        grid-template-columns: repeat(3, 1fr);
+    .caracteristicas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .caracteristica-card {
+        min-height: 0;
+    }
+
+    .selector-fechas {
+        padding: 20px;
     }
 
     .filtros-horarios {
         grid-template-columns: 1fr;
+        padding: 20px;
     }
 
     .funcion-pelicula {
-        grid-template-columns: 110px 1fr;
+        grid-template-columns: 110px minmax(0, 1fr);
         gap: 15px;
         padding: 16px;
     }
 
-    .funcion-poster {
-        height: 165px;
-    }
-
     .funcion-titulo h3 {
-        font-size: 1.15rem;
+        font-size: 19px;
     }
 
     .funcion-titulo p {
-        font-size: 0.75rem;
+        font-size: 12px;
     }
 
     .funcion-horas {
@@ -902,39 +900,61 @@
     }
 
     .hora-funcion {
-        min-width: 65px;
+        min-width: 66px;
         padding: 9px;
-        font-size: 0.8rem;
+        font-size: 13px;
     }
 
     .funcion-pie {
-        flex-direction: column;
         align-items: flex-start;
-    }
-
-    .informacion-funciones-contenido {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: 8px;
     }
 
     .resumen-horarios {
         padding: 20px;
     }
 
-    .info-imagen img {
-        height: 250px;
+    .informacion-funciones-contenido {
+        grid-template-columns: 1fr;
     }
+
+    .info-imagen img {
+        height: 260px;
+    }
+
+    .cierre-horarios {
+        padding: 70px 0;
+    }
+
 }
 
 @media (max-width: 450px) {
+
+    .horarios-banner-contenido h1 {
+        font-size: 36px;
+    }
+
+    .fechas-lista {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .funcion-pelicula {
         grid-template-columns: 1fr;
     }
 
     .funcion-poster {
-        height: 280px;
+        max-width: 230px;
+        margin: 0 auto;
     }
 
-    .fechas-lista {
-        grid-template-columns: repeat(2, 1fr);
+    .boton-principal {
+        width: 100%;
     }
+
+}
+
+.funcion-destacada {
+    border-color: var(--dorado);
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.5), 0 20px 50px rgba(0, 0, 0, 0.5);
 }

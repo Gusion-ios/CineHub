@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explora las películas de terror de CineHub. Vive el suspenso, el miedo y las experiencias más escalofriantes.">
+    <meta name="author" content="CineHub">
+
+    <title>Terror | CineHub</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../CSS/CSSGeneral.css">
+    <link rel="stylesheet" href="../CSS/CSSTerror.css">
+
+    <!-- Scripts -->
+    <script src="../JS/peliculas.js" defer></script>
+    <script src="../JS/catalogo.js" defer></script>
+    <script src="../JS/menu.js" defer></script>
+
+</head>
+
+<body>
+
+<!-- Encabezado -->
+<header class="encabezado">
+    <div class="contenedor encabezado-contenido">
+
+        <a href="../index.html" class="logo">
+            <div class="logo-simbolo">
+                <img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub">
+            </div>
+            <div class="logo-texto">
+                <h1>CINEHUB</h1>
+                <span>TODO EL CINE. EN UN SOLO LUGAR.</span>
+            </div>
+        </a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="cartelera.html">Cartelera</a></li>
+                <li><a href="estrenos.html">Estrenos</a></li>
+                <li><a href="peliculas.html" class="enlace-activo">Películas</a></li>
+                <li><a href="salas.html">Salas</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="dulceria.html">Dulcería</a></li>
+                <li><a href="sedes.html">Sedes</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="acciones-encabezado">
+            <a href="peliculas.html#catalogo" class="accion-icono" aria-label="Buscar películas">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+            </a>
+            <a href="contacto.html" class="accion-icono" aria-label="Mi cuenta">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"></path></svg>
+            </a>
+            <a href="cartelera.html" class="boton-entradas">Comprar entradas</a>
+        </div>
+
+    </div>
+</header>
+
+<!-- Contenido principal -->
+<main>
+
+    <section class="terror-hero">
+
+        <div class="terror-hero-fondo" aria-hidden="true"></div>
+        <div class="terror-hero-degradado" aria-hidden="true"></div>
+
+        <div class="contenedor terror-hero-contenido">
+
+            <nav class="terror-migas" aria-label="Migas de pan">
+                <a href="../index.html">Inicio</a>
+                <span>/</span>
+                <a href="peliculas.html">Películas</a>
+                <span>/</span>
+                <span>Terror</span>
+            </nav>
+
+            <div class="terror-etiqueta">
+                <span></span>
+                NO MIRES ATRÁS
+            </div>
+
+            <h1>
+                EL MIEDO<br>
+                TIENE UN LUGAR
+            </h1>
+
+            <p>
+                Historias que te harán contener la respiración,
+                sonidos que recorrerán tu espalda y secretos
+                que nunca debieron descubrirse.
+            </p>
+
+            <div class="terror-hero-botones">
+                <a href="#peliculas-terror" class="boton-principal">
+                    DESCUBRIR EL TERROR
+                    <span>➜</span>
+                </a>
+                <a href="cartelera.html" class="boton-secundario">
+                    VER CARTELERA
+                </a>
+            </div>
+
+            <div class="terror-hero-frase">
+                <span></span>
+                ALGUNAS HISTORIAS NO TERMINAN CUANDO SE APAGA LA PANTALLA.
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="terror-introduccion">
+
+        <div class="contenedor terror-intro-contenido">
+
+            <div class="terror-intro-titulo">
+                <span class="texto-superior">UNA EXPERIENCIA DIFERENTE</span>
+                <h2>
+                    EL SILENCIO<br>
+                    TAMBIÉN DA MIEDO.
+                </h2>
+            </div>
+
+            <div class="terror-intro-descripcion">
+                <p>
+                    El terror no necesita mostrarlo todo.
+                    A veces basta una sombra, un sonido lejano
+                    o una puerta que se abre lentamente.
+                </p>
+                <p>
+                    Explora historias sobrenaturales, criaturas
+                    desconocidas, misterios perturbadores y
+                    situaciones que desafían la imaginación.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="terror-destacada">
+
+        <div class="terror-destacada-fondo" aria-hidden="true"></div>
+        <div class="terror-destacada-degradado" aria-hidden="true"></div>
+
+        <div class="contenedor terror-destacada-contenido">
+
+            <div class="terror-destacada-info">
+
+                <span class="texto-superior">EXPERIENCIA DESTACADA</span>
+
+                <span class="terror-destacada-etiqueta">ESPECIAL DE TERROR</span>
+
+                <h2>EL EXORCISTA</h2>
+
+                <div class="terror-destacada-datos">
+                    <span>1973</span>
+                    <span>121 MIN</span>
+                    <span>TERROR</span>
+                    <span class="terror-rating">★ 7.4</span>
+                </div>
+
+                <p>
+                    Cuando una niña de doce años empieza a mostrar
+                    un comportamiento aterrador, su madre recurre
+                    a dos sacerdotes para enfrentar la presencia
+                    que se ha apoderado de ella.
+                </p>
+
+                <div class="terror-destacada-botones">
+                    <a href="seleccion-pelicula.html" class="boton-principal">
+                        DESCUBRIR PELÍCULA
+                        <span>➜</span>
+                    </a>
+                    <a href="cartelera.html" class="boton-secundario">
+                        COMPRAR ENTRADAS
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="terror-destacada-trailer">
+                <span class="terror-trailer-etiqueta">TRÁILER OFICIAL</span>
+                <div class="terror-trailer-video">
+                    <video controls preload="metadata">
+                        <source src="../Recursos/Videos/Compartidos/Trailer/El_Exorcista.mp4" type="video/mp4">
+                        Tu navegador no admite la reproducción de video.
+                    </video>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="terror-subgeneros">
+
+        <div class="contenedor">
+
+            <div class="terror-subgeneros-encabezado">
+                <span class="texto-superior">¿QUÉ TIPO DE MIEDO BUSCAS?</span>
+                <h2>EXPLORA TUS PESADILLAS</h2>
+                <p>Cada historia esconde una forma diferente de terror.</p>
+            </div>
+
+            <div class="terror-subgeneros-grid">
+
+                <a href="#peliculas-terror" class="terror-subgenero-card" data-filtro="sobrenatural">
+                    <div class="terror-subgenero-icono" aria-hidden="true">☠</div>
+                    <h3>Sobrenatural</h3>
+                    <p>Presencias, espíritus y fenómenos inexplicables.</p>
+                    <span>EXPLORAR →</span>
+                </a>
+
+                <a href="#peliculas-terror" class="terror-subgenero-card" data-filtro="psicologico">
+                    <div class="terror-subgenero-icono" aria-hidden="true">◉</div>
+                    <h3>Psicológico</h3>
+                    <p>La mente puede esconder los peores secretos.</p>
+                    <span>EXPLORAR →</span>
+                </a>
+
+                <a href="#peliculas-terror" class="terror-subgenero-card" data-filtro="paranormal">
+                    <div class="terror-subgenero-icono" aria-hidden="true">♜</div>
+                    <h3>Paranormal</h3>
+                    <p>Lo desconocido está más cerca de lo que imaginas.</p>
+                    <span>EXPLORAR →</span>
+                </a>
+
+                <a href="#peliculas-terror" class="terror-subgenero-card" data-filtro="supervivencia">
+                    <div class="terror-subgenero-icono" aria-hidden="true">✕</div>
+                    <h3>Supervivencia</h3>
+                    <p>Corre, escóndete y lucha por sobrevivir.</p>
+                    <span>EXPLORAR →</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="terror-catalogo" id="peliculas-terror">
+
+        <div class="contenedor">
+
+            <div class="terror-catalogo-encabezado">
+
+                <div>
+                    <span class="texto-superior">NUESTRA SELECCIÓN</span>
+                    <h2>PELÍCULAS DE TERROR</h2>
+                    <p>Atrévete a descubrir lo que se esconde en la oscuridad.</p>
+                </div>
+
+                <a href="peliculas.html" class="terror-ver-todo">
+                    VER TODOS LOS GÉNEROS →
+                </a>
+
+            </div>
+
+            <div class="terror-filtros">
+                <a href="#peliculas-terror" class="terror-filtro-activo" data-filtro="todas">Todas</a>
+                <a href="#peliculas-terror" data-filtro="sobrenatural">Sobrenatural</a>
+                <a href="#peliculas-terror" data-filtro="psicologico">Psicológico</a>
+                <a href="#peliculas-terror" data-filtro="paranormal">Paranormal</a>
+                <a href="#peliculas-terror" data-filtro="supervivencia">Supervivencia</a>
+            </div>
+
+            <div class="terror-peliculas-grid">
+
+                <article class="terror-pelicula-card" data-categoria="sobrenatural">
+                    <a href="seleccion-pelicula.html" class="terror-pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Exorcista.jpg" alt="Póster de El Exorcista" loading="lazy">
+                        <span class="terror-genero">SOBRENATURAL</span>
+                        <span class="terror-rating-card">★ 7.4</span>
+                        <div class="terror-overlay"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="terror-pelicula-info">
+                        <h3>El Exorcista</h3>
+                        <p>Terror · Sobrenatural</p>
+                        <div class="terror-pelicula-pie">
+                            <span>121 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="terror-pelicula-card" data-categoria="paranormal supervivencia">
+                    <a href="seleccion-pelicula.html" class="terror-pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/It.jpg" alt="Póster de It" loading="lazy">
+                        <span class="terror-genero">PARANORMAL</span>
+                        <span class="terror-rating-card">★ 7.3</span>
+                        <div class="terror-overlay"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="terror-pelicula-info">
+                        <h3>It</h3>
+                        <p>Terror · Suspenso · Misterio</p>
+                        <div class="terror-pelicula-pie">
+                            <span>135 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="terror-pelicula-card" data-categoria="sobrenatural paranormal">
+                    <a href="seleccion-pelicula.html" class="terror-pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/El_Conjuro.jpg" alt="Póster de El Conjuro" loading="lazy">
+                        <span class="terror-genero">SOBRENATURAL</span>
+                        <span class="terror-rating-card">★ 7.5</span>
+                        <div class="terror-overlay"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="terror-pelicula-info">
+                        <h3>El Conjuro</h3>
+                        <p>Terror · Paranormal</p>
+                        <div class="terror-pelicula-pie">
+                            <span>112 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="terror-pelicula-card" data-categoria="psicologico">
+                    <a href="seleccion-pelicula.html" class="terror-pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Smile.jpg" alt="Póster de Smile" loading="lazy">
+                        <span class="terror-genero">PSICOLÓGICO</span>
+                        <span class="terror-rating-card">★ 6.5</span>
+                        <div class="terror-overlay"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="terror-pelicula-info">
+                        <h3>Smile</h3>
+                        <p>Terror · Psicológico</p>
+                        <div class="terror-pelicula-pie">
+                            <span>115 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="terror-pelicula-card" data-categoria="supervivencia">
+                    <a href="seleccion-pelicula.html" class="terror-pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Un_Lugar_en_Silencio.jpg" alt="Póster de Un lugar en silencio" loading="lazy">
+                        <span class="terror-genero">SUPERVIVENCIA</span>
+                        <span class="terror-rating-card">★ 7.5</span>
+                        <div class="terror-overlay"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="terror-pelicula-info">
+                        <h3>Un lugar en silencio</h3>
+                        <p>Terror · Suspenso · Ciencia ficción</p>
+                        <div class="terror-pelicula-pie">
+                            <span>90 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="terror-pelicula-card" data-categoria="psicologico">
+                    <a href="seleccion-pelicula.html" class="terror-pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Hereditary.jpg" alt="Póster de Hereditary" loading="lazy">
+                        <span class="terror-genero">PSICOLÓGICO</span>
+                        <span class="terror-rating-card">★ 7.3</span>
+                        <div class="terror-overlay"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="terror-pelicula-info">
+                        <h3>Hereditary</h3>
+                        <p>Terror · Drama · Misterio</p>
+                        <div class="terror-pelicula-pie">
+                            <span>127 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <a href="peliculas.html#catalogo" class="terror-card-mas">
+                    <span aria-hidden="true">+</span>
+                    <strong>VER TODO EL CATÁLOGO</strong>
+                    <small>Más películas de todos los géneros</small>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="terror-experiencia">
+
+        <div class="contenedor terror-experiencia-contenido">
+
+            <div class="terror-experiencia-imagen">
+
+                <img src="../Recursos/Imagenes/Generos/TerrorExperiencia.png"
+                     alt="Sala cinematográfica oscura"
+                     loading="lazy">
+
+                <div class="terror-imagen-mensaje">
+                    <span>CUANDO LAS LUCES SE APAGAN...</span>
+                    <strong>COMIENZA EL MIEDO.</strong>
+                </div>
+
+            </div>
+
+            <div class="terror-experiencia-info">
+
+                <span class="texto-superior">NO ES LO MISMO VERLO EN CASA</span>
+
+                <h2>
+                    EL MIEDO SE<br>
+                    SIENTE MEJOR<br>
+                    EN LA OSCURIDAD.
+                </h2>
+
+                <p>
+                    El sonido, la imagen y la atmósfera
+                    pueden convertir una película en
+                    una experiencia completamente diferente.
+                </p>
+
+                <p>
+                    Descubre nuestras salas y prepárate
+                    para sentir cada instante de suspenso.
+                </p>
+
+                <div class="terror-caracteristicas">
+                    <div>
+                        <span>01</span>
+                        <strong>SONIDO ENVOLVENTE</strong>
+                    </div>
+                    <div>
+                        <span>02</span>
+                        <strong>IMAGEN DE ALTA DEFINICIÓN</strong>
+                    </div>
+                    <div>
+                        <span>03</span>
+                        <strong>AMBIENTE INMERSIVO</strong>
+                    </div>
+                </div>
+
+                <a href="salas.html" class="boton-principal">
+                    DESCUBRIR NUESTRAS SALAS
+                    <span>➜</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="terror-final">
+
+        <div class="contenedor terror-final-contenido">
+
+            <span class="texto-superior">UNA ÚLTIMA ADVERTENCIA</span>
+
+            <h2>¿TE ATREVES A ENTRAR?</h2>
+
+            <p>
+                Elige tu próxima película. Pero recuerda...
+                algunas pesadillas comienzan en el cine.
+            </p>
+
+            <a href="cartelera.html" class="boton-principal">
+                ENCUENTRA TU PRÓXIMA PELÍCULA
+                <span>➜</span>
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- Pie de página -->
+<footer class="pie-pagina">
+    <div class="contenedor">
+        <div class="footer-contenido">
+            <div class="footer-marca">
+                <a href="../index.html" class="logo-footer">
+                    <div class="logo-simbolo"><img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub"></div>
+                    <div class="logo-texto"><h2>CINEHUB</h2><span>TODO EL CINE. EN UN SOLO LUGAR.</span></div>
+                </a>
+                <p>Creamos experiencias cinematográficas para que cada película se convierta en un recuerdo inolvidable.</p>
+            </div>
+            <div class="footer-columna">
+                <h3>Explora</h3>
+                <a href="cartelera.html">Cartelera</a>
+                <a href="estrenos.html">Estrenos</a>
+                <a href="peliculas.html">Películas</a>
+                <a href="promociones.html">Promociones</a>
+            </div>
+            <div class="footer-columna">
+                <h3>CineHub</h3>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="sedes.html">Nuestras sedes</a>
+                <a href="salas.html">Nuestras salas</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-redes">
+                <h3>Síguenos</h3>
+                <p>Mantente al tanto de nuestras películas, novedades y promociones.</p>
+                <div class="redes-lista">
+                    <a href="#" aria-label="Facebook"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Facebook.png" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Instagram.png" alt="Instagram"></a>
+                    <a href="#" aria-label="TikTok"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/TikTok.png" alt="TikTok"></a>
+                    <a href="#" aria-label="YouTube"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Youtube_logo.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>© 2026 CineHub. Todos los derechos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Accesibilidad</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

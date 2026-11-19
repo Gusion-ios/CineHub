@@ -1,0 +1,752 @@
+/* 0. elementos compartidos de la página */
+
+.texto-superior {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--dorado);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+}
+
+.boton-principal {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 24px;
+    border-radius: 8px;
+    background-color: var(--dorado);
+    color: var(--negro);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.boton-principal:hover {
+    background-color: var(--dorado-suave);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);
+}
+
+/* 1. banner principal */
+
+.estrenos-banner {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--negro);
+}
+
+.estrenos-banner-fondo {
+    position: absolute;
+    inset: 0;
+    background-image: url("../Recursos/Imagenes/Estrenos/EstrenosBanner.png");
+    background-position: center 40%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.estrenos-banner-degradado {
+    position: absolute;
+    inset: 0;
+    background:
+            linear-gradient(
+                    90deg,
+                    rgba(10, 10, 10, 0.97) 0%,
+                    rgba(10, 10, 10, 0.85) 38%,
+                    rgba(10, 10, 10, 0.38) 75%,
+                    rgba(10, 10, 10, 0.15) 100%
+            ),
+            linear-gradient(
+                    0deg,
+                    var(--negro-suave) 0%,
+                    transparent 35%
+            );
+}
+
+.estrenos-banner-contenido {
+    position: relative;
+    z-index: 2;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    animation: aparecer 0.9s ease both;
+}
+
+.estrenos-migas {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    color: #999;
+    font-size: 12px;
+}
+
+.estrenos-migas a {
+    color: var(--plateado);
+    transition: 0.3s;
+}
+
+.estrenos-migas a:hover {
+    color: var(--dorado);
+}
+
+.estrenos-etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 22px;
+    padding: 9px 15px;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 30px;
+    background-color: rgba(212, 175, 55, 0.08);
+    color: var(--dorado);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.punto-etiqueta {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--dorado);
+    box-shadow: 0 0 10px var(--dorado);
+    animation: pulso 1.8s ease-in-out infinite;
+}
+
+.estrenos-banner-contenido h1 {
+    margin-bottom: 20px;
+    color: var(--blanco);
+    font-size: clamp(40px, 5vw, 66px);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -2px;
+}
+
+.estrenos-banner-contenido > p {
+    max-width: 580px;
+    margin-bottom: 30px;
+    color: var(--plateado);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* 2. introducción */
+
+.estrenos-introduccion {
+    padding: 70px 0;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    background-color: var(--negro-suave);
+}
+
+.introduccion-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.introduccion-texto {
+    max-width: 720px;
+}
+
+.introduccion-texto h2 {
+    margin-bottom: 18px;
+    color: var(--blanco);
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.25;
+}
+
+.introduccion-texto p {
+    max-width: 650px;
+    color: var(--plateado);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.introduccion-dato {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 25px;
+    border: 1px solid rgba(212, 175, 55, 0.12);
+    border-radius: 10px;
+    background-color: var(--negro);
+}
+
+.introduccion-dato strong {
+    color: var(--dorado);
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.introduccion-dato span {
+    color: var(--plateado);
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* 3. encabezado de próximos estrenos */
+
+.seccion-proximos-estrenos {
+    padding: 90px 0 100px;
+}
+
+.estrenos-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.estrenos-encabezado h2 {
+    margin-bottom: 12px;
+    color: var(--blanco);
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.estrenos-encabezado p {
+    color: var(--plateado);
+    font-size: 14px;
+}
+
+.estrenos-contador {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 22px;
+    border: 1px solid rgba(212, 175, 55, 0.12);
+    border-radius: 10px;
+    background-color: var(--negro-suave);
+}
+
+.estrenos-contador strong {
+    color: var(--dorado);
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.estrenos-contador span {
+    color: var(--plateado);
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+/* 4. cuadrícula de estrenos */
+
+.estrenos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 24px;
+}
+
+.estreno-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: 11px;
+    background-color: var(--negro-suave);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.estreno-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(212, 175, 55, 0.45);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+}
+
+.estreno-imagen-enlace {
+    display: block;
+}
+
+.estreno-imagen {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background-color: var(--gris-tarjeta);
+}
+
+.estreno-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.estreno-card:hover .estreno-imagen img {
+    transform: scale(1.07);
+}
+
+.estreno-imagen::after {
+    content: "";
+    position: absolute;
+    inset: 45% 0 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.55));
+    pointer-events: none;
+}
+
+.estreno-estado {
+    position: absolute;
+    z-index: 2;
+    top: 13px;
+    left: 13px;
+    padding: 7px 11px;
+    border-radius: 4px;
+    background-color: var(--dorado);
+    color: var(--negro);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+}
+
+.estreno-fecha-imagen {
+    position: absolute;
+    z-index: 2;
+    right: 13px;
+    bottom: 13px;
+    padding: 7px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: var(--blanco);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.estreno-informacion {
+    padding: 22px;
+}
+
+.estreno-genero {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--dorado);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.estreno-informacion h3 {
+    margin-bottom: 10px;
+    color: var(--blanco);
+    font-size: 19px;
+    font-weight: 900;
+    transition: 0.3s;
+}
+
+.estreno-card:hover .estreno-informacion h3 {
+    color: var(--dorado);
+}
+
+.estreno-informacion > p {
+    min-height: 48px;
+    margin-bottom: 20px;
+    color: var(--plateado);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.estreno-fecha-detalle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.estreno-fecha-detalle span {
+    color: #999;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.estreno-fecha-detalle strong {
+    color: var(--blanco);
+    font-size: 12px;
+    font-weight: 800;
+    text-align: right;
+}
+
+.boton-recordatorio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    padding: 13px 15px;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 6px;
+    background-color: rgba(212, 175, 55, 0.08);
+    color: var(--dorado);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+    transition: 0.3s;
+}
+
+.boton-recordatorio:hover {
+    border-color: var(--dorado);
+    background-color: var(--dorado);
+    color: var(--negro);
+}
+
+.boton-recordatorio span {
+    font-size: 16px;
+}
+
+/* 5. tráiler destacado */
+
+.estrenos-trailer {
+    padding: 90px 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    background-color: var(--negro);
+}
+
+.trailer-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.trailer-texto h2 {
+    margin-bottom: 18px;
+    color: var(--blanco);
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.trailer-texto p {
+    margin-bottom: 26px;
+    color: var(--plateado);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.trailer-video {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    background-color: #000;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+    transition: 0.3s;
+}
+
+.trailer-video:hover {
+    border-color: var(--dorado);
+}
+
+.trailer-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* 6. experiencia cinehub */
+
+.estrenos-experiencia {
+    padding: 85px 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    background-color: var(--negro-suave);
+}
+
+.experiencia-contenido {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.experiencia-imagen {
+    position: relative;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: var(--gris-tarjeta);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+}
+
+.experiencia-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.experiencia-imagen:hover img {
+    transform: scale(1.05);
+}
+
+.experiencia-imagen-etiqueta {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    background-color: rgba(10, 10, 10, 0.8);
+    color: var(--blanco);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.experiencia-imagen-etiqueta span {
+    color: var(--dorado);
+    font-size: 15px;
+}
+
+.experiencia-texto h2 {
+    margin-bottom: 20px;
+    color: var(--blanco);
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.experiencia-texto p {
+    margin-bottom: 26px;
+    color: var(--plateado);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* 7. invitación final */
+
+.estrenos-invitacion {
+    padding: 65px 0;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    background:
+            radial-gradient(
+                    ellipse at 85% 50%,
+                    rgba(212, 175, 55, 0.18),
+                    transparent 45%
+            ),
+            var(--negro-suave);
+}
+
+.estrenos-invitacion-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.estrenos-invitacion h2 {
+    margin-bottom: 13px;
+    color: var(--blanco);
+    font-size: 31px;
+    font-weight: 900;
+    line-height: 1.25;
+}
+
+.estrenos-invitacion p {
+    color: var(--plateado);
+    font-size: 14px;
+}
+
+/* 8. animaciones */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulso {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.45;
+        transform: scale(1.5);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .estrenos-banner-contenido,
+    .punto-etiqueta {
+        animation: none;
+    }
+
+}
+
+/* 9. responsive */
+
+@media (max-width: 1100px) {
+
+    .estrenos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .experiencia-contenido,
+    .trailer-contenido {
+        gap: 35px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .introduccion-contenido {
+        align-items: flex-start;
+    }
+
+    .trailer-contenido,
+    .experiencia-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .experiencia-imagen {
+        height: 330px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .estrenos-banner {
+        min-height: 450px;
+    }
+
+    .estrenos-banner-fondo {
+        background-position: 60% center;
+    }
+
+    .estrenos-banner-degradado {
+        background: linear-gradient(
+                90deg,
+                rgba(10, 10, 10, 0.95),
+                rgba(10, 10, 10, 0.62)
+        );
+    }
+
+    .estrenos-banner-contenido h1 {
+        font-size: 38px;
+        letter-spacing: -1px;
+    }
+
+    .estrenos-banner-contenido > p {
+        font-size: 14px;
+    }
+
+    .estrenos-introduccion {
+        padding: 50px 0;
+    }
+
+    .introduccion-contenido {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .introduccion-texto h2 {
+        font-size: 26px;
+    }
+
+    .introduccion-dato {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .introduccion-dato span {
+        text-align: left;
+    }
+
+    .seccion-proximos-estrenos {
+        padding: 60px 0 70px;
+    }
+
+    .estrenos-encabezado {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .estrenos-encabezado h2 {
+        font-size: 26px;
+    }
+
+    .estrenos-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .estrenos-trailer,
+    .estrenos-experiencia {
+        padding: 60px 0;
+    }
+
+    .trailer-texto h2,
+    .experiencia-texto h2 {
+        font-size: 28px;
+    }
+
+    .experiencia-imagen {
+        height: 260px;
+    }
+
+    .estrenos-invitacion-contenido {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .estrenos-invitacion h2 {
+        font-size: 26px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .estrenos-banner-contenido h1 {
+        font-size: 32px;
+    }
+
+    .estreno-informacion {
+        padding: 18px;
+    }
+
+    .boton-principal {
+        width: 100%;
+    }
+
+}

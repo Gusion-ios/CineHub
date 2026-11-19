@@ -1,0 +1,1811 @@
+/* 0. PROGRESO DE COMPRA (todas las páginas) */
+
+.compra-progreso {
+    padding: 28px 0;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+    background-color: var(--negro);
+}
+
+.progreso-pasos {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progreso-paso {
+    min-width: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progreso-paso > span:first-child {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 50%;
+    background-color: var(--gris-tarjeta);
+    color: var(--plateado);
+    font-size: 14px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.progreso-paso p,
+.progreso-paso > span:nth-child(2) {
+    margin-top: 9px;
+    color: #999;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.progreso-paso.paso-activo > span:first-child,
+.progreso-paso.activo > span:first-child,
+.progreso-paso.completado > span:first-child {
+    border-color: var(--dorado);
+    background-color: var(--dorado);
+    color: var(--negro);
+}
+
+.progreso-paso.paso-activo > span:first-child,
+.progreso-paso.activo > span:first-child {
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.35);
+    animation: pulso 2.4s ease-in-out infinite;
+}
+
+.progreso-paso.paso-activo p,
+.progreso-paso.activo p,
+.progreso-paso.completado p,
+.progreso-paso.paso-activo > span:nth-child(2),
+.progreso-paso.activo > span:nth-child(2),
+.progreso-paso.completado > span:nth-child(2) {
+    color: var(--dorado);
+}
+
+.progreso-linea {
+    width: 75px;
+    height: 2px;
+    margin: 0 5px 24px;
+    background-color: rgba(212, 175, 55, 0.18);
+}
+
+.progreso-linea.completada {
+    background-color: var(--dorado);
+}
+
+.compra-etiqueta {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--dorado);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+/* 1. selección de película - hero */
+
+.seleccion-hero {
+    padding: 70px 0 50px;
+    text-align: center;
+    background:
+            radial-gradient(ellipse at center top, rgba(212, 175, 55, 0.12), transparent 65%),
+            var(--negro-suave);
+}
+
+.seleccion-hero .contenedor {
+    animation: aparecer 0.8s ease both;
+}
+
+.seleccion-hero h1 {
+    margin-bottom: 18px;
+    color: var(--blanco);
+    font-size: clamp(34px, 5vw, 54px);
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.seleccion-hero h1 span {
+    display: block;
+    color: var(--dorado);
+}
+
+.seleccion-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--plateado);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* 2. filtros */
+
+.seleccion-filtros {
+    padding: 22px 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    background-color: var(--negro-suave);
+}
+
+.filtros-superiores {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.filtro-busqueda {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 8px;
+    background-color: var(--negro);
+    transition: 0.3s;
+}
+
+.filtro-busqueda:focus-within {
+    border-color: var(--dorado);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
+}
+
+.filtro-busqueda span {
+    color: var(--dorado);
+    font-size: 24px;
+    line-height: 1;
+}
+
+.filtro-busqueda input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--blanco);
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.filtro-busqueda input::placeholder {
+    color: #888;
+}
+
+.filtro-genero {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.filtro-genero label {
+    color: var(--plateado);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.filtro-genero select {
+    padding: 12px 15px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 8px;
+    outline: none;
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filtro-genero select:focus {
+    border-color: var(--dorado);
+}
+
+/* 3. listado de películas */
+
+.seleccion-peliculas {
+    padding: 60px 0 90px;
+    background-color: var(--negro);
+}
+
+.seleccion-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.seleccion-titulo h2 {
+    color: var(--blanco);
+    font-size: 31px;
+    font-weight: 900;
+}
+
+.peliculas-disponibles {
+    color: var(--plateado);
+    font-size: 13px;
+}
+
+.peliculas-compra-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.sin-resultados {
+    padding: 40px 20px;
+    color: var(--plateado);
+    text-align: center;
+    font-size: 15px;
+}
+
+.sin-resultados[hidden] {
+    display: none;
+}
+
+.pelicula-compra-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    border-radius: 12px;
+    background-color: var(--gris-tarjeta);
+    transition: 0.3s;
+}
+
+.pelicula-compra-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(212, 175, 55, 0.55);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.pelicula-compra-imagen {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background-color: var(--negro-suave);
+}
+
+.pelicula-compra-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.pelicula-compra-card:hover .pelicula-compra-imagen img {
+    transform: scale(1.06);
+}
+
+.pelicula-compra-genero {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: var(--dorado);
+    color: var(--negro);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.pelicula-clasificacion {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background-color: rgba(10, 10, 10, 0.88);
+    color: var(--blanco);
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.pelicula-compra-contenido {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+}
+
+.pelicula-compra-contenido h3 {
+    margin-bottom: 12px;
+    color: var(--blanco);
+    font-size: 20px;
+    font-weight: 900;
+    transition: 0.3s;
+}
+
+.pelicula-compra-card:hover .pelicula-compra-contenido h3 {
+    color: var(--dorado);
+}
+
+.pelicula-metadatos {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 14px;
+}
+
+.pelicula-metadatos span:first-child {
+    color: var(--dorado);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.pelicula-metadatos span:last-child {
+    color: #999;
+    font-size: 13px;
+}
+
+.pelicula-compra-contenido > p {
+    margin-bottom: 20px;
+    color: var(--plateado);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.boton-seleccionar-pelicula {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    background-color: var(--dorado);
+    color: var(--negro);
+    font-size: 12px;
+    font-weight: 900;
+    transition: 0.3s;
+}
+
+.boton-seleccionar-pelicula:hover {
+    background-color: var(--blanco);
+    transform: translateY(-2px);
+}
+
+.boton-seleccionar-pelicula span {
+    font-size: 18px;
+}
+
+.compra-mensaje-final {
+    padding: 38px 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.12);
+    background-color: var(--negro-suave);
+}
+
+.compra-mensaje-contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.compra-mensaje-contenido > span {
+    color: var(--dorado);
+    font-size: 36px;
+}
+
+.compra-mensaje-contenido h2 {
+    margin-bottom: 7px;
+    color: var(--blanco);
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.compra-mensaje-contenido p {
+    color: var(--plateado);
+    font-size: 13px;
+}
+
+/* 4. ASIENTOS (asientos.html) */
+
+.pagina-asientos {
+    padding-bottom: 90px;
+    background-color: var(--negro);
+}
+
+.asientos-hero {
+    padding-top: 55px;
+    padding-bottom: 45px;
+    text-align: center;
+}
+
+.asientos-hero h1 {
+    margin: 15px 0;
+    color: var(--blanco);
+    font-size: clamp(34px, 5vw, 54px);
+    font-weight: 900;
+}
+
+.asientos-hero h1 span {
+    color: var(--dorado);
+}
+
+.asientos-hero p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: var(--plateado);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.pelicula-seleccionada {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 24px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 16px;
+    background: linear-gradient(120deg, var(--gris-tarjeta), var(--negro-suave));
+}
+
+.pelicula-seleccionada-icono {
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 14px;
+    background-color: rgba(212, 175, 55, 0.1);
+    color: var(--dorado);
+    font-size: 2.6rem;
+}
+
+.pelicula-seleccionada-info {
+    flex: 1;
+}
+
+.pelicula-seleccionada-info span,
+.funcion-seleccionada span {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--dorado);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.pelicula-seleccionada-info h2 {
+    margin: 0 0 7px;
+    color: var(--blanco);
+    font-size: 1.5rem;
+}
+
+.pelicula-seleccionada-info p {
+    margin: 0;
+    color: var(--plateado);
+    font-size: 14px;
+}
+
+.funcion-seleccionada {
+    padding-left: 25px;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.funcion-seleccionada strong {
+    color: var(--blanco);
+    font-size: 1.3rem;
+}
+
+.pelicula-seleccionada-icono {
+    overflow: hidden;
+}
+
+.pelicula-seleccionada-icono img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.enlace-volver {
+    display: inline-block;
+    margin-top: 22px;
+    color: var(--dorado);
+    font-size: 13px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.enlace-volver:hover {
+    color: var(--blanco);
+    transform: translateX(-4px);
+}
+
+.seccion-seleccion-asientos {
+    margin-top: 60px;
+}
+
+.asientos-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.asientos-encabezado h2 {
+    margin: 12px 0 8px;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.asientos-encabezado p {
+    margin: 0;
+    color: var(--plateado);
+    font-size: 14px;
+}
+
+.leyenda-asientos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.leyenda-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--plateado);
+    font-size: 13px;
+}
+
+.leyenda-color {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+}
+
+.leyenda-color.disponible {
+    border: 1px solid var(--dorado);
+    background-color: var(--gris-tarjeta);
+}
+
+.leyenda-color.seleccionado {
+    background-color: var(--dorado);
+}
+
+.leyenda-color.ocupado {
+    background-color: #555;
+}
+
+.sala-contenedor {
+    padding: 45px 25px;
+    overflow-x: auto;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 20px;
+    background:
+            radial-gradient(ellipse at center top, rgba(212, 175, 55, 0.1), transparent 55%),
+            var(--negro-suave);
+}
+
+.pantalla-cine {
+    max-width: 650px;
+    min-width: 450px;
+    margin: 0 auto;
+    padding: 13px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(90deg, transparent, var(--dorado), transparent);
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.2);
+    color: var(--negro);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+
+.pantalla-cine span {
+    color: var(--negro);
+}
+
+.mensaje-pantalla {
+    margin: 20px 0 45px;
+    color: #888;
+    text-align: center;
+    font-size: 12px;
+}
+
+.fila-asientos {
+    min-width: 500px;
+    margin: 15px auto;
+    display: grid;
+    grid-template-columns: 30px repeat(8, minmax(35px, 48px)) 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.letra-fila {
+    color: var(--dorado);
+    font-weight: 800;
+    text-align: center;
+}
+
+.asiento {
+    width: 43px;
+    height: 43px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 9px 9px 13px 13px;
+    background-color: var(--gris-tarjeta);
+    color: var(--plateado);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.asiento-disponible:hover {
+    transform: translateY(-5px);
+    border-color: var(--dorado);
+    background-color: rgba(212, 175, 55, 0.25);
+    color: var(--blanco);
+    box-shadow: 0 7px 18px rgba(212, 175, 55, 0.25);
+}
+
+.asiento-seleccionado {
+    border-color: var(--dorado-suave);
+    background-color: var(--dorado);
+    color: var(--negro);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.asiento-ocupado {
+    border-color: #444;
+    background-color: #2a2a2a;
+    color: #777;
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.asiento:focus-visible,
+.boton-seleccionar-pelicula:focus-visible,
+.boton-continuar-asientos:focus-visible,
+.boton-reintentar:focus-visible,
+.boton-inicio:focus-visible,
+.enlace-volver:focus-visible {
+    outline: 2px solid var(--blanco);
+    outline-offset: 3px;
+}
+
+.resumen-asientos {
+    margin-top: 30px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 16px;
+    background-color: var(--gris-tarjeta);
+}
+
+.resumen-informacion span,
+.resumen-precio span {
+    display: block;
+    margin-bottom: 8px;
+    color: #999;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.resumen-informacion strong {
+    display: block;
+    color: var(--blanco);
+    font-size: 1.2rem;
+}
+
+.resumen-informacion p {
+    margin: 6px 0 0;
+    color: #999;
+    font-size: 13px;
+}
+
+.resumen-precio strong {
+    color: var(--dorado);
+    font-size: 1.6rem;
+}
+
+.boton-continuar-asientos {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 26px;
+    border-radius: 9px;
+    background-color: var(--dorado);
+    color: var(--negro);
+    font-size: 13px;
+    font-weight: 900;
+    transition: 0.25s;
+}
+
+.boton-continuar-asientos:hover {
+    transform: translateY(-3px);
+    background-color: var(--dorado-suave);
+}
+
+.boton-continuar-asientos span {
+    font-size: 1.2rem;
+}
+
+.nota-prototipo {
+    margin-top: 20px;
+    color: #888;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* 5. CONFIRMACIÓN (confirmacion.html) */
+
+.pagina-confirmacion {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+.confirmacion-hero {
+    padding: 65px 20px 45px;
+    text-align: center;
+    background: radial-gradient(ellipse at center top, rgba(212, 175, 55, 0.12), transparent 65%);
+}
+
+.confirmacion-icono {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #20d6a0;
+    border-radius: 50%;
+    background-color: rgba(32, 214, 160, 0.12);
+    box-shadow: 0 0 30px rgba(32, 214, 160, 0.15);
+    color: #20d6a0;
+    font-size: 42px;
+    font-weight: bold;
+    animation: aparecer 0.7s ease both;
+}
+
+.confirmacion-etiqueta {
+    margin-bottom: 12px;
+    color: #20d6a0;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.confirmacion-hero h1 {
+    margin-bottom: 15px;
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 900;
+}
+
+.confirmacion-hero h1 span {
+    color: var(--dorado);
+}
+
+.confirmacion-descripcion {
+    max-width: 620px;
+    margin: 0 auto;
+    color: var(--plateado);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.estado-reserva {
+    margin-top: 22px;
+    padding: 10px 17px;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    border: 1px solid rgba(32, 214, 160, 0.3);
+    border-radius: 30px;
+    background-color: rgba(32, 214, 160, 0.08);
+    color: #20d6a0;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.estado-punto {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #20d6a0;
+}
+
+.seccion-detalle-confirmacion {
+    padding: 20px 20px 75px;
+}
+
+.confirmacion-columnas {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.8fr);
+    align-items: start;
+    gap: 28px;
+}
+
+.entrada-digital {
+    padding: 30px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 18px;
+    background: linear-gradient(145deg, var(--gris-tarjeta), var(--negro-suave));
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.entrada-encabezado {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.entrada-etiqueta {
+    color: var(--dorado);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.entrada-encabezado h2 {
+    margin-top: 7px;
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.entrada-tipo {
+    padding: 8px 12px;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 6px;
+    color: var(--dorado);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.entrada-pelicula {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.entrada-poster {
+    width: 105px;
+    height: 145px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 9px;
+    background-color: var(--negro-suave);
+}
+
+.entrada-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.entrada-genero {
+    color: var(--dorado);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.entrada-pelicula-info h3 {
+    margin: 9px 0;
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.entrada-pelicula-info p {
+    color: var(--plateado);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.entrada-separador {
+    position: relative;
+    margin: 28px -30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dashed rgba(212, 175, 55, 0.35);
+}
+
+.entrada-separador span {
+    position: relative;
+    top: -1px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: var(--negro);
+}
+
+.entrada-separador span:first-child {
+    left: -9px;
+}
+
+.entrada-separador span:last-child {
+    right: -9px;
+}
+
+.entrada-datos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 20px;
+}
+
+.dato-entrada {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.dato-entrada span,
+.entrada-asientos > span,
+.entrada-pie span {
+    color: #999;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.dato-entrada strong {
+    color: var(--blanco);
+    font-size: 14px;
+}
+
+.entrada-asientos {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.asientos-confirmados {
+    display: flex;
+    gap: 8px;
+}
+
+.asientos-confirmados span {
+    min-width: 38px;
+    padding: 9px;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 6px;
+    background-color: rgba(212, 175, 55, 0.1);
+    color: var(--dorado);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.entrada-pie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.entrada-pie > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.entrada-pie strong {
+    color: var(--blanco);
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.codigo-barras {
+    height: 43px;
+    display: flex;
+    align-items: stretch;
+    gap: 3px;
+}
+
+.codigo-barras span {
+    width: 3px;
+    background-color: var(--blanco);
+}
+
+.codigo-barras span:nth-child(2n) {
+    width: 5px;
+}
+
+.codigo-barras span:nth-child(3n) {
+    width: 2px;
+}
+
+.panel-confirmacion {
+    padding: 25px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 18px;
+    background-color: var(--gris-tarjeta);
+}
+
+.qr-contenedor {
+    text-align: center;
+}
+
+.qr-etiqueta {
+    color: var(--dorado);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.qr-imagen {
+    width: 190px;
+    height: 190px;
+    margin: 20px auto 15px;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: var(--blanco);
+}
+
+.qr-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.qr-contenedor p {
+    color: var(--plateado);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.resumen-pago {
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.resumen-pago h3 {
+    margin-bottom: 20px;
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.resumen-fila {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--plateado);
+    font-size: 13px;
+}
+
+.resumen-fila strong {
+    color: var(--blanco);
+}
+
+.resumen-total {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+    color: var(--blanco);
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.resumen-total strong {
+    color: var(--dorado);
+    font-size: 21px;
+}
+
+.panel-acciones {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.boton-inicio,
+.boton-cartelera {
+    display: block;
+    padding: 13px 18px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.boton-inicio {
+    background-color: var(--dorado);
+    color: var(--negro);
+}
+
+.boton-inicio:hover {
+    transform: translateY(-2px);
+    background-color: var(--dorado-suave);
+}
+
+.boton-cartelera {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--blanco);
+}
+
+.boton-cartelera:hover {
+    border-color: var(--dorado);
+    color: var(--dorado);
+}
+
+.recomendaciones-confirmacion {
+    max-width: 1050px;
+    margin: 35px auto 0;
+    padding: 22px 25px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    border: 1px solid rgba(212, 175, 55, 0.22);
+    border-radius: 12px;
+    background-color: rgba(212, 175, 55, 0.06);
+}
+
+.recomendacion-icono {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(212, 175, 55, 0.14);
+    color: var(--dorado);
+    font-size: 23px;
+}
+
+.recomendaciones-confirmacion h3 {
+    margin-bottom: 7px;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.recomendaciones-confirmacion p {
+    color: var(--plateado);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.nota-confirmacion {
+    max-width: 1050px;
+    margin: 22px auto 0;
+    color: #888;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* 6. RESULTADO (resultado.html) */
+
+.pagina-resultado {
+    background:
+            radial-gradient(ellipse at 50% 20%, rgba(212, 175, 55, 0.08), transparent 55%),
+            var(--negro);
+    color: var(--blanco);
+}
+
+.resultado-contenido {
+    padding: 75px 20px 85px;
+}
+
+.resultado-tarjeta {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 45px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 20px;
+    background: linear-gradient(145deg, var(--gris-tarjeta), var(--negro-suave));
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    animation: aparecer 0.7s ease both;
+}
+
+.resultado-icono {
+    width: 78px;
+    height: 78px;
+    margin: 0 auto 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ff7373;
+    border-radius: 50%;
+    background-color: rgba(255, 90, 90, 0.1);
+    box-shadow: 0 0 30px rgba(255, 90, 90, 0.12);
+    color: #ff7373;
+    font-size: 45px;
+    font-weight: 800;
+}
+
+.resultado-etiqueta {
+    color: #ff8585;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.resultado-tarjeta h1 {
+    margin: 15px 0;
+    font-size: clamp(26px, 4vw, 36px);
+    font-weight: 900;
+    line-height: 1.25;
+}
+
+.resultado-descripcion {
+    max-width: 510px;
+    margin: 0 auto;
+    color: var(--plateado);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.resultado-estado {
+    margin-top: 22px;
+    padding: 10px 17px;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    border: 1px solid rgba(255, 115, 115, 0.3);
+    border-radius: 30px;
+    background-color: rgba(255, 115, 115, 0.08);
+    color: #ff8585;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.resultado-punto {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ff7373;
+}
+
+.resultado-detalle {
+    margin-top: 38px;
+    padding: 25px;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.resultado-detalle h2 {
+    margin-bottom: 24px;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.resultado-recomendacion {
+    margin-bottom: 23px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.resultado-recomendacion:last-child {
+    margin-bottom: 0;
+}
+
+.recomendacion-numero {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 8px;
+    background-color: rgba(212, 175, 55, 0.1);
+    color: var(--dorado);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.resultado-recomendacion h3 {
+    margin: 2px 0 7px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.resultado-recomendacion p {
+    color: var(--plateado);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.resultado-acciones {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.boton-reintentar,
+.boton-volver-inicio {
+    min-height: 48px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.boton-reintentar {
+    background-color: var(--dorado);
+    color: var(--negro);
+}
+
+.boton-reintentar:hover {
+    transform: translateY(-2px);
+    background-color: var(--dorado-suave);
+}
+
+.boton-reintentar span {
+    font-size: 19px;
+}
+
+.boton-volver-inicio {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--blanco);
+}
+
+.boton-volver-inicio:hover {
+    border-color: var(--dorado);
+    color: var(--dorado);
+}
+
+.resultado-contacto {
+    margin-top: 25px;
+    display: inline-block;
+    color: var(--dorado);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.resultado-contacto:hover {
+    text-decoration: underline;
+}
+
+.resultado-mensaje-final {
+    max-width: 680px;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: var(--plateado);
+    text-align: center;
+}
+
+.resultado-mensaje-final span {
+    color: var(--dorado);
+    font-size: 22px;
+}
+
+.resultado-mensaje-final p {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.resultado-nota {
+    max-width: 680px;
+    margin: 20px auto 0;
+    color: #888;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* 7. animaciones */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulso {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 24px rgba(212, 175, 55, 0.6);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .seleccion-hero .contenedor,
+    .confirmacion-icono,
+    .resultado-tarjeta,
+    .progreso-paso.paso-activo > span:first-child,
+    .progreso-paso.activo > span:first-child {
+        animation: none;
+    }
+
+}
+
+/* 8. responsive */
+
+@media (max-width: 1000px) {
+
+    .peliculas-compra-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    .confirmacion-columnas {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .panel-confirmacion {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .pelicula-seleccionada {
+        flex-wrap: wrap;
+    }
+
+    .funcion-seleccionada {
+        width: 100%;
+        padding: 15px 0 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        border-left: none;
+    }
+
+    .asientos-encabezado {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .resumen-asientos {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .boton-continuar-asientos {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .seleccion-hero {
+        padding: 50px 0 38px;
+    }
+
+    .filtros-superiores {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .filtro-busqueda {
+        max-width: none;
+    }
+
+    .filtro-genero {
+        justify-content: space-between;
+    }
+
+    .filtro-genero select {
+        flex: 1;
+    }
+
+    .seleccion-peliculas {
+        padding: 45px 0 65px;
+    }
+
+    .seleccion-titulo {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .seleccion-titulo h2 {
+        font-size: 26px;
+    }
+
+    .peliculas-compra-grid {
+        gap: 14px;
+    }
+
+    .pelicula-compra-contenido {
+        padding: 14px;
+    }
+
+    .pelicula-compra-contenido h3 {
+        font-size: 15px;
+    }
+
+    .pelicula-compra-contenido > p {
+        display: none;
+    }
+
+    .pelicula-metadatos {
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    .pelicula-metadatos span:first-child,
+    .pelicula-metadatos span:last-child {
+        font-size: 12px;
+    }
+
+    .boton-seleccionar-pelicula {
+        padding: 11px 12px;
+        font-size: 11px;
+    }
+
+    .pelicula-compra-genero {
+        left: 8px;
+        bottom: 8px;
+        padding: 6px 8px;
+        font-size: 8px;
+    }
+
+    .pelicula-clasificacion {
+        top: 8px;
+        right: 8px;
+        min-width: 32px;
+        height: 32px;
+        font-size: 10px;
+    }
+
+    .progreso-paso {
+        min-width: 58px;
+    }
+
+    .progreso-paso p,
+    .progreso-paso > span:nth-child(2) {
+        font-size: 10px;
+    }
+
+    .progreso-paso > span:first-child {
+        width: 34px;
+        height: 34px;
+    }
+
+    .progreso-linea {
+        width: 30px;
+        margin-bottom: 22px;
+    }
+
+    .compra-mensaje-contenido {
+        align-items: flex-start;
+    }
+
+    .confirmacion-hero {
+        padding: 45px 15px 30px;
+    }
+
+    .confirmacion-icono {
+        width: 65px;
+        height: 65px;
+        font-size: 35px;
+    }
+
+    .confirmacion-descripcion {
+        font-size: 14px;
+    }
+
+    .seccion-detalle-confirmacion {
+        padding: 15px 12px 50px;
+    }
+
+    .entrada-digital {
+        padding: 20px;
+    }
+
+    .entrada-encabezado h2 {
+        font-size: 19px;
+    }
+
+    .entrada-poster {
+        width: 85px;
+        height: 120px;
+    }
+
+    .entrada-pelicula-info h3 {
+        font-size: 18px;
+    }
+
+    .entrada-separador {
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+
+    .entrada-datos {
+        gap: 20px 12px;
+    }
+
+    .dato-entrada strong {
+        font-size: 13px;
+    }
+
+    .entrada-asientos,
+    .entrada-pie {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .recomendaciones-confirmacion {
+        align-items: flex-start;
+        padding: 18px;
+    }
+
+    .resultado-contenido {
+        padding: 45px 14px 55px;
+    }
+
+    .resultado-tarjeta {
+        padding: 28px 20px;
+    }
+
+    .resultado-icono {
+        width: 65px;
+        height: 65px;
+        font-size: 37px;
+    }
+
+    .resultado-detalle {
+        padding: 18px;
+    }
+
+    .resultado-recomendacion {
+        gap: 12px;
+    }
+
+    .resultado-mensaje-final {
+        align-items: flex-start;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .peliculas-compra-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pelicula-compra-imagen {
+        aspect-ratio: 4 / 5;
+    }
+
+    .pelicula-compra-contenido > p {
+        display: block;
+    }
+
+    .progreso-paso {
+        min-width: 46px;
+    }
+
+    .progreso-paso p,
+    .progreso-paso > span:nth-child(2) {
+        font-size: 9px;
+    }
+
+    .progreso-linea {
+        width: 18px;
+    }
+
+    .asientos-hero {
+        padding-top: 35px;
+    }
+
+    .pelicula-seleccionada {
+        padding: 18px;
+    }
+
+    .pelicula-seleccionada-icono {
+        width: 55px;
+        height: 55px;
+        font-size: 2rem;
+    }
+
+    .sala-contenedor {
+        padding: 30px 12px;
+    }
+
+    .leyenda-asientos {
+        gap: 12px;
+    }
+
+    .entrada-pelicula {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .entrada-poster {
+        width: 72px;
+        height: 105px;
+    }
+
+    .entrada-pelicula-info h3 {
+        font-size: 16px;
+    }
+
+    .qr-imagen {
+        width: 165px;
+        height: 165px;
+    }
+
+    .resultado-tarjeta {
+        padding: 23px 15px;
+    }
+
+    .resultado-tarjeta h1 {
+        font-size: 25px;
+    }
+
+}
+
+.resumen-promo {
+    display: block;
+    margin-top: 6px;
+    color: var(--dorado);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.resumen-promo[hidden] {
+    display: none;
+}
+
+.resumen-descuento strong {
+    color: var(--dorado);
+}

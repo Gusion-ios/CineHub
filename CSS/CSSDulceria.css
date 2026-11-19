@@ -1,9 +1,3 @@
-/* =========================================
-   CINEHUB - PÁGINA DE DULCERÍA
-   Archivo: CSSDulceria.css
-========================================= */
-
-/* HERO CON VIDEO DE FONDO */
 .dulceria-hero {
     position: relative;
     min-height: 480px;
@@ -96,7 +90,6 @@
     box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
 }
 
-/* INTRODUCCIÓN */
 .dulceria-introduccion {
     padding: 90px 0;
     background: var(--negro-suave);
@@ -180,7 +173,6 @@
     transform: scale(1.05);
 }
 
-/* CATEGORÍAS */
 .dulceria-categorias {
     padding: 90px 0;
     background: var(--negro);
@@ -305,7 +297,6 @@
     opacity: 0.9;
 }
 
-/* PRODUCTOS */
 .productos-seccion {
     padding: 90px 0;
     background: var(--negro-suave);
@@ -485,7 +476,6 @@
     box-shadow: 0 4px 12px rgba(212, 175, 55, 0.35);
 }
 
-/* COMBOS */
 .combos-seccion {
     padding: 90px 0;
     background: var(--negro-suave);
@@ -649,7 +639,6 @@
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 
-/* CTA FINAL CON VIDEO DE FONDO */
 .dulceria-final {
     position: relative;
     padding: 95px 20px;
@@ -700,7 +689,6 @@
     max-width: 560px;
 }
 
-/* RESPONSIVE */
 @media (max-width: 1000px) {
     .categorias-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -763,5 +751,271 @@
     }
     .combo-pie button {
         width: 100%;
+    }
+}
+
+/* Carrito (js) */
+
+.carrito-boton {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 22px;
+    border: 1px solid var(--dorado);
+    border-radius: 40px;
+    background-color: var(--negro-suave);
+    color: var(--blanco);
+    font-size: 0.9rem;
+    font-weight: 800;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    transition: 0.3s;
+}
+
+.carrito-boton:hover {
+    background-color: var(--dorado);
+    color: var(--negro);
+}
+
+.carrito-boton strong {
+    color: var(--dorado);
+    transition: 0.3s;
+}
+
+.carrito-boton:hover strong {
+    color: var(--negro);
+}
+
+.carrito-cantidad {
+    min-width: 24px;
+    padding: 2px 8px;
+    border-radius: 20px;
+    background-color: var(--dorado);
+    color: var(--negro);
+    font-size: 0.78rem;
+    text-align: center;
+}
+
+.carrito-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: min(400px, 100%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--borde-dorado);
+    background-color: var(--negro-suave);
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.6);
+    animation: carritoEntra 0.3s ease;
+}
+
+.carrito-panel[hidden] {
+    display: none;
+}
+
+.carrito-cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 24px;
+    border-bottom: 1px solid var(--borde-dorado);
+}
+
+.carrito-cabecera h2 {
+    color: var(--blanco);
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+.carrito-cerrar {
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--borde-dorado);
+    border-radius: 50%;
+    color: var(--plateado);
+    font-size: 1.4rem;
+    line-height: 1;
+    transition: 0.3s;
+}
+
+.carrito-cerrar:hover {
+    border-color: var(--dorado);
+    color: var(--dorado);
+}
+
+.carrito-lista {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px 24px;
+}
+
+.carrito-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.carrito-item-info strong {
+    display: block;
+    color: var(--blanco);
+    font-size: 0.95rem;
+}
+
+.carrito-item-info span {
+    color: #999;
+    font-size: 0.78rem;
+}
+
+.carrito-controles {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--blanco);
+    font-weight: 800;
+}
+
+.carrito-controles button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--borde-dorado);
+    border-radius: 50%;
+    color: var(--dorado);
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.carrito-controles button:hover {
+    background-color: var(--dorado);
+    color: var(--negro);
+}
+
+.carrito-subtotal {
+    grid-column: 1 / -1;
+    color: var(--dorado);
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.carrito-vacio {
+    flex: 1;
+    padding: 40px 24px;
+    color: var(--plateado);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.carrito-vacio[hidden],
+.carrito-pie[hidden] {
+    display: none;
+}
+
+.carrito-pie {
+    padding: 20px 24px 26px;
+    border-top: 1px solid var(--borde-dorado);
+}
+
+.carrito-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    color: var(--blanco);
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.carrito-total strong {
+    color: var(--dorado);
+}
+
+.carrito-acciones {
+    display: flex;
+    gap: 10px;
+}
+
+.carrito-vaciar,
+.carrito-confirmar {
+    padding: 14px 18px;
+    border-radius: 7px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.carrito-vaciar {
+    border: 1px solid var(--borde-dorado);
+    color: var(--plateado);
+}
+
+.carrito-vaciar:hover {
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+}
+
+.carrito-confirmar {
+    flex: 1;
+    background: linear-gradient(135deg, var(--dorado), var(--dorado-claro));
+    color: var(--negro);
+}
+
+.carrito-confirmar:hover {
+    transform: translateY(-2px);
+}
+
+.boton-musica {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    z-index: 900;
+    padding: 12px 18px;
+    border: 1px solid var(--borde-dorado);
+    border-radius: 30px;
+    background-color: var(--negro-suave);
+    color: var(--plateado);
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.boton-musica:hover,
+.boton-musica[aria-pressed="true"] {
+    border-color: var(--dorado);
+    color: var(--dorado);
+}
+
+.carrito-boton:focus-visible,
+.carrito-panel button:focus-visible,
+.boton-musica:focus-visible {
+    outline: 2px solid var(--blanco);
+    outline-offset: 3px;
+}
+
+@keyframes carritoEntra {
+    from { transform: translateX(40px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    .carrito-boton {
+        right: 14px;
+        bottom: 14px;
+        padding: 12px 16px;
+    }
+
+    .boton-musica {
+        left: 14px;
+        bottom: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .carrito-panel {
+        animation: none;
     }
 }

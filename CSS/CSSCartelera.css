@@ -1,11 +1,4 @@
-/* =====================================================
-   CINEHUB
-   ARCHIVO: CSSCartelera.css
-===================================================== */
-
-/* =====================================================
-   1. BANNER CON CARRUSEL DESLIZANTE AUTOMÁTICO
-===================================================== */
+/* 1. banner con carrusel deslizante automático */
 .cartelera-banner {
     position: relative;
     min-height: 430px;
@@ -15,7 +8,6 @@
     background-color: var(--negro);
 }
 
-/* Contenedor que recorta el carrusel */
 .cartelera-carrusel-contenedor {
     position: absolute;
     inset: 0;
@@ -23,7 +15,6 @@
     overflow: hidden;
 }
 
-/* Pista que se desplaza hacia la izquierda */
 .cartelera-carrusel-pista {
     display: flex;
     align-items: center;
@@ -31,12 +22,10 @@
     animation: desplazamiento 24s linear infinite;
 }
 
-/* Duplicar grupo = bucle continuo sin cortes */
 .cartelera-carrusel-pista:hover {
     animation-play-state: paused;
 }
 
-/* Cada fila de imágenes */
 .carrusel-grupo {
     display: flex;
     align-items: center;
@@ -44,7 +33,6 @@
     flex-shrink: 0;
 }
 
-/* Cada imagen del fondo */
 .carrusel-grupo img {
     width: 33.333%;
     height: 100%;
@@ -61,13 +49,11 @@
     transform: scale(1.03);
 }
 
-/* Animación principal — 3 imágenes = avanza 1/3 del ancho total */
 @keyframes desplazamiento {
     0%   { transform: translateX(0); }
     100% { transform: translateX(-33.333%); }
 }
 
-/* Capa de sombra/degradado */
 .cartelera-banner-degradado {
     position: absolute;
     inset: 0;
@@ -94,7 +80,6 @@
     padding-bottom: 30px;
 }
 
-/* Migas de pan */
 .cartelera-migas {
     display: flex;
     align-items: center;
@@ -113,7 +98,6 @@
     color: var(--dorado);
 }
 
-/* Etiqueta */
 .cartelera-etiqueta {
     display: inline-flex;
     align-items: center;
@@ -137,7 +121,6 @@
     box-shadow: 0 0 10px var(--dorado);
 }
 
-/* Título */
 .cartelera-banner-contenido h2 {
     margin-bottom: 17px;
     color: var(--blanco);
@@ -155,7 +138,6 @@
     line-height: 1.9;
 }
 
-/* Indicadores */
 .cartelera-indicadores {
     display: flex;
     gap: 8px;
@@ -177,7 +159,7 @@
     border-radius: 5px;
 }
 
-/* ========== RESPONSIVE ========== */
+/* Responsive */
 @media (max-width: 900px) {
     .cartelera-banner {
         min-height: 390px;
@@ -217,9 +199,7 @@
     }
 }
 
-/* =====================================================
-   2. SECCIÓN PRINCIPAL
-===================================================== */
+/* 2. sección principal */
 .seccion-cartelera-pagina {
     padding: 75px 0 85px;
 }
@@ -253,7 +233,6 @@
     margin-bottom: 6px;
 }
 
-/* CONTADOR */
 .cantidad-peliculas {
     display: flex;
     align-items: center;
@@ -278,9 +257,7 @@
     letter-spacing: 1px;
 }
 
-/* =====================================================
-   3. FILTROS CON ÍCONOS
-===================================================== */
+/* 3. filtros con íconos */
 .cartelera-filtros {
     display: flex;
     justify-content: space-between;
@@ -366,10 +343,7 @@
     cursor: pointer;
 }
 
-/* =====================================================
-   4. TARJETAS DE PELÍCULAS — MISMO ESTILO QUE INICIO
-   Imagen visible por defecto → video al hacer hover
-===================================================== */
+/* 4. tarjetas de películas — mismo estilo que inicio */
 .peliculas-lista {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -419,7 +393,6 @@
     pointer-events: none;
 }
 
-/* ✅ Al pasar el cursor: se oculta el póster y se ve el video */
 .tarjeta-pelicula:hover .pelicula-poster {
     opacity: 0;
 }
@@ -497,9 +470,7 @@
     color: var(--blanco);
 }
 
-/* =====================================================
-   5. PAGINACIÓN
-===================================================== */
+/* 5. paginación */
 .cartelera-paginacion {
     display: flex;
     justify-content: center;
@@ -541,9 +512,7 @@
     font-size: 14px;
 }
 
-/* =====================================================
-   6. INVITACIÓN A COMPRAR
-===================================================== */
+/* 6. invitación a comprar */
 .cartelera-invitacion {
     padding: 60px 0;
     border-top: 1px solid rgba(212, 175, 55, 0.12);
@@ -578,9 +547,7 @@
     font-size: 11px;
 }
 
-/* =====================================================
-   7. RESPONSIVE
-===================================================== */
+/* 7. responsive */
 @media (max-width: 1050px) {
     .peliculas-lista {
         grid-template-columns: repeat(2, 1fr);

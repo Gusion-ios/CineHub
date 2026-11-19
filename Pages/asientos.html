@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Selecciona tus asientos para disfrutar de la experiencia CineHub.">
+    <meta name="author" content="CineHub">
+
+    <title>Seleccionar asientos | CineHub</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../CSS/CSSGeneral.css">
+    <link rel="stylesheet" href="../CSS/CSSCompras.css">
+    <link rel="stylesheet" href="../CSS/CSSAmbientes.css">
+
+    <!-- Scripts -->
+    <script src="../JS/peliculas.js" defer></script>
+    <script src="../JS/ambientes.js" defer></script>
+    <script src="../JS/modal.js" defer></script>
+    <script src="../JS/compras.js" defer></script>
+    <script src="../JS/menu.js" defer></script>
+
+</head>
+
+<body>
+
+<!-- Encabezado -->
+<header class="encabezado">
+    <div class="contenedor encabezado-contenido">
+
+        <a href="../index.html" class="logo">
+            <div class="logo-simbolo">
+                <img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub">
+            </div>
+            <div class="logo-texto">
+                <h1>CINEHUB</h1>
+                <span>TODO EL CINE. EN UN SOLO LUGAR.</span>
+            </div>
+        </a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="cartelera.html" class="enlace-activo">Cartelera</a></li>
+                <li><a href="estrenos.html">Estrenos</a></li>
+                <li><a href="peliculas.html">Películas</a></li>
+                <li><a href="salas.html">Salas</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="dulceria.html">Dulcería</a></li>
+                <li><a href="sedes.html">Sedes</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="acciones-encabezado">
+            <a href="peliculas.html#catalogo" class="accion-icono" aria-label="Buscar películas">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+            </a>
+            <a href="contacto.html" class="accion-icono" aria-label="Mi cuenta">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"></path></svg>
+            </a>
+            <a href="seleccion-pelicula.html" class="boton-entradas">Comprar entradas</a>
+        </div>
+
+    </div>
+</header>
+
+<!-- Contenido principal -->
+<main class="pagina-asientos">
+
+    <section class="compra-progreso" aria-label="Progreso de compra">
+        <div class="contenedor">
+            <div class="progreso-pasos">
+
+                <div class="progreso-paso completado">
+                    <span>✓</span>
+                    <p>Película</p>
+                </div>
+
+                <div class="progreso-linea completada"></div>
+
+                <div class="progreso-paso completado">
+                    <span>✓</span>
+                    <p>Función</p>
+                </div>
+
+                <div class="progreso-linea completada"></div>
+
+                <div class="progreso-paso paso-activo">
+                    <span>3</span>
+                    <p>Asientos</p>
+                </div>
+
+                <div class="progreso-linea"></div>
+
+                <div class="progreso-paso">
+                    <span>4</span>
+                    <p>Confirmación</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="asientos-hero contenedor">
+
+        <span class="compra-etiqueta">EXPERIENCIA CINEHUB</span>
+
+        <h1>Elige tus <span>asientos</span></h1>
+
+        <p>
+            Tu función está a punto de comenzar. Selecciona los lugares
+            desde donde disfrutarás de esta experiencia cinematográfica.
+        </p>
+
+        <a href="horarios.html" class="enlace-volver">← Cambiar función</a>
+
+    </section>
+
+    <section class="contenedor">
+
+        <div class="pelicula-seleccionada">
+
+            <div class="pelicula-seleccionada-icono">
+                <img src="../Recursos/Imagenes/Compartidos/Peliculas/Duna2.jpg" alt="Póster de Duna: Parte Dos">
+            </div>
+
+            <div class="pelicula-seleccionada-info">
+                <span>PELÍCULA SELECCIONADA</span>
+                <h2>Duna: Parte Dos</h2>
+                <p>Ciencia ficción · 2 h 46 min · 3D · Subtitulada</p>
+            </div>
+
+            <div class="funcion-seleccionada">
+                <span>FUNCIÓN</span>
+                <strong>6:50 p. m.</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="seccion-seleccion-asientos contenedor">
+
+        <div class="asientos-encabezado">
+            <div>
+                <span class="compra-etiqueta">SALA 3D</span>
+                <h2>Elige tu lugar en la sala</h2>
+                <p>Selecciona los asientos disponibles.</p>
+            </div>
+
+            <div class="leyenda-asientos">
+
+                <div class="leyenda-item">
+                    <span class="leyenda-color disponible"></span>
+                    <span>Disponible</span>
+                </div>
+
+                <div class="leyenda-item">
+                    <span class="leyenda-color seleccionado"></span>
+                    <span>Seleccionado</span>
+                </div>
+
+                <div class="leyenda-item">
+                    <span class="leyenda-color ocupado"></span>
+                    <span>Ocupado</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="sala-contenedor" id="sala" data-precio="25.00">
+
+            <div class="pantalla-cine" aria-hidden="true">
+                <span>✦</span>
+                PANTALLA
+                <span>✦</span>
+            </div>
+
+            <p class="mensaje-pantalla">Vista de la pantalla desde los asientos</p>
+
+            <div class="fila-asientos" role="group" aria-label="Fila A">
+                <span class="letra-fila">A</span>
+                <button class="asiento asiento-disponible" type="button" data-asiento="A1" aria-label="Fila A, asiento 1">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="A2" aria-label="Fila A, asiento 2">♜</button>
+                <button class="asiento asiento-ocupado" type="button" data-asiento="A3" disabled aria-label="Fila A, asiento 3 ocupado">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="A4" aria-label="Fila A, asiento 4">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="A5" aria-label="Fila A, asiento 5">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="A6" aria-label="Fila A, asiento 6">♜</button>
+                <button class="asiento asiento-ocupado" type="button" data-asiento="A7" disabled aria-label="Fila A, asiento 7 ocupado">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="A8" aria-label="Fila A, asiento 8">♜</button>
+                <span class="letra-fila">A</span>
+            </div>
+
+            <div class="fila-asientos" role="group" aria-label="Fila B">
+                <span class="letra-fila">B</span>
+                <button class="asiento asiento-disponible" type="button" data-asiento="B1" aria-label="Fila B, asiento 1">♜</button>
+                <button class="asiento asiento-ocupado" type="button" data-asiento="B2" disabled aria-label="Fila B, asiento 2 ocupado">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="B3" aria-label="Fila B, asiento 3">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="B4" aria-label="Fila B, asiento 4">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="B5" aria-label="Fila B, asiento 5">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="B6" aria-label="Fila B, asiento 6">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="B7" aria-label="Fila B, asiento 7">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="B8" aria-label="Fila B, asiento 8">♜</button>
+                <span class="letra-fila">B</span>
+            </div>
+
+            <div class="fila-asientos" role="group" aria-label="Fila C">
+                <span class="letra-fila">C</span>
+                <button class="asiento asiento-disponible" type="button" data-asiento="C1" aria-label="Fila C, asiento 1">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="C2" aria-label="Fila C, asiento 2">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="C3" aria-label="Fila C, asiento 3">♜</button>
+                <button class="asiento asiento-ocupado" type="button" data-asiento="C4" disabled aria-label="Fila C, asiento 4 ocupado">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="C5" aria-label="Fila C, asiento 5">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="C6" aria-label="Fila C, asiento 6">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="C7" aria-label="Fila C, asiento 7">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="C8" aria-label="Fila C, asiento 8">♜</button>
+                <span class="letra-fila">C</span>
+            </div>
+
+            <div class="fila-asientos" role="group" aria-label="Fila D">
+                <span class="letra-fila">D</span>
+                <button class="asiento asiento-disponible" type="button" data-asiento="D1" aria-label="Fila D, asiento 1">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="D2" aria-label="Fila D, asiento 2">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="D3" aria-label="Fila D, asiento 3">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="D4" aria-label="Fila D, asiento 4">♜</button>
+                <button class="asiento asiento-ocupado" type="button" data-asiento="D5" disabled aria-label="Fila D, asiento 5 ocupado">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="D6" aria-label="Fila D, asiento 6">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="D7" aria-label="Fila D, asiento 7">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="D8" aria-label="Fila D, asiento 8">♜</button>
+                <span class="letra-fila">D</span>
+            </div>
+
+            <div class="fila-asientos" role="group" aria-label="Fila E">
+                <span class="letra-fila">E</span>
+                <button class="asiento asiento-disponible" type="button" data-asiento="E1" aria-label="Fila E, asiento 1">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="E2" aria-label="Fila E, asiento 2">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="E3" aria-label="Fila E, asiento 3">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="E4" aria-label="Fila E, asiento 4">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="E5" aria-label="Fila E, asiento 5">♜</button>
+                <button class="asiento asiento-ocupado" type="button" data-asiento="E6" disabled aria-label="Fila E, asiento 6 ocupado">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="E7" aria-label="Fila E, asiento 7">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="E8" aria-label="Fila E, asiento 8">♜</button>
+                <span class="letra-fila">E</span>
+            </div>
+
+            <div class="fila-asientos" role="group" aria-label="Fila F">
+                <span class="letra-fila">F</span>
+                <button class="asiento asiento-disponible" type="button" data-asiento="F1" aria-label="Fila F, asiento 1">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="F2" aria-label="Fila F, asiento 2">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="F3" aria-label="Fila F, asiento 3">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="F4" aria-label="Fila F, asiento 4">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="F5" aria-label="Fila F, asiento 5">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="F6" aria-label="Fila F, asiento 6">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="F7" aria-label="Fila F, asiento 7">♜</button>
+                <button class="asiento asiento-disponible" type="button" data-asiento="F8" aria-label="Fila F, asiento 8">♜</button>
+                <span class="letra-fila">F</span>
+            </div>
+
+        </div>
+
+        <div class="resumen-asientos" aria-live="polite">
+
+            <div class="resumen-informacion">
+                <span>ASIENTOS SELECCIONADOS</span>
+                <strong id="resumen-cantidad">0 asientos</strong>
+                <p id="resumen-lista">Selecciona tus lugares en la sala.</p>
+            </div>
+
+            <div class="resumen-precio">
+                <span>TOTAL</span>
+                <strong id="resumen-total">S/ 0.00</strong>
+            </div>
+
+            <a href="confirmacion.html" class="boton-continuar-asientos">
+                Continuar
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Modal: confirmar la selección de asientos (lo abre compras.js) -->
+    <div class="modal" id="modal-confirmar" role="dialog" aria-modal="true" aria-labelledby="modal-confirmar-titulo" hidden>
+        <div class="modal__panel">
+            <button type="button" class="modal__cerrar" data-modal-cerrar aria-label="Cerrar">×</button>
+            <h2 id="modal-confirmar-titulo">Confirma tu selección</h2>
+            <dl class="modal__detalle" id="modal-confirmar-detalle"></dl>
+            <div class="modal__acciones">
+                <button type="button" class="boton-principal" id="modal-confirmar-aceptar" data-modal-foco>
+                    Confirmar y continuar
+                </button>
+                <button type="button" class="boton-secundario" data-modal-cerrar>
+                    Seguir eligiendo
+                </button>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!-- Pie de página -->
+<footer class="pie-pagina">
+    <div class="contenedor">
+        <div class="footer-contenido">
+            <div class="footer-marca">
+                <a href="../index.html" class="logo-footer">
+                    <div class="logo-simbolo"><img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub"></div>
+                    <div class="logo-texto"><h2>CINEHUB</h2><span>TODO EL CINE. EN UN SOLO LUGAR.</span></div>
+                </a>
+                <p>Creamos experiencias cinematográficas para que cada película se convierta en un recuerdo inolvidable.</p>
+            </div>
+            <div class="footer-columna">
+                <h3>Explora</h3>
+                <a href="cartelera.html">Cartelera</a>
+                <a href="estrenos.html">Estrenos</a>
+                <a href="peliculas.html">Películas</a>
+                <a href="promociones.html">Promociones</a>
+            </div>
+            <div class="footer-columna">
+                <h3>CineHub</h3>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="sedes.html">Nuestras sedes</a>
+                <a href="salas.html">Nuestras salas</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-redes">
+                <h3>Síguenos</h3>
+                <p>Mantente al tanto de nuestras películas, novedades y promociones.</p>
+                <div class="redes-lista">
+                    <a href="#" aria-label="Facebook"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Facebook.png" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Instagram.png" alt="Instagram"></a>
+                    <a href="#" aria-label="TikTok"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/TikTok.png" alt="TikTok"></a>
+                    <a href="#" aria-label="YouTube"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Youtube_logo.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>© 2026 CineHub. Todos los derechos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Accesibilidad</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

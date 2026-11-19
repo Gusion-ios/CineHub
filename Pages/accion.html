@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Descubre las mejores películas de acción en CineHub. Vive la adrenalina, las aventuras y la emoción en la pantalla grande.">
+    <meta name="author" content="CineHub">
+
+    <title>Acción | CineHub</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../CSS/CSSGeneral.css">
+    <link rel="stylesheet" href="../CSS/CSSAccion.css">
+
+    <!-- Scripts -->
+    <script src="../JS/peliculas.js" defer></script>
+    <script src="../JS/catalogo.js" defer></script>
+    <script src="../JS/menu.js" defer></script>
+
+</head>
+
+<body>
+
+<!-- Encabezado -->
+<header class="encabezado">
+    <div class="contenedor encabezado-contenido">
+
+        <a href="../index.html" class="logo">
+            <div class="logo-simbolo">
+                <img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub">
+            </div>
+            <div class="logo-texto">
+                <h1>CINEHUB</h1>
+                <span>TODO EL CINE. EN UN SOLO LUGAR.</span>
+            </div>
+        </a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="cartelera.html">Cartelera</a></li>
+                <li><a href="estrenos.html">Estrenos</a></li>
+                <li><a href="peliculas.html" class="enlace-activo">Películas</a></li>
+                <li><a href="salas.html">Salas</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="dulceria.html">Dulcería</a></li>
+                <li><a href="sedes.html">Sedes</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="acciones-encabezado">
+            <a href="peliculas.html#catalogo" class="accion-icono" aria-label="Buscar películas">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+            </a>
+            <a href="contacto.html" class="accion-icono" aria-label="Mi cuenta">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"></path></svg>
+            </a>
+            <a href="cartelera.html" class="boton-entradas">Comprar entradas</a>
+        </div>
+
+    </div>
+</header>
+
+<!-- Contenido principal -->
+<main>
+
+    <section class="accion-hero">
+
+        <div class="accion-hero-fondo" aria-hidden="true"></div>
+        <div class="accion-hero-degradado" aria-hidden="true"></div>
+
+        <div class="contenedor accion-hero-contenido">
+
+            <nav class="accion-migas" aria-label="Migas de pan">
+                <a href="../index.html">Inicio</a>
+                <span>/</span>
+                <a href="peliculas.html">Películas</a>
+                <span>/</span>
+                <span>Acción</span>
+            </nav>
+
+            <div class="accion-etiqueta-superior">
+                <span></span>
+                EL LÍMITE ES TU ADRENALINA
+            </div>
+
+            <h1>
+                ACCIÓN<br>
+                SIN LÍMITES
+            </h1>
+
+            <p>
+                Explosiones, persecuciones, combates y aventuras
+                que te mantendrán al borde de tu asiento.
+                La adrenalina comienza aquí.
+            </p>
+
+            <div class="accion-hero-botones">
+                <a href="#peliculas-accion" class="boton-principal">
+                    EXPLORAR PELÍCULAS
+                    <span>➜</span>
+                </a>
+                <a href="cartelera.html" class="boton-secundario">
+                    VER CARTELERA
+                </a>
+            </div>
+
+            <div class="accion-hero-indicadores">
+                <div>
+                    <strong>01</strong>
+                    <span>ADRENALINA</span>
+                </div>
+                <div>
+                    <strong>02</strong>
+                    <span>AVENTURA</span>
+                </div>
+                <div>
+                    <strong>03</strong>
+                    <span>EMOCIÓN</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="accion-introduccion">
+
+        <div class="contenedor accion-intro-contenido">
+
+            <div class="accion-intro-titulo">
+                <span class="texto-superior">BIENVENIDO A LA ACCIÓN</span>
+                <h2>
+                    NO EXISTEN<br>
+                    MOMENTOS TRANQUILOS
+                </h2>
+            </div>
+
+            <div class="accion-intro-descripcion">
+                <p>
+                    Desde enfrentamientos imposibles hasta
+                    misiones que desafían todos los límites,
+                    el cine de acción convierte cada minuto
+                    en una experiencia extraordinaria.
+                </p>
+                <p>
+                    Prepárate para descubrir historias llenas
+                    de intensidad, personajes inolvidables
+                    y secuencias espectaculares.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="accion-destacada">
+
+        <div class="accion-destacada-fondo" aria-hidden="true"></div>
+        <div class="accion-destacada-degradado" aria-hidden="true"></div>
+
+        <div class="contenedor accion-destacada-contenido">
+
+            <div class="accion-destacada-info">
+
+                <span class="texto-superior">EXPERIENCIA DESTACADA</span>
+
+                <span class="accion-destacada-seleccion">SELECCIÓN CINEHUB</span>
+
+                <h2>
+                    JOHN WICK<br>
+                    CAPÍTULO 4
+                </h2>
+
+                <div class="accion-destacada-datos">
+                    <span>2023</span>
+                    <span>169 MIN</span>
+                    <span>ACCIÓN</span>
+                    <span class="accion-rating">★ 8.2</span>
+                </div>
+
+                <p>
+                    John Wick descubre un camino para derrotar
+                    a la Alta Mesa. Pero antes de conseguir
+                    su libertad deberá enfrentarse a nuevos
+                    enemigos y desafíos alrededor del mundo.
+                </p>
+
+                <div class="accion-destacada-botones">
+                    <a href="seleccion-pelicula.html" class="boton-principal">
+                        VER PELÍCULA
+                        <span>➜</span>
+                    </a>
+                    <a href="cartelera.html" class="boton-secundario">
+                        COMPRAR ENTRADAS
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="accion-destacada-trailer">
+                <span class="accion-trailer-etiqueta">TRÁILER OFICIAL</span>
+                <div class="accion-trailer-video">
+                    <video controls preload="metadata">
+                        <source src="../Recursos/Videos/Compartidos/Trailer/John_Wick_4.mp4" type="video/mp4">
+                        Tu navegador no admite la reproducción de video.
+                    </video>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="accion-catalogo" id="peliculas-accion">
+
+        <div class="contenedor">
+
+            <div class="accion-catalogo-encabezado">
+
+                <div>
+                    <span class="texto-superior">NUESTRA SELECCIÓN</span>
+                    <h2>PELÍCULAS DE ACCIÓN</h2>
+                    <p>Historias que no te darán ni un segundo de descanso.</p>
+                </div>
+
+                <a href="peliculas.html" class="accion-ver-todo">
+                    VER TODOS LOS GÉNEROS →
+                </a>
+
+            </div>
+
+            <div class="accion-filtros">
+                <a href="#peliculas-accion" class="filtro-seleccionado" data-filtro="todas">Todas</a>
+                <a href="#peliculas-accion" data-filtro="artes-marciales">Artes marciales</a>
+                <a href="#peliculas-accion" data-filtro="superheroes">Superhéroes</a>
+                <a href="#peliculas-accion" data-filtro="aventura">Aventura</a>
+                <a href="#peliculas-accion" data-filtro="crimen">Crimen</a>
+            </div>
+
+            <div class="accion-peliculas-grid">
+
+                <article class="accion-pelicula-card" data-categoria="artes-marciales crimen">
+                    <a href="seleccion-pelicula.html" class="accion-pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/John_Wick_4.jpg" alt="Póster de John Wick 4" loading="lazy">
+                        <span class="accion-pelicula-genero">ACCIÓN</span>
+                        <span class="accion-pelicula-rating">★ 8.2</span>
+                        <div class="accion-pelicula-overlay"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="accion-pelicula-info">
+                        <h3>John Wick 4</h3>
+                        <p>Acción · Crimen · Suspenso</p>
+                        <div class="accion-pelicula-pie">
+                            <span>169 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="accion-pelicula-card" data-categoria="superheroes">
+                    <a href="seleccion-pelicula.html" class="accion-pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Spiderman.jpg" alt="Póster de Spider-Man" loading="lazy">
+                        <span class="accion-pelicula-genero">SUPERHÉROES</span>
+                        <span class="accion-pelicula-rating">★ 8.7</span>
+                        <div class="accion-pelicula-overlay"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="accion-pelicula-info">
+                        <h3>Spider-Man</h3>
+                        <p>Acción · Aventura · Fantasía</p>
+                        <div class="accion-pelicula-pie">
+                            <span>148 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="accion-pelicula-card" data-categoria="superheroes">
+                    <a href="seleccion-pelicula.html" class="accion-pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Avengers.jpg" alt="Póster de Avengers" loading="lazy">
+                        <span class="accion-pelicula-genero">SUPERHÉROES</span>
+                        <span class="accion-pelicula-rating">★ 8.4</span>
+                        <div class="accion-pelicula-overlay"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="accion-pelicula-info">
+                        <h3>Avengers</h3>
+                        <p>Acción · Ciencia ficción</p>
+                        <div class="accion-pelicula-pie">
+                            <span>143 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="accion-pelicula-card" data-categoria="aventura">
+                    <a href="seleccion-pelicula.html" class="accion-pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Duna2.jpg" alt="Póster de Duna: Parte Dos" loading="lazy">
+                        <span class="accion-pelicula-genero">AVENTURA</span>
+                        <span class="accion-pelicula-rating">★ 8.5</span>
+                        <div class="accion-pelicula-overlay"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="accion-pelicula-info">
+                        <h3>Duna: Parte Dos</h3>
+                        <p>Acción · Aventura · Ciencia ficción</p>
+                        <div class="accion-pelicula-pie">
+                            <span>166 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="accion-pelicula-card" data-categoria="aventura">
+                    <a href="seleccion-pelicula.html" class="accion-pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Avatar.png" alt="Póster de Avatar" loading="lazy">
+                        <span class="accion-pelicula-genero">AVENTURA</span>
+                        <span class="accion-pelicula-rating">★ 8.0</span>
+                        <div class="accion-pelicula-overlay"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="accion-pelicula-info">
+                        <h3>Avatar</h3>
+                        <p>Acción · Ciencia ficción · Aventura</p>
+                        <div class="accion-pelicula-pie">
+                            <span>162 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <a href="peliculas.html#catalogo" class="accion-card-mas">
+                    <span aria-hidden="true">+</span>
+                    <strong>VER TODO EL CATÁLOGO</strong>
+                    <small>Más películas de todos los géneros</small>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="accion-experiencia">
+
+        <div class="contenedor accion-experiencia-contenido">
+
+            <div class="accion-experiencia-imagen">
+
+                <img src="../Recursos/Imagenes/Generos/AccionExperiencia.jpg"
+                     alt="Público disfrutando una película de acción en sala"
+                     loading="lazy">
+
+                <div class="experiencia-imagen-texto">
+                    <span>NO SOLO LA VEAS</span>
+                    <strong>VÍVELA.</strong>
+                </div>
+
+            </div>
+
+            <div class="accion-experiencia-info">
+
+                <span class="texto-superior">MÁS ALLÁ DE LA PANTALLA</span>
+
+                <h2>
+                    SIENTE CADA<br>
+                    SEGUNDO DE ACCIÓN
+                </h2>
+
+                <p>
+                    En CineHub queremos que cada película
+                    sea una experiencia diferente.
+                </p>
+
+                <p>
+                    Descubre nuestras salas, disfruta de
+                    una calidad audiovisual extraordinaria
+                    y sumérgete en historias que parecen
+                    cobrar vida frente a ti.
+                </p>
+
+                <div class="accion-experiencia-caracteristicas">
+                    <div>
+                        <span>01</span>
+                        <strong>IMAGEN INMERSIVA</strong>
+                    </div>
+                    <div>
+                        <span>02</span>
+                        <strong>SONIDO ENVOLVENTE</strong>
+                    </div>
+                    <div>
+                        <span>03</span>
+                        <strong>SALAS ESPECIALES</strong>
+                    </div>
+                </div>
+
+                <a href="salas.html" class="boton-principal">
+                    CONOCE NUESTRAS SALAS
+                    <span>➜</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="accion-final">
+
+        <div class="contenedor accion-final-contenido">
+
+            <span class="texto-superior">TU SIGUIENTE MISIÓN COMIENZA AHORA</span>
+
+            <h2>¿ESTÁS LISTO PARA LA ACCIÓN?</h2>
+
+            <p>
+                Elige tu próxima película y prepárate
+                para vivir una experiencia inolvidable.
+            </p>
+
+            <a href="cartelera.html" class="boton-principal">
+                COMPRAR ENTRADAS
+                <span>➜</span>
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- Pie de página -->
+<footer class="pie-pagina">
+    <div class="contenedor">
+        <div class="footer-contenido">
+            <div class="footer-marca">
+                <a href="../index.html" class="logo-footer">
+                    <div class="logo-simbolo"><img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub"></div>
+                    <div class="logo-texto"><h2>CINEHUB</h2><span>TODO EL CINE. EN UN SOLO LUGAR.</span></div>
+                </a>
+                <p>Creamos experiencias cinematográficas para que cada película se convierta en un recuerdo inolvidable.</p>
+            </div>
+            <div class="footer-columna">
+                <h3>Explora</h3>
+                <a href="cartelera.html">Cartelera</a>
+                <a href="estrenos.html">Estrenos</a>
+                <a href="peliculas.html">Películas</a>
+                <a href="promociones.html">Promociones</a>
+            </div>
+            <div class="footer-columna">
+                <h3>CineHub</h3>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="sedes.html">Nuestras sedes</a>
+                <a href="salas.html">Nuestras salas</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-redes">
+                <h3>Síguenos</h3>
+                <p>Mantente al tanto de nuestras películas, novedades y promociones.</p>
+                <div class="redes-lista">
+                    <a href="#" aria-label="Facebook"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Facebook.png" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Instagram.png" alt="Instagram"></a>
+                    <a href="#" aria-label="TikTok"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/TikTok.png" alt="TikTok"></a>
+                    <a href="#" aria-label="YouTube"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Youtube_logo.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>© 2026 CineHub. Todos los derechos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Accesibilidad</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

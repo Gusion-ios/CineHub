@@ -1,0 +1,412 @@
+:root {
+    --acento: var(--dorado);
+    --acento-rgb: 212, 175, 55;
+}
+
+body.apertura-activa {
+    overflow: hidden;
+}
+
+/* 1. CURSOR (solo escritorio, lo crea el JS) */
+
+.cursor-ambiente {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2100;
+    width: 28px;
+    height: 28px;
+    margin: -14px 0 0 -14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--acento);
+    font-size: 22px;
+    line-height: 1;
+    text-shadow: 0 0 10px rgba(var(--acento-rgb), 0.7);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.25s ease, scale 0.25s ease;
+}
+
+.cursor-ambiente.visible {
+    opacity: 0.95;
+}
+
+.cursor-ambiente.grande {
+    scale: 1.6;
+}
+
+.cursor-ambiente[data-tipo="cruz"]::before      { content: "✝"; }
+.cursor-ambiente[data-tipo="estrella"]::before  { content: "✦"; }
+.cursor-ambiente[data-tipo="grano"]::before     { content: "•"; font-size: 30px; }
+.cursor-ambiente[data-tipo="mira"]::before      { content: "⌖"; font-size: 28px; }
+.cursor-ambiente[data-tipo="particula"]::before { content: "✺"; }
+.cursor-ambiente[data-tipo="telarana"]::before  { content: "✳"; }
+
+.cursor-ambiente[data-tipo="esfera"]::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #fff, var(--acento));
+}
+
+.cursor-ambiente[data-tipo="punto"]::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--acento);
+    border-radius: 50%;
+}
+
+/* 2. animación de apertura */
+
+.apertura {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:
+            radial-gradient(circle at 50% 50%, rgba(var(--acento-rgb), 0.18), #050505 70%);
+    animation: aperturaSalida 0.6s var(--duracion, 2.5s) ease forwards;
+}
+
+.apertura-efecto {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.apertura-texto {
+    position: relative;
+    padding: 0 24px;
+    text-align: center;
+    animation: aperturaTexto 0.8s 0.3s ease both;
+}
+
+.apertura-texto span {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--acento);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.apertura-texto h2 {
+    color: var(--blanco);
+    font-size: clamp(32px, 6vw, 72px);
+    font-weight: 900;
+    line-height: 1.05;
+    text-shadow: 0 0 30px rgba(var(--acento-rgb), 0.6);
+}
+
+.apertura-texto p {
+    margin-top: 16px;
+    color: var(--plateado);
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.apertura-saltar {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    z-index: 2;
+    padding: 10px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    color: var(--plateado);
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.apertura-saltar:hover {
+    border-color: var(--acento);
+    color: var(--acento);
+}
+
+.apertura-particula {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    width: var(--t);
+    height: var(--t);
+    animation-delay: var(--d);
+    animation-fill-mode: both;
+}
+
+.apertura[data-tipo="estrellas"] .apertura-particula {
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 8px var(--acento);
+    animation-name: estrellaViaje;
+    animation-duration: 2.2s;
+    animation-timing-function: ease-in;
+}
+
+.apertura[data-tipo="arena"] .apertura-efecto {
+    background: linear-gradient(0deg, rgba(var(--acento-rgb), 0.28), transparent 55%);
+}
+
+.apertura[data-tipo="arena"] .apertura-particula {
+    border-radius: 50%;
+    background-color: var(--acento);
+    opacity: 0.8;
+    animation-name: arenaViento;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+.apertura[data-tipo="luciernagas"] .apertura-particula {
+    border-radius: 50%;
+    background-color: var(--acento);
+    box-shadow: 0 0 14px 4px rgba(var(--acento-rgb), 0.7);
+    animation-name: luciernagaFlota;
+    animation-duration: 2.4s;
+    animation-timing-function: ease-in-out;
+}
+
+.apertura[data-tipo="burbujas"] .apertura-particula {
+    border-radius: 50%;
+    background-color: hsla(var(--h), 90%, 75%, 0.5);
+    border: 2px solid hsla(var(--h), 90%, 85%, 0.8);
+    animation-name: burbujaSube;
+    animation-duration: 2.3s;
+    animation-timing-function: ease-out;
+}
+
+.apertura[data-tipo="confeti"] .apertura-particula {
+    height: calc(var(--t) * 1.6);
+    background-color: hsl(var(--h), 95%, 60%);
+    animation-name: confetiCae;
+    animation-duration: 2.2s;
+    animation-timing-function: ease-in;
+}
+
+.apertura[data-tipo="parpadeo"] .apertura-efecto {
+    background: radial-gradient(circle at 50% 40%, rgba(var(--acento-rgb), 0.45), transparent 65%);
+    animation: parpadeoLuz 2.2s linear both;
+}
+
+.apertura[data-tipo="corte"] .apertura-texto {
+    animation-delay: 0.95s;
+}
+
+.apertura[data-tipo="corte"] .apertura-efecto::before {
+    content: "";
+    position: absolute;
+    left: -20%;
+    top: 50%;
+    width: 140%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #fff 40%, var(--acento));
+    box-shadow: 0 0 25px var(--acento);
+    transform: rotate(-18deg) translateX(-100%);
+    animation: corteLinea 0.45s 0.5s ease-out forwards;
+}
+
+.apertura[data-tipo="corte"] .apertura-efecto::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #fff;
+    opacity: 0;
+    animation: corteDestello 0.35s 0.85s ease-out;
+}
+
+.apertura[data-tipo="telarana"] .apertura-efecto::before {
+    content: "";
+    position: absolute;
+    inset: 10%;
+    background:
+            repeating-conic-gradient(from 0deg at 50% 50%, rgba(255, 255, 255, 0.4) 0 0.6deg, transparent 0.6deg 30deg),
+            repeating-radial-gradient(circle at 50% 50%, transparent 0 55px, rgba(255, 255, 255, 0.3) 55px 57px);
+    -webkit-mask-image: radial-gradient(circle, #000 0%, transparent 70%);
+    mask-image: radial-gradient(circle, #000 0%, transparent 70%);
+    animation: telaranaCrece 1.8s ease-out forwards;
+}
+
+.apertura[data-tipo="cuenta-atras"] {
+    --duracion: 3.1s;
+}
+
+.apertura[data-tipo="cuenta-atras"] .apertura-texto {
+    animation-delay: 2.1s;
+}
+
+.apertura[data-tipo="cuenta-atras"] .apertura-efecto b {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(var(--acento-rgb), 0.9);
+    font-size: clamp(120px, 28vw, 320px);
+    font-weight: 900;
+    opacity: 0;
+    animation: cuentaNumero 0.75s ease both;
+}
+
+.apertura[data-tipo="cuenta-atras"] .apertura-efecto b:nth-child(2) { animation-delay: 0.7s; }
+.apertura[data-tipo="cuenta-atras"] .apertura-efecto b:nth-child(3) { animation-delay: 1.4s; }
+
+/* 3. animaciones de asientos */
+
+[data-asientos="temblor"]  .asiento-animar { animation: asTemblor 0.5s ease; }
+[data-asientos="levitar"]  .asiento-animar { animation: asLevitar 0.9s ease; }
+[data-asientos="onda"]     .asiento-animar { animation: asOnda 0.8s ease-out; }
+[data-asientos="destello"] .asiento-animar { animation: asDestello 0.5s ease-out; }
+[data-asientos="brillo"]   .asiento-animar { animation: asBrillo 0.9s ease-in-out; }
+[data-asientos="balanceo"] .asiento-animar { animation: asBalanceo 0.9s ease-in-out; transform-origin: top center; }
+[data-asientos="rebote"]   .asiento-animar { animation: asRebote 0.7s ease; }
+[data-asientos="salto"]    .asiento-animar { animation: asSalto 0.7s ease; }
+[data-asientos="fundido"]  .asiento-animar { animation: asFundido 0.8s ease; }
+
+@keyframes asTemblor {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-5px) rotate(-3deg); }
+    40% { transform: translateX(5px) rotate(3deg); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+}
+
+@keyframes asLevitar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); box-shadow: 0 14px 18px rgba(var(--acento-rgb), 0.4); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes asOnda {
+    from { box-shadow: 0 0 0 0 rgba(var(--acento-rgb), 0.8); }
+    to { box-shadow: 0 0 0 18px rgba(var(--acento-rgb), 0); }
+}
+
+@keyframes asDestello {
+    0% { filter: brightness(3); }
+    100% { filter: brightness(1); }
+}
+
+@keyframes asBrillo {
+    0%, 100% { box-shadow: 0 0 0 rgba(var(--acento-rgb), 0); }
+    50% { box-shadow: 0 0 24px 6px rgba(var(--acento-rgb), 0.8); }
+}
+
+@keyframes asBalanceo {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(-14deg); }
+    50% { transform: rotate(14deg); }
+    75% { transform: rotate(-8deg); }
+    100% { transform: rotate(0); }
+}
+
+@keyframes asRebote {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.25, 0.75); }
+    55% { transform: scale(0.85, 1.2); }
+    80% { transform: scale(1.05, 0.95); }
+    100% { transform: scale(1); }
+}
+
+@keyframes asSalto {
+    0%, 100% { transform: translateY(0); }
+    35% { transform: translateY(-16px); }
+    65% { transform: translateY(0); }
+    80% { transform: translateY(-6px); }
+}
+
+@keyframes asFundido {
+    from { opacity: 0.15; filter: sepia(1); }
+    to { opacity: 1; filter: sepia(0); }
+}
+
+/* 4. keyframes de la apertura */
+
+@keyframes aperturaSalida {
+    from { opacity: 1; visibility: visible; }
+    to { opacity: 0; visibility: hidden; }
+}
+
+@keyframes aperturaTexto {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes estrellaViaje {
+    from { opacity: 0; transform: scale(0.2); }
+    30% { opacity: 1; }
+    to { opacity: 0; transform: scale(3.2); }
+}
+
+@keyframes arenaViento {
+    from { opacity: 0; transform: translateX(-10vw); }
+    20% { opacity: 0.8; }
+    to { opacity: 0; transform: translateX(110vw); }
+}
+
+@keyframes luciernagaFlota {
+    from { opacity: 0; transform: translateY(15vh); }
+    40% { opacity: 1; }
+    to { opacity: 0; transform: translateY(-25vh); }
+}
+
+@keyframes burbujaSube {
+    from { opacity: 0; transform: translateY(30vh) scale(0.4); }
+    30% { opacity: 1; }
+    to { opacity: 0; transform: translateY(-30vh) scale(1.2); }
+}
+
+@keyframes confetiCae {
+    from { opacity: 1; transform: translateY(-15vh) rotate(0deg); }
+    to { opacity: 0.9; transform: translateY(115vh) rotate(720deg); }
+}
+
+@keyframes parpadeoLuz {
+    0% { opacity: 0; }
+    8% { opacity: 1; }
+    12% { opacity: 0.1; }
+    18% { opacity: 0.9; }
+    30% { opacity: 0.2; }
+    34% { opacity: 1; }
+    55% { opacity: 0.3; }
+    60% { opacity: 0.9; }
+    80% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+@keyframes corteLinea {
+    from { transform: rotate(-18deg) translateX(-100%); }
+    to { transform: rotate(-18deg) translateX(0); }
+}
+
+@keyframes corteDestello {
+    0% { opacity: 0.9; }
+    100% { opacity: 0; }
+}
+
+@keyframes telaranaCrece {
+    from { opacity: 0; transform: scale(0.2) rotate(-20deg); }
+    to { opacity: 1; transform: scale(1.2) rotate(0deg); }
+}
+
+@keyframes cuentaNumero {
+    0% { opacity: 0; transform: scale(1.5); }
+    30% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.8); }
+}
+
+/* 5. menos movimiento */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .apertura,
+    .apertura *,
+    [data-asientos] .asiento-animar {
+        animation: none !important;
+    }
+
+}

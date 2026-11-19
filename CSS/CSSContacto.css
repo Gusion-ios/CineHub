@@ -1,11 +1,4 @@
-/* =========================================
-   CINEHUB - PÁGINA DE CONTACTO
-   Archivo: CSSContacto.css
-========================================= */
-
-/* =========================================
-   PORTADA
-========================================= */
+/* Portada */
 .contacto-portada {
     position: relative;
     min-height: 40vh;
@@ -86,9 +79,7 @@
     line-height: 1.8;
 }
 
-/* =========================================
-   TARJETAS DE INFORMACIÓN
-========================================= */
+/* Tarjetas de información */
 .contacto-informacion {
     background-color: var(--negro);
     padding: 60px 40px;
@@ -154,9 +145,7 @@
     font-weight: bold;
 }
 
-/* =========================================
-   FORMULARIO + HORARIOS
-========================================= */
+/* Formulario + horarios */
 .contacto-formulario-seccion {
     background-color: var(--negro-suave);
     padding: 70px 40px;
@@ -301,9 +290,7 @@
     display: block;
 }
 
-/* =========================================
-   FAQ
-========================================= */
+/* Faq */
 .contacto-faq {
     background-color: var(--negro);
     padding: 70px 40px;
@@ -372,9 +359,7 @@
     margin-top: 12px;
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+/* Responsive */
 @media (max-width: 1050px) {
     .info-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -405,4 +390,25 @@
         flex-direction: column;
         align-items: flex-start;
     }
+}
+
+/* Validación del formulario */
+
+.campo-error {
+    color: #ff6b6b;
+    font-size: 0.78rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.campo input[aria-invalid="true"],
+.campo select[aria-invalid="true"],
+.campo textarea[aria-invalid="true"] {
+    border-color: #ff6b6b;
+}
+
+.campo-contador {
+    align-self: flex-end;
+    color: var(--plateado);
+    font-size: 0.72rem;
 }

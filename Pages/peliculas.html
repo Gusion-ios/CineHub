@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explora el catálogo de películas de CineHub. Encuentra tus películas favoritas de todos los géneros.">
+    <meta name="author" content="CineHub">
+
+    <title>Películas | CineHub</title>
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../CSS/CSSGeneral.css">
+    <link rel="stylesheet" href="../CSS/CSSPeliculas.css">
+
+    <!-- Scripts -->
+    <script src="../JS/peliculas.js" defer></script>
+    <script src="../JS/catalogo.js" defer></script>
+    <script src="../JS/menu.js" defer></script>
+
+</head>
+
+<body>
+
+<!-- Encabezado -->
+<header class="encabezado">
+    <div class="contenedor encabezado-contenido">
+
+        <a href="../index.html" class="logo">
+            <div class="logo-simbolo">
+                <img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub">
+            </div>
+            <div class="logo-texto">
+                <h1>CINEHUB</h1>
+                <span>TODO EL CINE. EN UN SOLO LUGAR.</span>
+            </div>
+        </a>
+
+        <nav class="navegacion" aria-label="Navegación principal">
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="cartelera.html">Cartelera</a></li>
+                <li><a href="estrenos.html">Estrenos</a></li>
+                <li><a href="peliculas.html" class="enlace-activo">Películas</a></li>
+                <li><a href="salas.html">Salas</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="dulceria.html">Dulcería</a></li>
+                <li><a href="sedes.html">Sedes</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="acciones-encabezado">
+            <a href="#catalogo" class="accion-icono" aria-label="Buscar películas">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+            </a>
+            <a href="contacto.html" class="accion-icono" aria-label="Mi cuenta">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"></path></svg>
+            </a>
+            <a href="cartelera.html" class="boton-entradas">Comprar entradas</a>
+        </div>
+
+    </div>
+</header>
+
+<!-- Contenido principal -->
+<main>
+
+    <section class="peliculas-hero">
+
+        <div class="peliculas-hero-fondo" aria-hidden="true"></div>
+        <div class="peliculas-hero-degradado" aria-hidden="true"></div>
+
+        <div class="contenedor peliculas-hero-contenido">
+
+            <nav class="peliculas-migas" aria-label="Migas de pan">
+                <a href="../index.html">Inicio</a>
+                <span>/</span>
+                <span>Películas</span>
+            </nav>
+
+            <span class="texto-superior">DESCUBRE TU PRÓXIMA HISTORIA</span>
+
+            <h1>
+                UN UNIVERSO<br>
+                DE PELÍCULAS
+            </h1>
+
+            <p>
+                Aventuras, emociones, misterios y mundos
+                extraordinarios. Explora nuestro catálogo
+                y encuentra una historia para cada momento.
+            </p>
+
+            <a href="#catalogo" class="boton-principal">
+                EXPLORAR CATÁLOGO
+                <span>➜</span>
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="peliculas-categorias">
+
+        <div class="contenedor">
+
+            <div class="categorias-encabezado">
+
+                <div>
+                    <span class="texto-superior">ENCUENTRA TU GÉNERO</span>
+                    <h2>¿QUÉ TE GUSTARÍA VER?</h2>
+                </div>
+
+                <p>Cada género tiene una historia que contar.</p>
+
+            </div>
+
+            <div class="categorias-grid">
+
+                <a href="accion.html" class="categoria-card">
+                    <span class="categoria-icono">
+                        <img src="../Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_Accion.png" alt="" loading="lazy">
+                    </span>
+                    <h3>Acción</h3>
+                    <p>Adrenalina y aventura</p>
+                </a>
+
+                <a href="terror.html" class="categoria-card">
+                    <span class="categoria-icono">
+                        <img src="../Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_Terror.png" alt="" loading="lazy">
+                    </span>
+                    <h3>Terror</h3>
+                    <p>El miedo te espera</p>
+                </a>
+
+                <a href="ciencia-ficcion.html" class="categoria-card">
+                    <span class="categoria-icono">
+                        <img src="../Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_CienciaFiccion.png" alt="" loading="lazy">
+                    </span>
+                    <h3>Ciencia ficción</h3>
+                    <p>Otros mundos</p>
+                </a>
+
+                <a href="animacion.html" class="categoria-card">
+                    <span class="categoria-icono">
+                        <img src="../Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_Animacion.png" alt="" loading="lazy">
+                    </span>
+                    <h3>Animación</h3>
+                    <p>Magia para todos</p>
+                </a>
+
+                <a href="#catalogo" class="categoria-card">
+                    <span class="categoria-icono">
+                        <img src="../Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_Aventura.png" alt="" loading="lazy">
+                    </span>
+                    <h3>Aventura</h3>
+                    <p>Grandes desafíos</p>
+                </a>
+
+                <a href="#catalogo" class="categoria-card">
+                    <span class="categoria-icono">
+                        <img src="../Recursos/Imagenes/Compartidos/Iconos/Categorias/Icon_Romance.png" alt="" loading="lazy">
+                    </span>
+                    <h3>Drama</h3>
+                    <p>Historias que emocionan</p>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="peliculas-catalogo" id="catalogo">
+
+        <div class="contenedor">
+
+            <div class="catalogo-encabezado">
+
+                <div>
+                    <span class="texto-superior">NUESTRA COLECCIÓN</span>
+                    <h2>EXPLORA EL CATÁLOGO</h2>
+                    <p>Encuentra películas de todos los géneros y para todos los gustos.</p>
+                </div>
+
+                <span class="catalogo-cantidad">12 PELÍCULAS DESTACADAS</span>
+
+            </div>
+
+            <div class="catalogo-herramientas">
+
+                <div class="catalogo-buscador">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+                    <input type="search"
+                           id="buscar-pelicula"
+                           placeholder="Buscar una película..."
+                           aria-label="Buscar una película">
+                </div>
+
+                <div class="catalogo-orden">
+                    <label for="orden-peliculas">Ordenar por:</label>
+                    <select id="orden-peliculas">
+                        <option>Destacadas</option>
+                        <option>Nombre</option>
+                        <option>Calificación</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="catalogo-filtros">
+                <a href="#catalogo" class="filtro-activo">Todas</a>
+                <a href="accion.html">Acción</a>
+                <a href="terror.html">Terror</a>
+                <a href="ciencia-ficcion.html">Ciencia ficción</a>
+                <a href="animacion.html">Animación</a>
+                <a href="#catalogo">Aventura</a>
+                <a href="#catalogo">Drama</a>
+            </div>
+
+            <div class="peliculas-grid" id="peliculas-grid">
+
+                <article class="pelicula-card" data-genero="ciencia-ficcion" data-calificacion="8.5">
+                    <a href="seleccion-pelicula.html" class="pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Duna2.jpg" alt="Póster de Duna: Parte Dos" loading="lazy">
+                        <span class="pelicula-etiqueta">CIENCIA FICCIÓN</span>
+                        <span class="pelicula-calificacion">★ 8.5</span>
+                        <div class="pelicula-hover"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="pelicula-datos">
+                        <h3>Duna: Parte Dos</h3>
+                        <p>Acción · Ciencia ficción · Aventura</p>
+                        <div class="pelicula-pie">
+                            <span>166 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="pelicula-card" data-genero="animacion" data-calificacion="8.1">
+                    <a href="seleccion-pelicula.html" class="pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Intensamente2.jpg" alt="Póster de Intensamente 2" loading="lazy">
+                        <span class="pelicula-etiqueta">ANIMACIÓN</span>
+                        <span class="pelicula-calificacion">★ 8.1</span>
+                        <div class="pelicula-hover"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="pelicula-datos">
+                        <h3>Intensamente 2</h3>
+                        <p>Animación · Comedia · Familiar</p>
+                        <div class="pelicula-pie">
+                            <span>96 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="pelicula-card" data-genero="accion" data-calificacion="8.2">
+                    <a href="seleccion-pelicula.html" class="pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/John_Wick_4.jpg" alt="Póster de John Wick 4" loading="lazy">
+                        <span class="pelicula-etiqueta">ACCIÓN</span>
+                        <span class="pelicula-calificacion">★ 8.2</span>
+                        <div class="pelicula-hover"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="pelicula-datos">
+                        <h3>John Wick 4</h3>
+                        <p>Acción · Suspenso · Crimen</p>
+                        <div class="pelicula-pie">
+                            <span>169 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="pelicula-card" data-genero="terror" data-calificacion="7.4">
+                    <a href="seleccion-pelicula.html" class="pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Exorcista.jpg" alt="Póster de El Exorcista" loading="lazy">
+                        <span class="pelicula-etiqueta">TERROR</span>
+                        <span class="pelicula-calificacion">★ 7.4</span>
+                        <div class="pelicula-hover"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="pelicula-datos">
+                        <h3>El Exorcista</h3>
+                        <p>Terror · Suspenso</p>
+                        <div class="pelicula-pie">
+                            <span>121 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="pelicula-card" data-genero="aventura" data-calificacion="8.7">
+                    <a href="seleccion-pelicula.html" class="pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Spiderman.jpg" alt="Póster de Spider-Man" loading="lazy">
+                        <span class="pelicula-etiqueta">AVENTURA</span>
+                        <span class="pelicula-calificacion">★ 8.7</span>
+                        <div class="pelicula-hover"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="pelicula-datos">
+                        <h3>Spider-Man</h3>
+                        <p>Acción · Aventura · Fantasía</p>
+                        <div class="pelicula-pie">
+                            <span>148 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="pelicula-card" data-genero="ciencia-ficcion" data-calificacion="8.0">
+                    <a href="seleccion-pelicula.html" class="pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Avatar.png" alt="Póster de Avatar" loading="lazy">
+                        <span class="pelicula-etiqueta">CIENCIA FICCIÓN</span>
+                        <span class="pelicula-calificacion">★ 8.0</span>
+                        <div class="pelicula-hover"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="pelicula-datos">
+                        <h3>Avatar</h3>
+                        <p>Ciencia ficción · Aventura</p>
+                        <div class="pelicula-pie">
+                            <span>162 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="pelicula-card" data-genero="ciencia-ficcion" data-calificacion="8.9">
+                    <a href="seleccion-pelicula.html" class="pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Interestellar.png" alt="Póster de Interestelar" loading="lazy">
+                        <span class="pelicula-etiqueta">CIENCIA FICCIÓN</span>
+                        <span class="pelicula-calificacion">★ 8.9</span>
+                        <div class="pelicula-hover"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="pelicula-datos">
+                        <h3>Interestelar</h3>
+                        <p>Drama · Ciencia ficción</p>
+                        <div class="pelicula-pie">
+                            <span>169 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="pelicula-card" data-genero="animacion" data-calificacion="7.0">
+                    <a href="seleccion-pelicula.html" class="pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Mi_Villano_Favorito_4.jpg" alt="Póster de Mi Villano Favorito 4" loading="lazy">
+                        <span class="pelicula-etiqueta">ANIMACIÓN</span>
+                        <span class="pelicula-calificacion">★ 7.0</span>
+                        <div class="pelicula-hover"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="pelicula-datos">
+                        <h3>Mi Villano Favorito 4</h3>
+                        <p>Animación · Comedia · Familiar</p>
+                        <div class="pelicula-pie">
+                            <span>95 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="pelicula-card" data-genero="drama" data-calificacion="8.6">
+                    <a href="seleccion-pelicula.html" class="pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Oppenheimer.png" alt="Póster de Oppenheimer" loading="lazy">
+                        <span class="pelicula-etiqueta">DRAMA</span>
+                        <span class="pelicula-calificacion">★ 8.6</span>
+                        <div class="pelicula-hover"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="pelicula-datos">
+                        <h3>Oppenheimer</h3>
+                        <p>Drama · Historia · Suspenso</p>
+                        <div class="pelicula-pie">
+                            <span>180 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="pelicula-card" data-genero="accion" data-calificacion="8.4">
+                    <a href="seleccion-pelicula.html" class="pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Avengers.jpg" alt="Póster de Avengers" loading="lazy">
+                        <span class="pelicula-etiqueta">ACCIÓN</span>
+                        <span class="pelicula-calificacion">★ 8.4</span>
+                        <div class="pelicula-hover"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="pelicula-datos">
+                        <h3>Avengers</h3>
+                        <p>Acción · Ciencia ficción</p>
+                        <div class="pelicula-pie">
+                            <span>143 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="pelicula-card" data-genero="animacion" data-calificacion="8.4">
+                    <a href="seleccion-pelicula.html" class="pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/Coco.jpg" alt="Póster de Coco" loading="lazy">
+                        <span class="pelicula-etiqueta">ANIMACIÓN</span>
+                        <span class="pelicula-calificacion">★ 8.4</span>
+                        <div class="pelicula-hover"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="pelicula-datos">
+                        <h3>Coco</h3>
+                        <p>Animación · Familiar · Fantasía</p>
+                        <div class="pelicula-pie">
+                            <span>105 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="pelicula-card" data-genero="terror" data-calificacion="7.3">
+                    <a href="seleccion-pelicula.html" class="pelicula-imagen" tabindex="-1" aria-hidden="true">
+                        <img src="../Recursos/Imagenes/Compartidos/Peliculas/It.jpg" alt="Póster de It" loading="lazy">
+                        <span class="pelicula-etiqueta">TERROR</span>
+                        <span class="pelicula-calificacion">★ 7.3</span>
+                        <div class="pelicula-hover"><span>VER DETALLES</span></div>
+                    </a>
+                    <div class="pelicula-datos">
+                        <h3>It</h3>
+                        <p>Terror · Suspenso · Misterio</p>
+                        <div class="pelicula-pie">
+                            <span>135 min</span>
+                            <a href="seleccion-pelicula.html">VER MÁS →</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="peliculas-recomendaciones">
+
+        <div class="contenedor recomendaciones-contenido">
+
+            <div class="recomendaciones-texto">
+
+                <span class="texto-superior">TU PRÓXIMA AVENTURA COMIENZA AQUÍ</span>
+
+                <h2>
+                    CADA PELÍCULA<br>
+                    ES UN NUEVO UNIVERSO
+                </h2>
+
+                <p>
+                    En CineHub no solo encuentras películas.
+                    Encuentras mundos que puedes explorar,
+                    personajes que recordar y experiencias
+                    que hacen especial cada función.
+                </p>
+
+                <a href="cartelera.html" class="boton-principal">
+                    DESCUBRIR CARTELERA
+                    <span>➜</span>
+                </a>
+
+            </div>
+
+            <div class="recomendaciones-imagen">
+
+                <img src="../Recursos/Imagenes/Peliculas/PeliculasUniverso.jpg"
+                     alt="Composición cinematográfica de diferentes mundos"
+                     loading="lazy">
+
+                <div class="recomendaciones-etiqueta">
+                    <strong>CINEHUB</strong>
+                    <span>TODO EL CINE. EN UN SOLO LUGAR.</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<!-- Pie de página -->
+<footer class="pie-pagina">
+    <div class="contenedor">
+        <div class="footer-contenido">
+            <div class="footer-marca">
+                <a href="../index.html" class="logo-footer">
+                    <div class="logo-simbolo"><img src="../Recursos/Imagenes/Compartidos/Logos/logo-cinehub.png" alt="CineHub"></div>
+                    <div class="logo-texto"><h2>CINEHUB</h2><span>TODO EL CINE. EN UN SOLO LUGAR.</span></div>
+                </a>
+                <p>Creamos experiencias cinematográficas para que cada película se convierta en un recuerdo inolvidable.</p>
+            </div>
+            <div class="footer-columna">
+                <h3>Explora</h3>
+                <a href="cartelera.html">Cartelera</a>
+                <a href="estrenos.html">Estrenos</a>
+                <a href="peliculas.html">Películas</a>
+                <a href="promociones.html">Promociones</a>
+            </div>
+            <div class="footer-columna">
+                <h3>CineHub</h3>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="sedes.html">Nuestras sedes</a>
+                <a href="salas.html">Nuestras salas</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div class="footer-redes">
+                <h3>Síguenos</h3>
+                <p>Mantente al tanto de nuestras películas, novedades y promociones.</p>
+                <div class="redes-lista">
+                    <a href="#" aria-label="Facebook"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Facebook.png" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Instagram.png" alt="Instagram"></a>
+                    <a href="#" aria-label="TikTok"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/TikTok.png" alt="TikTok"></a>
+                    <a href="#" aria-label="YouTube"><img src="../Recursos/Imagenes/Compartidos/RedesSociales/Youtube_logo.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>© 2026 CineHub. Todos los derechos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Accesibilidad</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>
