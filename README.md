@@ -8,7 +8,6 @@ Proyecto del curso **Taller de Programación Web** — Universidad Tecnológica 
 |---|---|
 | **Autor** | Franco Valerio Ccorahua Tizon |
 | **Docente** | Edmundo Aurelio Aparicio Maldonado |
-|
 | **Entregas** | APF1 (HTML) · APF2 (CSS) · APF3 (JavaScript) · Proyecto final |
 
 ---
